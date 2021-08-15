@@ -1,0 +1,4 @@
+.idea/
+*.py[cop]
+logs/log*
+WeChatSetup*
