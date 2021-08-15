@@ -1,4 +1,4 @@
-# 如果你是Python36。请删除37、38的pyd文件，其他版本同理
+# 如果你是Python36。请删除37、38、39的pyd文件，其他版本同理
 from WeChatPYAPI import WeChatPYApi
 
 import time
