@@ -297,8 +297,3 @@ class WeChatPYApi(builtins.object)
 
 **本项目仅供技术研究，请勿用于非法用途，如有任何人凭此做何非法事情，均于作者无关，特此声明。**
 
-
-
-<script type="text/javascript">
-    localStorage.gitbook_dir = location.href
-</script>
