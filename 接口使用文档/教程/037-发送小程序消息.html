@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1、添加好友 · GitBook</title>
+        <title>8、发送小程序消息 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,8 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="017-删除好友.html" />
     
+    <link rel="prev" href="036-发送xml消息.html" />
     
 
     </head>
@@ -377,7 +377,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.8" data-path="037-发送小程序消息.html">
+        <li class="chapter active" data-level="1.5.8" data-path="037-发送小程序消息.html">
             
                 <a href="037-发送小程序消息.html">
             
@@ -409,7 +409,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.6.1" data-path="016-添加好友.html">
+        <li class="chapter " data-level="1.6.1" data-path="016-添加好友.html">
             
                 <a href="016-添加好友.html">
             
@@ -787,7 +787,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >1、添加好友</a>
+        <a href=".." >8、发送小程序消息</a>
     </h1>
 </div>
 
@@ -802,11 +802,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6DFB;&#x52A0;&#x597D;&#x53CB;">&#x6DFB;&#x52A0;&#x597D;&#x53CB;</h1>
+                                <h1 id="&#x53D1;&#x9001;&#x5C0F;&#x7A0B;&#x5E8F;&#x6D88;&#x606F;">&#x53D1;&#x9001;&#x5C0F;&#x7A0B;&#x5E8F;&#x6D88;&#x606F;</h1>
 <ul>
 <li>&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</li>
 </ul>
-<pre><code class="lang-python">w.add_friend()
+<pre><code class="lang-python">w.send_small_app()
 </code></pre>
 <ul>
 <li>&#x53C2;&#x6570;&#xFF1A;</li>
@@ -825,11 +825,15 @@
 </tr>
 <tr>
 <td style="text-align:center">to_wx</td>
-<td style="text-align:center">&#x8981;&#x6DFB;&#x52A0;&#x7684;&#x5FAE;&#x4FE1;ID</td>
+<td style="text-align:center">&#x63A5;&#x6536;&#x8005;&#x5FAE;&#x4FE1;ID</td>
 </tr>
 <tr>
-<td style="text-align:center">msg</td>
-<td style="text-align:center">&#x6DFB;&#x52A0;&#x65F6;&#x7684;&#x6253;&#x62DB;&#x547C;&#x6D88;&#x606F;</td>
+<td style="text-align:center">img_path</td>
+<td style="text-align:center">&#x56FE;&#x7247;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td style="text-align:center">xml_str</td>
+<td style="text-align:center">XML&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x53EF;&#x53C2;&#x8003;&#x6D88;&#x606F;&#x56DE;&#x8C03;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
@@ -860,10 +864,10 @@
 
             
                 
-                
-                <a href="017-删除好友.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 2、删除好友">
-                    <i class="fa fa-angle-right"></i>
+                <a href="036-发送xml消息.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 7、发送XML消息">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -872,7 +876,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1、添加好友","level":"1.6.1","depth":2,"next":{"title":"2、删除好友","level":"1.6.2","depth":2,"path":"教程/017-删除好友.md","ref":"教程/017-删除好友.md","articles":[]},"previous":{"title":"4、好友操作","level":"1.6","depth":1,"ref":"","articles":[{"title":"1、添加好友","level":"1.6.1","depth":2,"path":"教程/016-添加好友.md","ref":"教程/016-添加好友.md","articles":[]},{"title":"2、删除好友","level":"1.6.2","depth":2,"path":"教程/017-删除好友.md","ref":"教程/017-删除好友.md","articles":[]},{"title":"3、同意添加好友请求","level":"1.6.3","depth":2,"path":"教程/018-同意添加好友请求.md","ref":"教程/018-同意添加好友请求.md","articles":[]},{"title":"4、修改好友备注","level":"1.6.4","depth":2,"path":"教程/019-修改好友备注.md","ref":"教程/019-修改好友备注.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/016-添加好友.md","mtime":"2021-07-30T19:59:32.964Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-28T18:21:57.135Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"8、发送小程序消息","level":"1.5.8","depth":2,"next":{"title":"4、好友操作","level":"1.6","depth":1,"ref":"","articles":[{"title":"1、添加好友","level":"1.6.1","depth":2,"path":"教程/016-添加好友.md","ref":"教程/016-添加好友.md","articles":[]},{"title":"2、删除好友","level":"1.6.2","depth":2,"path":"教程/017-删除好友.md","ref":"教程/017-删除好友.md","articles":[]},{"title":"3、同意添加好友请求","level":"1.6.3","depth":2,"path":"教程/018-同意添加好友请求.md","ref":"教程/018-同意添加好友请求.md","articles":[]},{"title":"4、修改好友备注","level":"1.6.4","depth":2,"path":"教程/019-修改好友备注.md","ref":"教程/019-修改好友备注.md","articles":[]}]},"previous":{"title":"7、发送XML消息","level":"1.5.7","depth":2,"path":"教程/036-发送xml消息.md","ref":"教程/036-发送xml消息.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/037-发送小程序消息.md","mtime":"2021-09-28T18:19:20.708Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-28T18:21:57.135Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
