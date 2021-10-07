@@ -214,6 +214,13 @@ class WeChatPYApi(builtins.object)
  |      :param msg_data: 消息数据
  |      :return: 无
  |  
+ |  save_voice_switch(self, self_wx, save_dir_path, switch)
+ |      开启/关闭保存语音
+ |      :param self_wx: 当前微信ID
+ |      :param save_dir_path: 保存语音的绝对路径【目录路径】
+ |      :param switch: True:开启 False:关闭
+ |      :return: 无
+ |  
  |  send_card_link(self, self_wx, to_wx, title, desc, target_url, img_url)
  |      发送卡片链接
  |      :param self_wx: 当前微信ID
@@ -253,6 +260,14 @@ class WeChatPYApi(builtins.object)
  |      :param msg: 公告内容
  |      :return: 无
  |  
+ |  send_small_app(self, self_wx, to_wx, img_path, xml_str)
+ |      发送小程序
+ |      :param self_wx: 当前微信ID
+ |      :param to_wx: 接收者微信ID
+ |      :param img_path: 图片的绝对路径
+ |      :param xml_str: 小程序的XML字符串
+ |      :return:
+ |  
  |  send_text(self, self_wx, to_wx, msg)
  |      发送文本消息
  |      :param self_wx: 当前微信ID
@@ -271,9 +286,9 @@ class WeChatPYApi(builtins.object)
  |  
  |  send_xml(self, self_wx, to_wx, xml_str)
  |      发送xml消息
- |      :param self_wx:
- |      :param to_wx:
- |      :param xml_str:
+ |      :param self_wx: 当前微信ID
+ |      :param to_wx: 接收者微信ID
+ |      :param xml_str: XML字符串
  |      :return: 无
  |  
  |  start_wx(self, path=None)

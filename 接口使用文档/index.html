@@ -713,7 +713,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.3" data-path="教程/034-同意好友邀请进群.html">
+        <li class="chapter " data-level="1.9.3" data-path="教程/038-开启关闭保存语音.html">
+            
+                <a href="教程/038-开启关闭保存语音.html">
+            
+                    
+                    开启/关闭保存语音
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="教程/034-同意好友邀请进群.html">
             
                 <a href="教程/034-同意好友邀请进群.html">
             
@@ -1005,6 +1018,13 @@
  |      :param msg_data: &#x6D88;&#x606F;&#x6570;&#x636E;
  |      :return: &#x65E0;
  |  
+ |  save_voice_switch(self, self_wx, save_dir_path, switch)
+ |      &#x5F00;&#x542F;/&#x5173;&#x95ED;&#x4FDD;&#x5B58;&#x8BED;&#x97F3;
+ |      :param self_wx: &#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID
+ |      :param save_dir_path: &#x4FDD;&#x5B58;&#x8BED;&#x97F3;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x3010;&#x76EE;&#x5F55;&#x8DEF;&#x5F84;&#x3011;
+ |      :param switch: True:&#x5F00;&#x542F; False:&#x5173;&#x95ED;
+ |      :return: &#x65E0;
+ |  
  |  send_card_link(self, self_wx, to_wx, title, desc, target_url, img_url)
  |      &#x53D1;&#x9001;&#x5361;&#x7247;&#x94FE;&#x63A5;
  |      :param self_wx: &#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID
@@ -1044,6 +1064,14 @@
  |      :param msg: &#x516C;&#x544A;&#x5185;&#x5BB9;
  |      :return: &#x65E0;
  |  
+ |  send_small_app(self, self_wx, to_wx, img_path, xml_str)
+ |      &#x53D1;&#x9001;&#x5C0F;&#x7A0B;&#x5E8F;
+ |      :param self_wx: &#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID
+ |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x5FAE;&#x4FE1;ID
+ |      :param img_path: &#x56FE;&#x7247;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+ |      :param xml_str: &#x5C0F;&#x7A0B;&#x5E8F;&#x7684;XML&#x5B57;&#x7B26;&#x4E32;
+ |      :return:
+ |  
  |  send_text(self, self_wx, to_wx, msg)
  |      &#x53D1;&#x9001;&#x6587;&#x672C;&#x6D88;&#x606F;
  |      :param self_wx: &#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID
@@ -1062,9 +1090,9 @@
  |  
  |  send_xml(self, self_wx, to_wx, xml_str)
  |      &#x53D1;&#x9001;xml&#x6D88;&#x606F;
- |      :param self_wx:
- |      :param to_wx:
- |      :param xml_str:
+ |      :param self_wx: &#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID
+ |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x5FAE;&#x4FE1;ID
+ |      :param xml_str: XML&#x5B57;&#x7B26;&#x4E32;
  |      :return: &#x65E0;
  |  
  |  start_wx(self, path=None)
@@ -1125,7 +1153,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"WeChatPYAPI介绍","level":"1.1","depth":1,"next":{"title":"免费版跟付费版的区别","level":"1.2","depth":1,"path":"教程/免费版跟付费版区别.md","ref":"教程/免费版跟付费版区别.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2021-08-30T13:41:26.276Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-28T18:21:57.135Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"WeChatPYAPI介绍","level":"1.1","depth":1,"next":{"title":"免费版跟付费版的区别","level":"1.2","depth":1,"path":"教程/免费版跟付费版区别.md","ref":"教程/免费版跟付费版区别.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2021-10-07T17:46:39.784Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-07T17:55:16.762Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

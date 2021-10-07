@@ -713,7 +713,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.3" data-path="教程/034-同意好友邀请进群.html">
+        <li class="chapter " data-level="1.9.3" data-path="教程/038-开启关闭保存语音.html">
+            
+                <a href="教程/038-开启关闭保存语音.html">
+            
+                    
+                    开启/关闭保存语音
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="教程/034-同意好友邀请进群.html">
             
                 <a href="教程/034-同意好友邀请进群.html">
             
@@ -870,14 +883,28 @@
 </li>
 </ul>
 <ul>
-<li><p>&#x95EE;&#x9898;2&#xFF1A;&#x6211;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x6307;&#x5B9A;libs&#x76EE;&#x5F55;&#x8DEF;&#x5F84;&#x5417;&#xFF1F;</p>
+<li><p>&#x95EE;&#x9898;2&#xFF1A;&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;pyinstaller&#x6253;&#x5305;&#x65F6;&#xFF0C;&#x51FA;&#x73B0;&#x5305;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x95EE;&#x9898;</p>
+</li>
+<li><p>&#x7B54;&#xFF1A;&#x56E0;&#x4E3A;pyinstaller&#x6253;&#x5305;&#x65F6;&#xFF0C;&#x4F1A;&#x68C0;&#x6D4B;pyd&#x4E2D;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x5305;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;pyinstaller&#x6253;&#x5305;&#xFF0C;&#x8BF7;&#x5728;&#x4F60;&#x7684;main&#x6587;&#x4EF6;&#x5934;&#x90E8;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+</li>
+<li><pre><code class="lang-python"><span class="hljs-keyword">import</span> json, requests
+<span class="hljs-keyword">from</span> Cryptodome.Cipher <span class="hljs-keyword">import</span> AES
+<span class="hljs-keyword">try</span>:
+    <span class="hljs-keyword">import</span> xml.etree.cElementTree <span class="hljs-keyword">as</span> ET
+<span class="hljs-keyword">except</span> ImportError:
+    <span class="hljs-keyword">import</span> xml.etree.ElementTree <span class="hljs-keyword">as</span> ET
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>&#x95EE;&#x9898;3&#xFF1A;&#x6211;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x6307;&#x5B9A;libs&#x76EE;&#x5F55;&#x8DEF;&#x5F84;&#x5417;&#xFF1F;</p>
 </li>
 <li><p>&#x7B54;&#xFF1A;&#x53EF;&#x4EE5;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x60F3;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x6709;libs&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5728;&#x5B9E;&#x4F8B;&#x5316;WeChatPYApi&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F20;&#x5165;&#x53C2;&#x6570;&#xFF1A;libs_dir=&#x4F60;&#x81EA;&#x5B9A;&#x4E49;&#x76EE;&#x5F55;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;&#x867D;&#x7136;&#x76EE;&#x5F55;&#x53EF;&#x66F4;&#x6539;&#xFF0C;&#x4F46;&#x662F;&#xFF01;<strong>WeChatPYAPI.dll</strong>&#x8DDF;<strong>multi_open.exe</strong>&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x5728;&#x540C;&#x4E00;&#x7EA7;&#x76EE;&#x5F55;&#x4E0B;&#xFF1A;</p>
 <p><img src="images/&#x5176;&#x5B83;&#x95EE;&#x9898;2.png" alt=""></p>
 </li>
 </ul>
 <ul>
-<li>&#x95EE;&#x9898;3&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x514D;&#x8D39;&#x7248;&#x672C;&#x65F6;&#x51FA;&#x73B0;&#x4E86;&#x5D29;&#x6E83;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5F88;&#x4E0D;&#x5E78;&#xFF0C;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5728;&#x514D;&#x8D39;&#x7248;&#x6CA1;&#x6709;&#x89E3;&#x51B3;&#x6389;&#x3002;</li>
+<li>&#x95EE;&#x9898;4&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x514D;&#x8D39;&#x7248;&#x672C;&#x65F6;&#x51FA;&#x73B0;&#x4E86;&#x5D29;&#x6E83;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5F88;&#x4E0D;&#x5E78;&#xFF0C;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5728;&#x514D;&#x8D39;&#x7248;&#x6CA1;&#x6709;&#x89E3;&#x51B3;&#x6389;&#x3002;</li>
 </ul>
 
                                 
@@ -918,7 +945,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"常见问题及解决方案","level":"1.11","depth":1,"previous":{"title":"消息类型","level":"1.10","depth":1,"path":"消息类型.md","ref":"消息类型.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"常见问题及解决方案.md","mtime":"2021-08-30T13:21:47.322Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-28T18:21:57.135Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"常见问题及解决方案","level":"1.11","depth":1,"previous":{"title":"消息类型","level":"1.10","depth":1,"path":"消息类型.md","ref":"消息类型.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"常见问题及解决方案.md","mtime":"2021-10-07T17:51:54.831Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-07T17:55:16.762Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

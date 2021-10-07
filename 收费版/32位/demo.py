@@ -51,6 +51,14 @@ def main():
     print("登陆成功！")
     print(my_info)
 
+    # 开启保存语言【需要在登录成功后调用】
+    # 保存的语音为silk文件，可使用群文件中的转换工具，批量转为mp3格式
+    w.save_voice_switch(
+        self_wx=self_wx,
+        save_dir_path=os.path.join(BASE_DIR, "temp"),
+        switch=True,
+    )
+
     # 拉取列表（好友/群/公众号等）第一次拉取可能会阻塞，可以自行做异步处理
     # 好友列表：pull_type = 1
     # 群列表：pull_type = 2
@@ -104,10 +112,11 @@ def main():
     # time.sleep(1)
     #
     # 发送小程序【XML字段可以从消息回调中捕获，具体想怎么玩，请自行研究】
+    # 注意：发送小程序时，要把xml中的发送者wx_id修改为自身的wx_id
     # w.send_small_app(
     #     self_wx=self_wx,
     #     to_wx="filehelper",
-    #     img_path=os.path.join(BASE_DIR, "login_qrcode.png"),
+    #     img_path=os.path.join(BASE_DIR, "1.png"),
     #     xml_str=xml_str,
     # )
     # time.sleep(1)
@@ -119,6 +128,19 @@ def main():
         if msg["msg_type"] == 37:
             # 同意添加好友申请
             w.agree_friend(self_wx=self_wx, msg_data=msg)
+
+        # 处理图片消息
+        elif msg["msg_type"] == 3:
+            file_path, file_name = os.path.split(msg["file_path"])
+            if file_name.endswith("dat"):
+                file_name = file_name.replace(".dat", "")
+
+                # 保存图片
+                w.save_img(
+                    self_wx=self_wx,
+                    save_path=os.path.join(BASE_DIR, "temp\\{}.png".format(file_name)),
+                    msg_data=msg,
+                )
 
         # 收款
         elif msg["msg_type"] == 490:

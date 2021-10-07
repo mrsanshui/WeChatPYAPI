@@ -1,4 +1,5 @@
 .idea/
+.git/
 *.py[cop]
 logs/log*
 WeChatSetup*
