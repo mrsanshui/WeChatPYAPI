@@ -125,7 +125,10 @@ def main():
     while True:
         msg = msg_queue.get()
 
-        if msg["msg_type"] == 37:
+        if msg["msg_type"] == 666:
+            print("有人撤回消息了！")
+
+        elif msg["msg_type"] == 37:
             # 同意添加好友申请
             w.agree_friend(self_wx=self_wx, msg_data=msg)
 
