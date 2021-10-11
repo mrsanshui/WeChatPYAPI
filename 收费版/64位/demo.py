@@ -38,7 +38,12 @@ def main():
     # 实例化api对象
     w = WeChatPYApi(msg_callback=on_message, exit_callback=on_exit, logger=logging)
 
-    # 启动微信
+    # 调试模式：
+    # debug_pid=日志中输出的进程pid
+    # 注意：你的微信必须使用start_wx方法登录成功后，才能使用调试模式
+    # w = WeChatPYApi(msg_callback=on_message, exit_callback=on_exit, logger=logging, debug_pid=14436)
+
+    # 启动微信【调试模式可不调用该方法】
     w.start_wx()
     # w.start_wx(path=os.path.join(BASE_DIR, "login_qrcode.png"))  # 保存登录二维码
 
@@ -121,43 +126,53 @@ def main():
     # )
     # time.sleep(1)
 
-    # 处理消息回调
+    # 处理消息回调【具体根据自己的业务来写，这里只是一个简陋的演示】
     while True:
         msg = msg_queue.get()
 
+        # 撤回消息
+        # 注意：撤回消息中的参数，跟正常消息的参数不一致，可自行判断消息类型是否是666，分别放到不同的队列中处理
         if msg["msg_type"] == 666:
-            print("有人撤回消息了！")
+            print("{} 撤回消息：{}".format(msg["wx_id"], msg["content"]))
 
-        elif msg["msg_type"] == 37:
-            # 同意添加好友申请
-            w.agree_friend(self_wx=self_wx, msg_data=msg)
+        # 正常消息
+        else:
+            # 自己发送的消息
+            if msg["is_self_msg"]:
+                print("收到了自己发送的消息！")
 
-        # 处理图片消息
-        elif msg["msg_type"] == 3:
-            file_path, file_name = os.path.split(msg["file_path"])
-            if file_name.endswith("dat"):
-                file_name = file_name.replace(".dat", "")
+            # 别人发送的消息
+            else:
+                if msg["msg_type"] == 37:
+                    # 同意添加好友申请
+                    w.agree_friend(self_wx=self_wx, msg_data=msg)
 
-                # 保存图片
-                w.save_img(
-                    self_wx=self_wx,
-                    save_path=os.path.join(BASE_DIR, "temp\\{}.png".format(file_name)),
-                    msg_data=msg,
-                )
+                # 处理图片消息
+                elif msg["msg_type"] == 3:
+                    file_path, file_name = os.path.split(msg["file_path"])
+                    if file_name.endswith("dat"):
+                        file_name = file_name.replace(".dat", "")
 
-        # 收款
-        elif msg["msg_type"] == 490:
-            is_recv = msg["detail"]["is_recv"]
-            if is_recv:
+                        # 保存图片
+                        w.save_img(
+                            self_wx=self_wx,
+                            save_path=os.path.join(BASE_DIR, "temp\\{}.png".format(file_name)),
+                            msg_data=msg,
+                        )
+
                 # 收款
-                w.collection(self_wx=self_wx, msg_data=msg)
+                elif msg["msg_type"] == 490:
+                    is_recv = msg["detail"]["is_recv"]
+                    if is_recv:
+                        # 收款
+                        w.collection(self_wx=self_wx, msg_data=msg)
 
-                # 退款
-                # w.refund(self_wx=self_wx, msg_data=msg)
+                        # 退款
+                        # w.refund(self_wx=self_wx, msg_data=msg)
 
-        # 同意好友邀请进群
-        elif msg["msg_type"] == 491:
-            w.agree_friend_invite_join_chat_room(self_wx=self_wx, msg_data=msg)
+                # 同意好友邀请进群
+                elif msg["msg_type"] == 491:
+                    w.agree_friend_invite_join_chat_room(self_wx=self_wx, msg_data=msg)
 
 
 if __name__ == '__main__':
