@@ -190,10 +190,16 @@ class WeChatPYApi(builtins.object)
  |      :param switch: True:开启免打扰 False:关闭免打扰
  |      :return: 无
  |  
- |  pull_list(self, self_wx, pull_type)
+ |  pull_label_list(self, self_wx)
+ |      拉取标签列表
+ |      :param self_wx: 当前微信ID
+ |      :return: list数据
+ |  
+ |  pull_list(self, self_wx, pull_type, want_avatar=True)
  |      拉取列表（好友/群/公众号/其他）
  |      :param self_wx: 当前微信ID
  |      :param pull_type: 好友:1 群:2 公众号:3 其他:4
+ |      :param want_avatar: True:需要头像地址(速度慢) False:不需要头像地址(速度快)
  |      :return: list数据
  |  
  |  pull_list_of_work(self, self_wx)

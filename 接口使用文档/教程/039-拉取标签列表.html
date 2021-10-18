@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>4、退款 · GitBook</title>
+        <title>5、拉取标签列表 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="035-开启关闭消息防撤回.html" />
     
-    
-    <link rel="prev" href="031-收款.html" />
+    <link rel="prev" href="009-获取企业群成员列表.html" />
     
 
     </head>
@@ -269,7 +267,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="039-拉取标签列表.html">
+        <li class="chapter active" data-level="1.4.5" data-path="039-拉取标签列表.html">
             
                 <a href="039-拉取标签列表.html">
             
@@ -657,7 +655,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8.4" data-path="032-退款.html">
+        <li class="chapter " data-level="1.8.4" data-path="032-退款.html">
             
                 <a href="032-退款.html">
             
@@ -815,7 +813,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >4、退款</a>
+        <a href=".." >5、拉取标签列表</a>
     </h1>
 </div>
 
@@ -830,11 +828,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x9000;&#x6B3E;">&#x9000;&#x6B3E;</h1>
+                                <h1 id="&#x62C9;&#x53D6;&#x6807;&#x7B7E;&#x5217;&#x8868;">&#x62C9;&#x53D6;&#x6807;&#x7B7E;&#x5217;&#x8868;</h1>
 <ul>
 <li>&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</li>
 </ul>
-<pre><code class="lang-python">w.refund()
+<pre><code class="lang-python">w.pull_label_list()
 </code></pre>
 <ul>
 <li>&#x53C2;&#x6570;&#xFF1A;</li>
@@ -851,12 +849,48 @@
 <td style="text-align:center">self_wx</td>
 <td style="text-align:center">&#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID</td>
 </tr>
+</tbody>
+</table>
+<ul>
+<li>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;<ul>
+<li>&#x62C9;&#x53D6;&#x6210;&#x529F;&#xFF1A;list&#x7C7B;&#x578B;</li>
+<li>&#x62C9;&#x53D6;&#x5931;&#x8D25;&#xFF1A;&#x8FD4;&#x56DE;None</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
 <tr>
-<td style="text-align:center">msg_data</td>
-<td style="text-align:center">&#x6D88;&#x606F;&#x6570;&#x636E;</td>
+<th style="text-align:center">&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">&#x6807;&#x7B7E;&#x540D;</td>
+</tr>
+<tr>
+<td style="text-align:center">wx_list</td>
+<td style="text-align:center">&#x6240;&#x5C5E;&#x6807;&#x7B7E;&#x4E0B;&#x7684;&#x5FAE;&#x4FE1;ID&#x5217;&#x8868;</td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li>&#x8FD4;&#x56DE;&#x793A;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-json">[
+    {
+        <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;&#x6807;&#x7B7E;&#x540D;1&apos;</span>, 
+        <span class="hljs-string">&apos;wx_list&apos;</span>: [<span class="hljs-string">&apos;wx_idxxxxxx&apos;</span>, <span class="hljs-string">&apos;wx_idxxxxxx&apos;</span>]
+    }, 
+    {
+        <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;&#x6807;&#x7B7E;&#x540D;2&apos;</span>, 
+        <span class="hljs-string">&apos;wx_list&apos;</span>: [<span class="hljs-string">&apos;wx_idxxxxxx&apos;</span>, <span class="hljs-string">&apos;wx_idxxxxxx&apos;</span>]
+    }
+    ...
+]
+</code></pre>
 
                                 
                                 </section>
@@ -884,14 +918,10 @@
 
             
                 
-                <a href="031-收款.html" class="navigation navigation-prev " aria-label="Previous page: 3、收款">
+                <a href="009-获取企业群成员列表.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 4、获取企业群成员列表">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="035-开启关闭消息防撤回.html" class="navigation navigation-next " aria-label="Next page: 5、开启/关闭消息防撤回">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -900,7 +930,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4、退款","level":"1.8.4","depth":2,"next":{"title":"5、开启/关闭消息防撤回","level":"1.8.5","depth":2,"path":"教程/035-开启关闭消息防撤回.md","ref":"教程/035-开启关闭消息防撤回.md","articles":[]},"previous":{"title":"3、收款","level":"1.8.3","depth":2,"path":"教程/031-收款.md","ref":"教程/031-收款.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/032-退款.md","mtime":"2021-07-30T19:58:49.719Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-18T12:50:35.387Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5、拉取标签列表","level":"1.4.5","depth":2,"next":{"title":"3、发送消息类","level":"1.5","depth":1,"ref":"","articles":[{"title":"1、发送文本消息","level":"1.5.1","depth":2,"path":"教程/010-发送文本消息.md","ref":"教程/010-发送文本消息.md","articles":[]},{"title":"2、发送图片消息","level":"1.5.2","depth":2,"path":"教程/011-发送图片消息.md","ref":"教程/011-发送图片消息.md","articles":[]},{"title":"3、发送文件/视频消息","level":"1.5.3","depth":2,"path":"教程/012-发送文件视频消息.md","ref":"教程/012-发送文件视频消息.md","articles":[]},{"title":"4、群聊发送消息并且@指定群成员","level":"1.5.4","depth":2,"path":"教程/013-群聊发送消息并且@指定群成员.md","ref":"教程/013-群聊发送消息并且@指定群成员.md","articles":[]},{"title":"5、发送好友名片","level":"1.5.5","depth":2,"path":"教程/014-发送好友名片.md","ref":"教程/014-发送好友名片.md","articles":[]},{"title":"6、发送卡片链接","level":"1.5.6","depth":2,"path":"教程/015-发送卡片链接.md","ref":"教程/015-发送卡片链接.md","articles":[]},{"title":"7、发送XML消息","level":"1.5.7","depth":2,"path":"教程/036-发送xml消息.md","ref":"教程/036-发送xml消息.md","articles":[]},{"title":"8、发送小程序消息","level":"1.5.8","depth":2,"path":"教程/037-发送小程序消息.md","ref":"教程/037-发送小程序消息.md","articles":[]}]},"previous":{"title":"4、获取企业群成员列表","level":"1.4.4","depth":2,"path":"教程/009-获取企业群成员列表.md","ref":"教程/009-获取企业群成员列表.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/039-拉取标签列表.md","mtime":"2021-10-18T12:19:51.847Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-18T12:50:35.387Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
