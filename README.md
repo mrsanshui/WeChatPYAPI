@@ -220,6 +220,13 @@ class WeChatPYApi(builtins.object)
  |      :param msg_data: 消息数据
  |      :return: 无
  |  
+ |  save_to_addr_book(self, self_wx, to_chat_room, switch)
+ |      保存/取消保存到通讯录
+ |      :param self_wx: 当前微信ID
+ |      :param to_chat_room: 群ID
+ |      :param switch: True:保存 False:取消保存
+ |      :return: 无
+ |  
  |  save_voice_switch(self, self_wx, save_dir_path, switch)
  |      开启/关闭保存语音
  |      :param self_wx: 当前微信ID
