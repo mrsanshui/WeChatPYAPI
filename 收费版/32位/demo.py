@@ -64,12 +64,12 @@ def main():
         switch=True,
     )
 
-    # 拉取列表（好友/群/公众号等）第一次拉取可能会阻塞，可以自行做异步处理
+    # 拉取列表（好友/群/公众号等）第一次拉取可能会阻塞，可以自行做异步处理，want_avatar=False 拉取速度提升30倍
     # 好友列表：pull_type = 1
     # 群列表：pull_type = 2
     # 公众号列表：pull_type = 3
     # 其他：pull_type = 4
-    lists = w.pull_list(self_wx=self_wx, pull_type=1)
+    lists = w.pull_list(self_wx=self_wx, pull_type=1, want_avatar=True)
     print(lists)
 
     # 获取群成员列表
@@ -111,7 +111,7 @@ def main():
     #     to_wx="filehelper",
     #     title="QQ",
     #     desc="437382693",
-    #     target_url="http://baidu.com",
+    #     target_url="http://www.baidu.com",
     #     img_url="http://img-haodanku-com.cdn.fudaiapp.com/oimg_643855036504_1627291311.jpg_310x310.jpg"
     # )
     # time.sleep(1)
