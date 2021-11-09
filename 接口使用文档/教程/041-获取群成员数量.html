@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>5、退出登录 · GitBook</title>
+        <title>10、获取群成员数量 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -62,7 +62,7 @@
 
     
     
-    <link rel="prev" href="004-获取微信登录状态.html" />
+    <link rel="prev" href="040-保存取消保存群到通讯录.html" />
     
 
     </head>
@@ -183,7 +183,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.5" data-path="005-退出登录.html">
+        <li class="chapter " data-level="1.3.5" data-path="005-退出登录.html">
             
                 <a href="005-退出登录.html">
             
@@ -610,7 +610,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.10" data-path="041-获取群成员数量.html">
+        <li class="chapter active" data-level="1.7.10" data-path="041-获取群成员数量.html">
             
                 <a href="041-获取群成员数量.html">
             
@@ -852,7 +852,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >5、退出登录</a>
+        <a href=".." >10、获取群成员数量</a>
     </h1>
 </div>
 
@@ -867,11 +867,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x9000;&#x51FA;&#x767B;&#x5F55;">&#x9000;&#x51FA;&#x767B;&#x5F55;</h1>
+                                <h1 id="&#x83B7;&#x53D6;&#x7FA4;&#x6210;&#x5458;&#x6570;&#x91CF;">&#x83B7;&#x53D6;&#x7FA4;&#x6210;&#x5458;&#x6570;&#x91CF;</h1>
 <ul>
 <li>&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</li>
 </ul>
-<pre><code class="lang-python">w.logout()
+<pre><code class="lang-python">w.get_chat_room_members_num()
 </code></pre>
 <ul>
 <li>&#x53C2;&#x6570;&#xFF1A;</li>
@@ -887,6 +887,27 @@
 <tr>
 <td style="text-align:center">self_wx</td>
 <td style="text-align:center">&#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID</td>
+</tr>
+<tr>
+<td style="text-align:center">to_chat_room</td>
+<td style="text-align:center">&#x7FA4;ID</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">int</td>
+<td style="text-align:center">&#x7FA4;&#x6210;&#x5458;&#x6570;&#x91CF;</td>
 </tr>
 </tbody>
 </table>
@@ -917,7 +938,7 @@
 
             
                 
-                <a href="004-获取微信登录状态.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 4、获取微信登录状态">
+                <a href="040-保存取消保存群到通讯录.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 9、保存/取消保存群到通讯录">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -929,7 +950,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5、退出登录","level":"1.3.5","depth":2,"next":{"title":"2、拉取好友/群/成员","level":"1.4","depth":1,"ref":"","articles":[{"title":"1、拉取列表","level":"1.4.1","depth":2,"path":"教程/006-拉取列表.md","ref":"教程/006-拉取列表.md","articles":[]},{"title":"2、获取群成员列表","level":"1.4.2","depth":2,"path":"教程/007-获取群成员列表.md","ref":"教程/007-获取群成员列表.md","articles":[]},{"title":"3、拉取企业微信列表","level":"1.4.3","depth":2,"path":"教程/008-拉取企业微信列表.md","ref":"教程/008-拉取企业微信列表.md","articles":[]},{"title":"4、获取企业群成员列表","level":"1.4.4","depth":2,"path":"教程/009-获取企业群成员列表.md","ref":"教程/009-获取企业群成员列表.md","articles":[]},{"title":"5、拉取标签列表","level":"1.4.5","depth":2,"path":"教程/039-拉取标签列表.md","ref":"教程/039-拉取标签列表.md","articles":[]}]},"previous":{"title":"4、获取微信登录状态","level":"1.3.4","depth":2,"path":"教程/004-获取微信登录状态.md","ref":"教程/004-获取微信登录状态.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/005-退出登录.md","mtime":"2021-07-30T20:01:34.939Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-09T13:16:00.250Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"10、获取群成员数量","level":"1.7.10","depth":2,"next":{"title":"6、控制类","level":"1.8","depth":1,"ref":"","articles":[{"title":"1、开启/关闭消息免打扰","level":"1.8.1","depth":2,"path":"教程/028-开启关闭消息免打扰.md","ref":"教程/028-开启关闭消息免打扰.md","articles":[]},{"title":"2、置顶/取消置顶聊天","level":"1.8.2","depth":2,"path":"教程/029-置顶取消置顶聊天.md","ref":"教程/029-置顶取消置顶聊天.md","articles":[]},{"title":"3、收款","level":"1.8.3","depth":2,"path":"教程/031-收款.md","ref":"教程/031-收款.md","articles":[]},{"title":"4、退款","level":"1.8.4","depth":2,"path":"教程/032-退款.md","ref":"教程/032-退款.md","articles":[]},{"title":"5、开启/关闭消息防撤回","level":"1.8.5","depth":2,"path":"教程/035-开启关闭消息防撤回.md","ref":"教程/035-开启关闭消息防撤回.md","articles":[]}]},"previous":{"title":"9、保存/取消保存群到通讯录","level":"1.7.9","depth":2,"path":"教程/040-保存取消保存群到通讯录.md","ref":"教程/040-保存取消保存群到通讯录.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/041-获取群成员数量.md","mtime":"2021-11-09T12:57:56.373Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-09T13:16:00.250Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

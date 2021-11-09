@@ -610,6 +610,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.10" data-path="教程/041-获取群成员数量.html">
+            
+                <a href="教程/041-获取群成员数量.html">
+            
+                    
+                    10、获取群成员数量
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -726,7 +739,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.2" data-path="教程/033-保存图片.html">
+        <li class="chapter " data-level="1.9.2" data-path="教程/042-取消关注公众号.html">
+            
+                <a href="教程/042-取消关注公众号.html">
+            
+                    
+                    取消关注公众号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="教程/033-保存图片.html">
             
                 <a href="教程/033-保存图片.html">
             
@@ -739,7 +765,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.3" data-path="教程/038-开启关闭保存语音.html">
+        <li class="chapter " data-level="1.9.4" data-path="教程/038-开启关闭保存语音.html">
             
                 <a href="教程/038-开启关闭保存语音.html">
             
@@ -752,7 +778,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.4" data-path="教程/034-同意好友邀请进群.html">
+        <li class="chapter " data-level="1.9.5" data-path="教程/034-同意好友邀请进群.html">
             
                 <a href="教程/034-同意好友邀请进群.html">
             
@@ -866,11 +892,11 @@
 <li>&#x514B;&#x9686;&#x8BE5;&#x9879;&#x76EE;<span style="color: red">&#xFF08;&#x8BF7;&#x5173;&#x95ED;&#x4F60;&#x7684;&#x6740;&#x6BD2;&#x8F6F;&#x4EF6;&#xFF0C;&#x5426;&#x5219;&#x53EF;&#x80FD;&#x4F1A;&#x8BEF;&#x5220;dll&#x6587;&#x4EF6;&#xFF09;</span></li>
 <li>&#x9009;&#x62E9;&#x5BF9;&#x5E94;python&#x89E3;&#x91CA;&#x5668;&#x73AF;&#x5883;&#xFF08;&#x5982;&#x679C;&#x4F60;&#x662F;32&#x4F4D;&#x7684;python&#xFF0C;&#x8BF7;&#x6253;&#x5F00;32&#x4F4D;&#x6587;&#x4EF6;&#x5939;&#xFF09;</li>
 <li>&#x6267;&#x884C;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x7684;demo.py</li>
-<li>&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x5FAE;&#x4FE1;&#x7248;&#x672C;&#x4E3A;&#xFF1A;3.3.0.115&#xFF0C;&#x4F7F;&#x7528;&#x524D;&#x8BF7;&#x5148;&#x5B89;&#x88C5;&#x6307;&#x5B9A;&#x7248;&#x672C;&#x7684;&#x5FAE;&#x4FE1;</li>
+<li>&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x5FAE;&#x4FE1;&#x7248;&#x672C;&#x4E3A;&#xFF1A;3.4.0.38&#xFF0C;&#x4F7F;&#x7528;&#x524D;&#x8BF7;&#x5148;&#x5B89;&#x88C5;&#x6307;&#x5B9A;&#x7248;&#x672C;&#x7684;&#x5FAE;&#x4FE1;</li>
 </ol>
 <blockquote>
-<p>&#x6307;&#x5B9A;&#x7248;&#x672C;&#x5FAE;&#x4FE1;&#x5B89;&#x88C5;&#x5305;&#xFF1A;<a href="https://pan.baidu.com/s/1mWWV449fTdY5KeSw4cw-Qg" target="_blank">https://pan.baidu.com/s/1mWWV449fTdY5KeSw4cw-Qg</a> </p>
-<p>&#x63D0;&#x53D6;&#x7801;&#xFF1A;mevk </p>
+<p>&#x6307;&#x5B9A;&#x7248;&#x672C;&#x5FAE;&#x4FE1;&#x5B89;&#x88C5;&#x5305;&#xFF1A;<a href="https://pan.baidu.com/s/1zltBp6grmJB4mpJkn-Lqpw" target="_blank">https://pan.baidu.com/s/1zltBp6grmJB4mpJkn-Lqpw</a></p>
+<p>&#x63D0;&#x53D6;&#x7801;&#xFF1A;s4gb</p>
 </blockquote>
 <h2 id="&#x7591;&#x95EE;&#x89E3;&#x7B54;&#x3001;&#x8054;&#x7CFB;&#x65B9;&#x5F0F;">&#x7591;&#x95EE;&#x89E3;&#x7B54;&#x3001;&#x8054;&#x7CFB;&#x65B9;&#x5F0F;</h2>
 <ul>
@@ -979,6 +1005,12 @@
  |      :param self_wx: &#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID
  |      :param to_chat_room: &#x7FA4;ID
  |      :return: list&#x6570;&#x636E;
+ |  
+ |  get_chat_room_members_num(self, self_wx, to_chat_room)
+ |      &#x83B7;&#x53D6;&#x7FA4;&#x6210;&#x5458;&#x6570;&#x91CF;
+ |      :param self_wx: &#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID
+ |      :param to_chat_room: &#x7FA4;ID
+ |      :return: &#x7FA4;&#x6210;&#x5458;&#x6570;&#x91CF;
  |  
  |  get_chat_room_members_of_work(self, self_wx, to_chat_room)
  |      &#x83B7;&#x53D6;&#x4F01;&#x4E1A;&#x7FA4;&#x6210;&#x5458;&#x5217;&#x8868;
@@ -1135,7 +1167,7 @@
  |      :return: &#x65E0;
  |  
  |  start_wx(self, path=None)
- |      &#x542F;&#x52A8;&#x5FAE;&#x4FE1;&#xFF0C;&#x76EE;&#x524D;&#x652F;&#x6301;&#x5FAE;&#x4FE1;&#x7248;&#x672C;&#xFF1A;V-3.3.0.115
+ |      &#x542F;&#x52A8;&#x5FAE;&#x4FE1;&#xFF0C;&#x76EE;&#x524D;&#x652F;&#x6301;&#x5FAE;&#x4FE1;&#x7248;&#x672C;&#xFF1A;V-3.4.0.38
  |      :param path: &#x4FDD;&#x5B58;&#x767B;&#x5F55;&#x4E8C;&#x7EF4;&#x7801;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
  |      :return: &#x65E0;
  |  
@@ -1144,6 +1176,12 @@
  |      :param self_wx: &#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID
  |      :param to_id: &#x597D;&#x53CB;ID/&#x7FA4;ID
  |      :param switch: True:&#x7F6E;&#x9876; False:&#x53D6;&#x6D88;&#x7F6E;&#x9876;
+ |      :return: &#x65E0;
+ |  
+ |  un_follow_mp(self, self_wx, mp_id)
+ |      &#x53D6;&#x6D88;&#x5173;&#x6CE8;&#x516C;&#x4F17;&#x53F7;
+ |      :param self_wx: &#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID
+ |      :param mp_id: &#x516C;&#x4F17;&#x53F7;ID
  |      :return: &#x65E0;
  |  
  |  ----------------------------------------------------------------------
@@ -1192,7 +1230,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"WeChatPYAPI介绍","level":"1.1","depth":1,"next":{"title":"免费版跟付费版的区别","level":"1.2","depth":1,"path":"教程/免费版跟付费版区别.md","ref":"教程/免费版跟付费版区别.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2021-10-25T15:53:18.930Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-25T15:57:37.702Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"WeChatPYAPI介绍","level":"1.1","depth":1,"next":{"title":"免费版跟付费版的区别","level":"1.2","depth":1,"path":"教程/免费版跟付费版区别.md","ref":"教程/免费版跟付费版区别.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2021-11-09T13:15:08.459Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-09T13:16:00.250Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

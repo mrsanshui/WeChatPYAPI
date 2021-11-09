@@ -30,11 +30,11 @@
 1. 克隆该项目<span style="color: red">（请关闭你的杀毒软件，否则可能会误删dll文件）</span>
 2. 选择对应python解释器环境（如果你是32位的python，请打开32位文件夹）
 4. 执行文件夹中的demo.py
-4. 目前支持的微信版本为：3.3.0.115，使用前请先安装指定版本的微信
+4. 目前支持的微信版本为：3.4.0.38，使用前请先安装指定版本的微信
 
-> 指定版本微信安装包：https://pan.baidu.com/s/1mWWV449fTdY5KeSw4cw-Qg 
+> 指定版本微信安装包：https://pan.baidu.com/s/1zltBp6grmJB4mpJkn-Lqpw
 >
-> 提取码：mevk 
+> 提取码：s4gb
 
 
 
@@ -149,6 +149,12 @@ class WeChatPYApi(builtins.object)
  |      :param self_wx: 当前微信ID
  |      :param to_chat_room: 群ID
  |      :return: list数据
+ |  
+ |  get_chat_room_members_num(self, self_wx, to_chat_room)
+ |      获取群成员数量
+ |      :param self_wx: 当前微信ID
+ |      :param to_chat_room: 群ID
+ |      :return: 群成员数量
  |  
  |  get_chat_room_members_of_work(self, self_wx, to_chat_room)
  |      获取企业群成员列表
@@ -305,7 +311,7 @@ class WeChatPYApi(builtins.object)
  |      :return: 无
  |  
  |  start_wx(self, path=None)
- |      启动微信，目前支持微信版本：V-3.3.0.115
+ |      启动微信，目前支持微信版本：V-3.4.0.38
  |      :param path: 保存登录二维码的绝对路径
  |      :return: 无
  |  
@@ -314,6 +320,12 @@ class WeChatPYApi(builtins.object)
  |      :param self_wx: 当前微信ID
  |      :param to_id: 好友ID/群ID
  |      :param switch: True:置顶 False:取消置顶
+ |      :return: 无
+ |  
+ |  un_follow_mp(self, self_wx, mp_id)
+ |      取消关注公众号
+ |      :param self_wx: 当前微信ID
+ |      :param mp_id: 公众号ID
  |      :return: 无
  |  
  |  ----------------------------------------------------------------------
