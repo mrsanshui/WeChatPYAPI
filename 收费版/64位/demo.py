@@ -21,9 +21,15 @@ def on_message(msg):
     msg_queue.put(msg)
 
 
-def on_exit(wx_id):
+def on_exit(event):
     """退出事件回调"""
-    print("已退出：{}".format(wx_id))
+
+    action = event["action"]
+    wx_id = event["wx_id"]
+    if action == 1:
+        print("微信({})：在PC端退出，请重新启动微信".format(wx_id))
+    elif action == 2:
+        print("微信({})：在移动端退出，请重新扫码登录".format(wx_id))
 
 
 def main():
