@@ -32,7 +32,7 @@
 1. 克隆该项目<span style="color: red">（请关闭你的杀毒软件，否则可能会误删dll文件）</span>
 2. 选择对应python解释器环境（如果你是32位的python，请打开32位文件夹）
 4. 执行文件夹中的demo.py
-4. 目前支持的微信版本为：3.4.0.38，使用前请先安装指定版本的微信
+4. 使用前请先安装指定版本的微信
 
 > 指定版本微信安装包：https://pan.baidu.com/s/1dxBuvDgAeI0mFjGsY6NVNA
 >
@@ -186,9 +186,10 @@ class WeChatPYApi(builtins.object)
  |      :param switch: True:开启 False:关闭
  |      :return: 无
  |  
- |  logout(self, self_wx)
+ |  logout(self, self_wx, exit_proc=False)
  |      退出登录
  |      :param self_wx: 当前微信ID
+ |      :param exit_proc: True:退出登录并且退出微信进程 False:仅退出登录
  |      :return: 无
  |  
  |  mask_msg_switch(self, self_wx, to_id, switch)
@@ -274,6 +275,14 @@ class WeChatPYApi(builtins.object)
  |      :param path: 图片的绝对路径
  |      :return: 无
  |  
+ |  send_mp_card(self, self_wx, to_wx, mp_id, mp_name)
+ |      发送公众号名片
+ |      :param self_wx: 当前微信ID
+ |      :param to_wx: 接收者微信ID
+ |      :param mp_id: 公众号ID
+ |      :param mp_name: 公众号名称
+ |      :return: 无
+ |  
  |  send_notice(self, self_wx, to_chat_room, msg)
  |      发送群公告
  |      :param self_wx: 当前微信ID
@@ -315,7 +324,7 @@ class WeChatPYApi(builtins.object)
  |  start_wx(self, path=None)
  |      启动微信，目前支持微信版本：V-3.4.0.38
  |      :param path: 保存登录二维码的绝对路径
- |      :return: 无
+ |      :return: (errno:状态码，errmsg:说明)
  |  
  |  top_chat_switch(self, self_wx, to_id, switch)
  |      置顶/取消置顶聊天

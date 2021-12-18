@@ -21,16 +21,23 @@ def on_message(msg):
     msg_queue.put(msg)
 
 
-def on_exit(wx_id):
+def on_exit(event):
     """退出事件回调"""
-    print("已退出：{}".format(wx_id))
+
+    action = event["action"]
+    wx_id = event["wx_id"]
+    if action == 1:
+        print("微信({})：在PC端退出，请重新启动微信".format(wx_id))
+    elif action == 2:
+        print("微信({})：在移动端退出，请重新扫码登录".format(wx_id))
 
 
 def main():
-    # 初次使用需要pip安装三个库：
+    # 初次使用需要pip安装四个库：
     # pip install requests
     # pip install pycryptodomex
     # pip install psutil
+    # pip install pywin32
     #
     # 查看帮助
     help(WeChatPYApi)
@@ -41,11 +48,14 @@ def main():
     # 调试模式：
     # debug_pid=日志中输出的进程pid
     # 注意：你的微信必须使用start_wx方法登录成功后，才能使用调试模式
-    # w = WeChatPYApi(msg_callback=on_message, exit_callback=on_exit, logger=logging, debug_pid=14436)
+    # w = WeChatPYApi(msg_callback=on_message, exit_callback=on_exit, logger=logging, debug_pid=6936)
 
     # 启动微信【调试模式可不调用该方法】
-    w.start_wx()
-    # w.start_wx(path=os.path.join(BASE_DIR, "login_qrcode.png"))  # 保存登录二维码
+    errno, errmsg = w.start_wx()
+    # errno, errmsg = w.start_wx(path=os.path.join(BASE_DIR, "login_qrcode.png"))  # 保存登录二维码
+    if errno != 0:
+        print(errmsg)
+        return
 
     # 这里需要阻塞，等待获取个人信息
     while not w.get_self_info():

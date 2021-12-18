@@ -48,11 +48,14 @@ def main():
     # 调试模式：
     # debug_pid=日志中输出的进程pid
     # 注意：你的微信必须使用start_wx方法登录成功后，才能使用调试模式
-    # w = WeChatPYApi(msg_callback=on_message, exit_callback=on_exit, logger=logging, debug_pid=14436)
+    # w = WeChatPYApi(msg_callback=on_message, exit_callback=on_exit, logger=logging, debug_pid=6936)
 
     # 启动微信【调试模式可不调用该方法】
-    w.start_wx()
-    # w.start_wx(path=os.path.join(BASE_DIR, "login_qrcode.png"))  # 保存登录二维码
+    errno, errmsg = w.start_wx()
+    # errno, errmsg = w.start_wx(path=os.path.join(BASE_DIR, "login_qrcode.png"))  # 保存登录二维码
+    if errno != 0:
+        print(errmsg)
+        return
 
     # 这里需要阻塞，等待获取个人信息
     while not w.get_self_info():
