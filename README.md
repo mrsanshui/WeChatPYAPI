@@ -146,10 +146,11 @@ class WeChatPYApi(builtins.object)
  |      :param mp_id: 公众号ID
  |      :return: 无
  |  
- |  get_chat_room_members(self, self_wx, to_chat_room)
+ |  get_chat_room_members(self, self_wx, to_chat_room, want_avatar=True)
  |      获取群成员列表
  |      :param self_wx: 当前微信ID
  |      :param to_chat_room: 群ID
+ |      :param want_avatar: True:需要头像地址(速度慢) False:不需要头像地址(速度快)
  |      :return: list数据
  |  
  |  get_chat_room_members_num(self, self_wx, to_chat_room)
@@ -214,6 +215,12 @@ class WeChatPYApi(builtins.object)
  |  pull_list_of_work(self, self_wx)
  |      拉取企业微信列表（好友/群）
  |      :param self_wx: 当前微信ID
+ |      :return: dict数据
+ |  
+ |  query_friend_info(self, self_wx, to_wx)
+ |      查询好友信息
+ |      :param self_wx: 当前微信ID
+ |      :param to_wx: 要查询的微信ID
  |      :return: dict数据
  |  
  |  refund(self, self_wx, msg_data)

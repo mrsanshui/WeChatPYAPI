@@ -83,7 +83,7 @@ def main():
     print(lists)
 
     # 获取群成员列表
-    # lists = w.get_chat_room_members(self_wx=self_wx, to_chat_room="123@chatroom")
+    # lists = w.get_chat_room_members(self_wx=self_wx, to_chat_room="123@chatroom", want_avatar=True)
     # print(lists)
 
     # 拉取企业微信列表（好友/群）
