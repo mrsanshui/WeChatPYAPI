@@ -55,7 +55,8 @@ def main():
     # errno, errmsg = w.start_wx(path=os.path.join(BASE_DIR, "login_qrcode.png"))  # 保存登录二维码
     if errno != 0:
         print(errmsg)
-        return
+        if errmsg != "当前为调试模式，不需要调用“start_wx”":
+            return
 
     # 这里需要阻塞，等待获取个人信息
     while not w.get_self_info():
