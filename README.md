@@ -17,7 +17,7 @@
   - 功能更加强大、稳定！
   - 支持长时间运行
   - 售后有保障！持续更新迭代
-  - 微信版本：3.4.0.38
+  - 微信版本：3.5.0.46
 
 > <span style="color: red">功能区别请打开《接口使用文档》进行查看</span>
 
@@ -275,6 +275,13 @@ class WeChatPYApi(builtins.object)
  |      :param friend_name: 好友昵称
  |      :return: 无
  |  
+ |  send_gif(self, self_wx, to_wx, path)
+ |      发送GIF表情
+ |      :param self_wx: 当前微信ID
+ |      :param to_wx: 接收者微信ID
+ |      :param path: gif图片的绝对路径
+ |      :return: 无
+ |  
  |  send_img(self, self_wx, to_wx, path)
  |      发送图片消息
  |      :param self_wx: 当前微信ID
@@ -312,12 +319,12 @@ class WeChatPYApi(builtins.object)
  |      :param msg: 消息内容
  |      :return: 无
  |  
- |  send_text_and_at_member(self, self_wx, to_chat_room, to_wx, name, msg)
+ |  send_text_and_at_member(self, self_wx, to_chat_room, to_wx_list, name_list, msg)
  |      群聊发送文本信息并且@指定群成员
  |      :param self_wx: 当前微信ID
  |      :param to_chat_room: 群ID
- |      :param to_wx: @人的微信ID
- |      :param name: @人的微信昵称
+ |      :param to_wx_list: @人的微信ID列表
+ |      :param name_list: @人的微信昵称列表
  |      :param msg: 文本消息
  |      :return: 无
  |  
@@ -329,7 +336,7 @@ class WeChatPYApi(builtins.object)
  |      :return: 无
  |  
  |  start_wx(self, path=None)
- |      启动微信，目前支持微信版本：V-3.4.0.38
+ |      启动微信，目前支持微信版本：V-3.5.0.46
  |      :param path: 保存登录二维码的绝对路径
  |      :return: (errno:状态码，errmsg:说明)
  |  
