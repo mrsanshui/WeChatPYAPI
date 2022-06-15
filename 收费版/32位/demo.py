@@ -178,9 +178,6 @@ def main():
                         # 收款
                         w.collection(self_wx=self_wx, msg_data=msg)
 
-                        # 退款
-                        # w.refund(self_wx=self_wx, msg_data=msg)
-
                 # 同意好友邀请进群
                 elif msg["msg_type"] == 491:
                     w.agree_friend_invite_join_chat_room(self_wx=self_wx, msg_data=msg)

@@ -17,7 +17,7 @@
   - 功能更加强大、稳定！
   - 支持长时间运行
   - 售后有保障！持续更新迭代
-  - 微信版本：3.5.0.46
+  - 微信版本：3.7.0.29
 
 > <span style="color: red">功能区别请打开《接口使用文档》进行查看</span>
 
@@ -102,13 +102,6 @@ class WeChatPYApi(builtins.object)
  |      :param name: 昵称
  |      :return: 无
  |  
- |  chat_room_member_remark_switch(self, self_wx, to_chat_room, switch)
- |      显示/隐藏群成员昵称
- |      :param self_wx: 当前微信ID
- |      :param to_chat_room: 群ID
- |      :param switch: True:显示 False:隐藏
- |      :return: 无
- |  
  |  collection(self, self_wx, msg_data)
  |      收款
  |      :param self_wx: 当前微信ID
@@ -121,11 +114,11 @@ class WeChatPYApi(builtins.object)
  |      :param wx_id_list: 邀请进群的微信ID列表
  |      :return: 无
  |  
- |  delete_chat_room_member(self, self_wx, to_chat_room, to_wx)
+ |  delete_chat_room_member(self, self_wx, to_chat_room, to_wx_list)
  |      踢出群成员
  |      :param self_wx: 当前微信ID
  |      :param to_chat_room: 群ID
- |      :param to_wx: 群成员微信ID
+ |      :param to_wx_list: 群成员微信ID列表
  |      :return: 无
  |  
  |  delete_friend(self, self_wx, to_wx)
@@ -174,17 +167,11 @@ class WeChatPYApi(builtins.object)
  |      获取个人信息
  |      :return: 未登录时返回None，登录成功返回字典数据
  |  
- |  invite_friend_enter_chat_room(self, self_wx, to_chat_room, to_wx)
+ |  invite_friend_enter_chat_room(self, self_wx, to_chat_room, to_wx_list)
  |      邀请好友进群
  |      :param self_wx: 当前微信ID
  |      :param to_chat_room: 群ID
- |      :param to_wx: 好友微信ID
- |      :return: 无
- |  
- |  keep_msg_switch(self, self_wx, switch)
- |      开启/关闭消息防撤回
- |      :param self_wx: 当前微信ID
- |      :param switch: True:开启 False:关闭
+ |      :param to_wx_list: 好友微信ID列表
  |      :return: 无
  |  
  |  logout(self, self_wx, exit_proc=False)
@@ -199,6 +186,12 @@ class WeChatPYApi(builtins.object)
  |      :param to_id: 好友ID/群ID
  |      :param switch: True:开启免打扰 False:关闭免打扰
  |      :return: 无
+ |  
+ |  network_query_wx_info(self, self_wx, key)
+ |      网络查询微信信息
+ |      :param self_wx: 当前微信ID
+ |      :param key: 要查询的手机号/QQ号/微信号
+ |      :return: dict数据
  |  
  |  pull_label_list(self, self_wx)
  |      拉取标签列表
@@ -223,24 +216,11 @@ class WeChatPYApi(builtins.object)
  |      :param to_wx: 要查询的微信ID
  |      :return: dict数据
  |  
- |  refund(self, self_wx, msg_data)
- |      退款
- |      :param self_wx: 当前微信ID
- |      :param msg_data: 消息数据
- |      :return: 无
- |  
  |  save_img(self, self_wx, save_path, msg_data)
  |      保存图片
  |      :param self_wx: 当前微信ID
  |      :param save_path: 保存图片的绝对路径
  |      :param msg_data: 消息数据
- |      :return: 无
- |  
- |  save_to_addr_book(self, self_wx, to_chat_room, switch)
- |      保存/取消保存到通讯录
- |      :param self_wx: 当前微信ID
- |      :param to_chat_room: 群ID
- |      :param switch: True:保存 False:取消保存
  |      :return: 无
  |  
  |  save_voice_switch(self, self_wx, save_dir_path, switch)
@@ -319,12 +299,18 @@ class WeChatPYApi(builtins.object)
  |      :param msg: 消息内容
  |      :return: 无
  |  
- |  send_text_and_at_member(self, self_wx, to_chat_room, to_wx_list, name_list, msg)
+ |  send_text_and_at_all(self, self_wx, to_chat_room, msg)
+ |      群聊发送文本信息并且@所有人
+ |      :param self_wx: 当前微信ID
+ |      :param to_chat_room: 群ID
+ |      :param msg: 文本消息
+ |      :return: 无
+ |  
+ |  send_text_and_at_member(self, self_wx, to_chat_room, to_wx_list, msg)
  |      群聊发送文本信息并且@指定群成员
  |      :param self_wx: 当前微信ID
  |      :param to_chat_room: 群ID
  |      :param to_wx_list: @人的微信ID列表
- |      :param name_list: @人的微信昵称列表
  |      :param msg: 文本消息
  |      :return: 无
  |  
@@ -336,7 +322,7 @@ class WeChatPYApi(builtins.object)
  |      :return: 无
  |  
  |  start_wx(self, path=None)
- |      启动微信，目前支持微信版本：V-3.5.0.46
+ |      启动微信，目前支持微信版本：V-3.7.0.29
  |      :param path: 保存登录二维码的绝对路径
  |      :return: (errno:状态码，errmsg:说明)
  |  
@@ -351,6 +337,13 @@ class WeChatPYApi(builtins.object)
  |      取消关注公众号
  |      :param self_wx: 当前微信ID
  |      :param mp_id: 公众号ID
+ |      :return: 无
+ |  
+ |  v3_add_friend(self, self_wx, v3, msg)
+ |      通过v3数据添加好友
+ |      :param self_wx: 当前微信ID
+ |      :param v3: v3数据
+ |      :param msg: 添加时的打招呼消息
  |      :return: 无
  |  
  |  ----------------------------------------------------------------------
