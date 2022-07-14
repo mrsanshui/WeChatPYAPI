@@ -108,10 +108,24 @@ class WeChatPYApi(builtins.object)
  |      :param msg_data: 消息数据
  |      :return: 无
  |  
+ |  comment_moments(self, self_wx, moments_id, content)
+ |      朋友圈评论
+ |      :param self_wx: 当前微信ID
+ |      :param moments_id: 朋友圈ID
+ |      :param content: 评论内容
+ |      :return: 无
+ |  
  |  create_chat_room(self, self_wx, wx_id_list)
  |      创建群聊
  |      :param self_wx: 当前微信ID
  |      :param wx_id_list: 邀请进群的微信ID列表
+ |      :return: 无
+ |  
+ |  del_comment_moments(self, self_wx, moments_id, comment_id)
+ |      朋友圈删除评论
+ |      :param self_wx: 当前微信ID
+ |      :param moments_id: 朋友圈ID
+ |      :param comment_id: 评论ID
  |      :return: 无
  |  
  |  delete_chat_room_member(self, self_wx, to_chat_room, to_wx_list)
@@ -163,15 +177,34 @@ class WeChatPYApi(builtins.object)
  |      :param self_wx: 当前微信ID
  |      :return: True:已登录 False:未登录
  |  
+ |  get_moments(self, self_wx, last_id=None)
+ |      获取朋友圈数据
+ |      :param self_wx: 当前微信ID
+ |      :param last_id: 最后一条朋友圈的ID【翻页必传】
+ |      :return: List数据
+ |  
  |  get_self_info(self)
  |      获取个人信息
  |      :return: 未登录时返回None，登录成功返回字典数据
+ |  
+ |  get_small_app_code(self, self_wx, app_id)
+ |      获取小程序code
+ |      :param self_wx: 当前微信ID
+ |      :param app_id: 小程序的AppId
+ |      :return: 小程序code
  |  
  |  invite_friend_enter_chat_room(self, self_wx, to_chat_room, to_wx_list)
  |      邀请好友进群
  |      :param self_wx: 当前微信ID
  |      :param to_chat_room: 群ID
  |      :param to_wx_list: 好友微信ID列表
+ |      :return: 无
+ |  
+ |  like_moments(self, self_wx, moments_id, state)
+ |      朋友圈点赞/取消点赞
+ |      :param self_wx: 当前微信ID
+ |      :param moments_id: 朋友圈ID
+ |      :param state: True:点赞 False:取消点赞
  |      :return: 无
  |  
  |  logout(self, self_wx, exit_proc=False)

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>9、发送公众号卡片 · GitBook</title>
+        <title>1、获取朋友圈数据 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="045-发送GIF表情消息.html" />
+    <link rel="next" href="051-朋友圈点赞取消点赞.html" />
     
-    
-    <link rel="prev" href="037-发送小程序消息.html" />
     
 
     </head>
@@ -405,7 +403,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.9" data-path="043-发送公众号卡片.html">
+        <li class="chapter " data-level="1.5.9" data-path="043-发送公众号卡片.html">
             
                 <a href="043-发送公众号卡片.html">
             
@@ -741,7 +739,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="050-获取朋友圈数据.html">
+        <li class="chapter active" data-level="1.9.1" data-path="050-获取朋友圈数据.html">
             
                 <a href="050-获取朋友圈数据.html">
             
@@ -964,7 +962,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >9、发送公众号卡片</a>
+        <a href=".." >1、获取朋友圈数据</a>
     </h1>
 </div>
 
@@ -979,13 +977,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x53D1;&#x9001;&#x516C;&#x4F17;&#x53F7;&#x5361;&#x7247;">&#x53D1;&#x9001;&#x516C;&#x4F17;&#x53F7;&#x5361;&#x7247;</h1>
+                                <h1 id="&#x83B7;&#x53D6;&#x670B;&#x53CB;&#x5708;&#x6570;&#x636E;">&#x83B7;&#x53D6;&#x670B;&#x53CB;&#x5708;&#x6570;&#x636E;</h1>
 <p><strong>&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="lang-python">w.send_mp_card(
-    self_wx=<span class="hljs-string">&quot;wxid_xxx&quot;</span>,
-    to_wx=<span class="hljs-string">&quot;wxid_xxx&quot;</span>,
-    mp_id=<span class="hljs-string">&quot;gh_xxx&quot;</span>,
-    mp_name=<span class="hljs-string">&quot;&#x516C;&#x4F17;&#x53F7;&#x540D;&#x79F0;&quot;</span>
+<pre><code class="lang-python">w.get_moments(
+    self_wx=<span class="hljs-string">&quot;wxid_xxx&quot;</span>
 )
 </code></pre>
 <p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
@@ -1002,19 +997,253 @@
 <td style="text-align:center">&#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID</td>
 </tr>
 <tr>
-<td style="text-align:center">to_wx</td>
-<td style="text-align:center">&#x63A5;&#x6536;&#x8005;&#x5FAE;&#x4FE1;ID</td>
-</tr>
-<tr>
-<td style="text-align:center">mp_id</td>
-<td style="text-align:center">&#x516C;&#x4F17;&#x53F7;ID</td>
-</tr>
-<tr>
-<td style="text-align:center">mp_name</td>
-<td style="text-align:center">&#x516C;&#x4F17;&#x53F7;&#x540D;&#x79F0;(&#x540D;&#x79F0;&#x5FC5;&#x987B;&#x6B63;&#x786E;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x53D1;&#x9001;&#x5931;&#x8D25;)</td>
+<td style="text-align:center">last_id</td>
+<td style="text-align:center">&#x975E;&#x5FC5;&#x4F20;&#xFF0C;&#x5982;&#x9700;&#x7FFB;&#x9875;&#xFF0C;&#x5219;&#x4F20;&#x6700;&#x540E;&#x4E00;&#x6761;&#x670B;&#x53CB;&#x5708;&#x7684;ID</td>
 </tr>
 </tbody>
 </table>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong></p>
+<ul>
+<li>List&#x6570;&#x636E;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">type</td>
+<td style="text-align:center">&#x670B;&#x53CB;&#x5708;&#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">&#x670B;&#x53CB;&#x5708;ID</td>
+</tr>
+<tr>
+<td style="text-align:center">wx_id</td>
+<td style="text-align:center">&#x5FAE;&#x4FE1;ID</td>
+</tr>
+<tr>
+<td style="text-align:center">nick_name</td>
+<td style="text-align:center">&#x6635;&#x79F0;</td>
+</tr>
+<tr>
+<td style="text-align:center">create_time</td>
+<td style="text-align:center">&#x53D1;&#x9001;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:center">content</td>
+<td style="text-align:center">&#x670B;&#x53CB;&#x5708;&#x5185;&#x5BB9;<span style="color: red">&#xFF08;&#x8BE6;&#x60C5;&#x89C1;&#x4E0B;&#x65B9;&#xFF09;</span></td>
+</tr>
+<tr>
+<td style="text-align:center">location</td>
+<td style="text-align:center">&#x5B9A;&#x4F4D;&#x4FE1;&#x606F;<span style="color: red">&#xFF08;&#x8BE6;&#x60C5;&#x89C1;&#x4E0B;&#x65B9;&#xFF09;</span></td>
+</tr>
+<tr>
+<td style="text-align:center">like_count</td>
+<td style="text-align:center">&#x70B9;&#x8D5E;&#x6570;</td>
+</tr>
+<tr>
+<td style="text-align:center">like_user_count</td>
+<td style="text-align:center">&#x70B9;&#x8D5E;&#x7528;&#x6237;&#x6570;</td>
+</tr>
+<tr>
+<td style="text-align:center">like_user_list</td>
+<td style="text-align:center">&#x70B9;&#x8D5E;&#x7528;&#x6237;&#x5217;&#x8868;<span style="color: red">&#xFF08;&#x8BE6;&#x60C5;&#x89C1;&#x4E0B;&#x65B9;&#xFF09;</span></td>
+</tr>
+<tr>
+<td style="text-align:center">comment_count</td>
+<td style="text-align:center">&#x8BC4;&#x8BBA;&#x6570;</td>
+</tr>
+<tr>
+<td style="text-align:center">comment_user_count</td>
+<td style="text-align:center">&#x8BC4;&#x8BBA;&#x7528;&#x6237;&#x6570;</td>
+</tr>
+<tr>
+<td style="text-align:center">comment_user_list</td>
+<td style="text-align:center">&#x8BC4;&#x8BBA;&#x7528;&#x6237;&#x5217;&#x8868;<span style="color: red">&#xFF08;&#x8BE6;&#x60C5;&#x89C1;&#x4E0B;&#x65B9;&#xFF09;</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>content&#x53C2;&#x6570;&#x8BE6;&#x60C5;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">text</td>
+<td style="text-align:center">&#x6587;&#x672C;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td style="text-align:center">title</td>
+<td style="text-align:center">&#x6807;&#x9898;&#xFF08;&#x5982;&#x53D1;&#x9001;&#x7684;&#x662F;&#x5206;&#x4EAB;&#x94FE;&#x63A5;&#x65F6;&#xFF0C;&#x6B64;&#x5904;&#x5219;&#x662F;&#x7F51;&#x9875;&#x6807;&#x9898;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:center">desc</td>
+<td style="text-align:center">&#x63CF;&#x8FF0;&#x4FE1;&#x606F;&#xFF08;&#x5982;&#x53D1;&#x9001;&#x7684;&#x662F;&#x5206;&#x4EAB;&#x94FE;&#x63A5;&#x65F6;&#xFF0C;&#x6B64;&#x5904;&#x5219;&#x662F;&#x7F51;&#x9875;&#x63CF;&#x8FF0;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:center">content_url</td>
+<td style="text-align:center">&#x5185;&#x5BB9;&#x5730;&#x5740;&#xFF08;&#x5982;&#x53D1;&#x9001;&#x7684;&#x662F;&#x5206;&#x4EAB;&#x94FE;&#x63A5;&#x65F6;&#xFF0C;&#x6B64;&#x5904;&#x5219;&#x662F;&#x94FE;&#x63A5;&#x5730;&#x5740;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:center">thumb_list</td>
+<td style="text-align:center">&#x7565;&#x7F29;&#x56FE;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td style="text-align:center">media_list</td>
+<td style="text-align:center">&#x5A92;&#x4F53;&#x5217;&#x8868;&#xFF08;&#x5982;&#x56FE;&#x7247;&#x3001;&#x89C6;&#x9891;&#x7B49;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>location&#x53C2;&#x6570;&#x8BE6;&#x60C5;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">country</td>
+<td style="text-align:center">&#x56FD;&#x5BB6;</td>
+</tr>
+<tr>
+<td style="text-align:center">city</td>
+<td style="text-align:center">&#x57CE;&#x5E02;</td>
+</tr>
+<tr>
+<td style="text-align:center">address</td>
+<td style="text-align:center">&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">&#x5B9A;&#x4F4D;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td style="text-align:center">address_name</td>
+<td style="text-align:center">&#x5730;&#x5740;&#x540D;&#x79F0;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>like_user_list&#x4E2D;&#x8282;&#x70B9;&#x53C2;&#x6570;&#x8BE6;&#x60C5;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">wx_id</td>
+<td style="text-align:center">&#x70B9;&#x8D5E;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID</td>
+</tr>
+<tr>
+<td style="text-align:center">nick_name</td>
+<td style="text-align:center">&#x70B9;&#x8D5E;&#x8005;&#x7684;&#x6635;&#x79F0;</td>
+</tr>
+<tr>
+<td style="text-align:center">create_time</td>
+<td style="text-align:center">&#x70B9;&#x8D5E;&#x65F6;&#x95F4;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>comment_user_list&#x4E2D;&#x8282;&#x70B9;&#x53C2;&#x6570;&#x8BE6;&#x60C5;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">comment_id</td>
+<td style="text-align:center">&#x8BC4;&#x8BBA;ID</td>
+</tr>
+<tr>
+<td style="text-align:center">wx_id</td>
+<td style="text-align:center">&#x8BC4;&#x8BBA;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID</td>
+</tr>
+<tr>
+<td style="text-align:center">nick_name</td>
+<td style="text-align:center">&#x8BC4;&#x8BBA;&#x8005;&#x7684;&#x6635;&#x79F0;</td>
+</tr>
+<tr>
+<td style="text-align:center">content</td>
+<td style="text-align:center">&#x8BC4;&#x8BBA;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td style="text-align:center">create_time</td>
+<td style="text-align:center">&#x8BC4;&#x8BBA;&#x65F6;&#x95F4;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8FD4;&#x56DE;&#x793A;&#x4F8B;</strong>&#xFF1A;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;type&quot;</span>:<span class="hljs-string">&quot;&#x56FE;&#x6587;&quot;</span>,
+    <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-string">&quot;13902999493&quot;</span>,
+    <span class="hljs-string">&quot;wx_id&quot;</span>:<span class="hljs-string">&quot;wxid_xxx&quot;</span>,
+    <span class="hljs-string">&quot;nick_name&quot;</span>:<span class="hljs-string">&quot;&#x6211;&#x662F;&#x6635;&#x79F0;&quot;</span>,
+    <span class="hljs-string">&quot;create_time&quot;</span>:<span class="hljs-string">&quot;2022-07-15 02:21:47&quot;</span>,
+    <span class="hljs-string">&quot;content&quot;</span>:{
+        <span class="hljs-string">&quot;text&quot;</span>:<span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&#x7684;&quot;</span>,
+        <span class="hljs-string">&quot;title&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;desc&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;content_url&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;thumb_list&quot;</span>:[
+            <span class="hljs-string">&quot;http://szmmsns.qpic.cn/mmsns/tJ9qSzxxq98TpIX3AbIGxxx1&quot;</span>
+        ],
+        <span class="hljs-string">&quot;media_list&quot;</span>:[
+            <span class="hljs-string">&quot;http://szmmsns.qpic.cn/mmsns/tJ9qSzxxq98TpIX3AbIGxxx2&quot;</span>
+        ]
+    },
+    <span class="hljs-string">&quot;location&quot;</span>:{
+        <span class="hljs-string">&quot;country&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;city&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;address&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;address_name&quot;</span>:<span class="hljs-string">&quot;&quot;</span>
+    },
+    <span class="hljs-string">&quot;like_count&quot;</span>:<span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;like_user_count&quot;</span>:<span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;like_user_list&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;wx_id&quot;</span>:<span class="hljs-string">&quot;wxid_xxx&quot;</span>,
+            <span class="hljs-string">&quot;nick_name&quot;</span>:<span class="hljs-string">&quot;&#x5C0F;&#x660E;&quot;</span>,
+            <span class="hljs-string">&quot;create_time&quot;</span>:<span class="hljs-string">&quot;2022-07-15 02:21:49&quot;</span>
+        }
+    ],
+    <span class="hljs-string">&quot;comment_count&quot;</span>:<span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;comment_user_count&quot;</span>:<span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;comment_user_list&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;comment_id&quot;</span>:<span class="hljs-number">3</span>,
+            <span class="hljs-string">&quot;wx_id&quot;</span>:<span class="hljs-string">&quot;wxid_xxx&quot;</span>,
+            <span class="hljs-string">&quot;nick_name&quot;</span>:<span class="hljs-string">&quot;&#x5C0F;&#x660E;&quot;</span>,
+            <span class="hljs-string">&quot;content&quot;</span>:<span class="hljs-string">&quot;&#x563B;&#x563B;&quot;</span>,
+            <span class="hljs-string">&quot;create_time&quot;</span>:<span class="hljs-string">&quot;2022-07-15 02:21:53&quot;</span>
+        }
+    ]
+}
+</code></pre>
 
                                 
                                 </section>
@@ -1042,12 +1271,8 @@
 
             
                 
-                <a href="037-发送小程序消息.html" class="navigation navigation-prev " aria-label="Previous page: 8、发送小程序消息">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
-                
-                <a href="045-发送GIF表情消息.html" class="navigation navigation-next " aria-label="Next page: 10、发送GIF表情消息">
+                <a href="051-朋友圈点赞取消点赞.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 2、朋友圈点赞/取消点赞">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1058,7 +1283,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"9、发送公众号卡片","level":"1.5.9","depth":2,"next":{"title":"10、发送GIF表情消息","level":"1.5.10","depth":2,"path":"教程/045-发送GIF表情消息.md","ref":"教程/045-发送GIF表情消息.md","articles":[]},"previous":{"title":"8、发送小程序消息","level":"1.5.8","depth":2,"path":"教程/037-发送小程序消息.md","ref":"教程/037-发送小程序消息.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/043-发送公众号卡片.md","mtime":"2022-03-06T17:18:20.583Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-14T18:40:05.392Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1、获取朋友圈数据","level":"1.9.1","depth":2,"next":{"title":"2、朋友圈点赞/取消点赞","level":"1.9.2","depth":2,"path":"教程/051-朋友圈点赞取消点赞.md","ref":"教程/051-朋友圈点赞取消点赞.md","articles":[]},"previous":{"title":"7、朋友圈","level":"1.9","depth":1,"ref":"","articles":[{"title":"1、获取朋友圈数据","level":"1.9.1","depth":2,"path":"教程/050-获取朋友圈数据.md","ref":"教程/050-获取朋友圈数据.md","articles":[]},{"title":"2、朋友圈点赞/取消点赞","level":"1.9.2","depth":2,"path":"教程/051-朋友圈点赞取消点赞.md","ref":"教程/051-朋友圈点赞取消点赞.md","articles":[]},{"title":"3、朋友圈评论","level":"1.9.3","depth":2,"path":"教程/052-朋友圈评论.md","ref":"教程/052-朋友圈评论.md","articles":[]},{"title":"4、朋友圈删除评论","level":"1.9.4","depth":2,"path":"教程/053-朋友圈删除评论.md","ref":"教程/053-朋友圈删除评论.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/050-获取朋友圈数据.md","mtime":"2022-07-14T18:29:12.291Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-14T18:40:05.392Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

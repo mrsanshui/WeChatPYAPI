@@ -83,6 +83,21 @@ def main():
     lists = w.pull_list(self_wx=self_wx, pull_type=1, want_avatar=True)
     print(lists)
 
+    # 获取朋友圈数据
+    moments = w.get_moments(self_wx)
+    if not moments:
+        print("没有最新的朋友圈")
+    else:
+        for item in moments:
+            print(item)
+
+    # 获取小程序code
+    # code = w.get_small_app_code(
+    #     self_wx=self_wx,
+    #     app_id="wx9e44d62c7ab75740"
+    # )
+    # print(code)
+
     # 获取群成员列表
     # lists = w.get_chat_room_members(self_wx=self_wx, to_chat_room="123@chatroom", want_avatar=True)
     # print(lists)
