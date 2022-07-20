@@ -172,6 +172,11 @@ class WeChatPYApi(builtins.object)
  |      :param to_chat_room: 企业群ID
  |      :return: list数据
  |  
+ |  get_cur_window_info(self, self_wx)
+ |      获取当前聊天窗口信息
+ |      :param self_wx: 当前微信ID
+ |      :return: dict数据
+ |  
  |  get_login_state(self, self_wx)
  |      获取微信登录状态
  |      :param self_wx: 当前微信ID
@@ -261,6 +266,12 @@ class WeChatPYApi(builtins.object)
  |      :param self_wx: 当前微信ID
  |      :param save_dir_path: 保存语音的绝对路径【目录路径】
  |      :param switch: True:开启 False:关闭
+ |      :return: 无
+ |  
+ |  scan_code_into_chat_room(self, self_wx, url)
+ |      扫码进群
+ |      :param self_wx: 当前微信ID
+ |      :param url: 群二维码识别出来的url
  |      :return: 无
  |  
  |  send_card_link(self, self_wx, to_wx, title, desc, target_url, img_url)
@@ -377,6 +388,19 @@ class WeChatPYApi(builtins.object)
  |      :param self_wx: 当前微信ID
  |      :param v3: v3数据
  |      :param msg: 添加时的打招呼消息
+ |      :return: 无
+ |  
+ |  voice_phone(self, self_wx, to_wx)
+ |      语音电话
+ |      :param self_wx: 当前微信ID
+ |      :param to_wx: 要拨打的微信ID
+ |      :return: 无
+ |  
+ |  voice_phone_to_chat_room(self, self_wx, to_chat_room, wx_id_list)
+ |      群聊语音电话
+ |      :param self_wx: 当前微信ID
+ |      :param to_chat_room: 要拨打的群ID
+ |      :param wx_id_list: 要拨打的群成员微信ID列表
  |      :return: 无
  |  
  |  ----------------------------------------------------------------------

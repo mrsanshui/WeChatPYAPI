@@ -5,6 +5,7 @@ import time
 import logging
 from queue import Queue
 import os
+from datetime import datetime
 
 
 # 当前目录路径
@@ -177,7 +178,12 @@ def main():
                 elif msg["msg_type"] == 3:
                     file_path, file_name = os.path.split(msg["file_path"])
                     if file_name.endswith("dat"):
-                        file_name = file_name.replace(".dat", "")
+                        cur_time = datetime.now().strftime("%Y-%m-%d %H-%M-%S ")
+                        file_name = cur_time + file_name.replace(".dat", "")
+                        print(file_name)
+
+                        # 这里睡2秒是防止某些图片过大，还未完全下载完毕
+                        time.sleep(2)
 
                         # 保存图片
                         w.save_img(

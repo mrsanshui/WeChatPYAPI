@@ -815,7 +815,7 @@
                 <a href="教程/030-关注公众号.html">
             
                     
-                    关注公众号
+                    1、关注公众号
             
                 </a>
             
@@ -828,7 +828,7 @@
                 <a href="教程/042-取消关注公众号.html">
             
                     
-                    取消关注公众号
+                    2、取消关注公众号
             
                 </a>
             
@@ -841,7 +841,7 @@
                 <a href="教程/033-保存图片.html">
             
                     
-                    保存图片
+                    3、保存图片
             
                 </a>
             
@@ -854,7 +854,7 @@
                 <a href="教程/038-开启关闭保存语音.html">
             
                     
-                    开启/关闭保存语音
+                    4、开启/关闭保存语音
             
                 </a>
             
@@ -867,7 +867,7 @@
                 <a href="教程/034-同意好友邀请进群.html">
             
                     
-                    同意好友邀请进群
+                    5、同意好友邀请进群
             
                 </a>
             
@@ -880,7 +880,7 @@
                 <a href="教程/047-网络查询微信信息.html">
             
                     
-                    网络查询微信信息
+                    6、网络查询微信信息
             
                 </a>
             
@@ -893,7 +893,59 @@
                 <a href="教程/049-获取小程序code.html">
             
                     
-                    获取小程序code
+                    7、获取小程序code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="教程/054-获取当前聊天窗口信息.html">
+            
+                <a href="教程/054-获取当前聊天窗口信息.html">
+            
+                    
+                    8、获取当前聊天窗口信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="教程/055-语音电话.html">
+            
+                <a href="教程/055-语音电话.html">
+            
+                    
+                    9、语音电话
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="教程/056-群聊语音电话.html">
+            
+                <a href="教程/056-群聊语音电话.html">
+            
+                    
+                    10、群聊语音电话
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="教程/057-扫码进群.html">
+            
+                <a href="教程/057-扫码进群.html">
+            
+                    
+                    11、扫码进群
             
                 </a>
             
@@ -1138,6 +1190,11 @@
  |      :param to_chat_room: &#x4F01;&#x4E1A;&#x7FA4;ID
  |      :return: list&#x6570;&#x636E;
  |  
+ |  get_cur_window_info(self, self_wx)
+ |      &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x804A;&#x5929;&#x7A97;&#x53E3;&#x4FE1;&#x606F;
+ |      :param self_wx: &#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID
+ |      :return: dict&#x6570;&#x636E;
+ |  
  |  get_login_state(self, self_wx)
  |      &#x83B7;&#x53D6;&#x5FAE;&#x4FE1;&#x767B;&#x5F55;&#x72B6;&#x6001;
  |      :param self_wx: &#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID
@@ -1227,6 +1284,12 @@
  |      :param self_wx: &#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID
  |      :param save_dir_path: &#x4FDD;&#x5B58;&#x8BED;&#x97F3;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x3010;&#x76EE;&#x5F55;&#x8DEF;&#x5F84;&#x3011;
  |      :param switch: True:&#x5F00;&#x542F; False:&#x5173;&#x95ED;
+ |      :return: &#x65E0;
+ |  
+ |  scan_code_into_chat_room(self, self_wx, url)
+ |      &#x626B;&#x7801;&#x8FDB;&#x7FA4;
+ |      :param self_wx: &#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID
+ |      :param url: &#x7FA4;&#x4E8C;&#x7EF4;&#x7801;&#x8BC6;&#x522B;&#x51FA;&#x6765;&#x7684;url
  |      :return: &#x65E0;
  |  
  |  send_card_link(self, self_wx, to_wx, title, desc, target_url, img_url)
@@ -1345,6 +1408,19 @@
  |      :param msg: &#x6DFB;&#x52A0;&#x65F6;&#x7684;&#x6253;&#x62DB;&#x547C;&#x6D88;&#x606F;
  |      :return: &#x65E0;
  |  
+ |  voice_phone(self, self_wx, to_wx)
+ |      &#x8BED;&#x97F3;&#x7535;&#x8BDD;
+ |      :param self_wx: &#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID
+ |      :param to_wx: &#x8981;&#x62E8;&#x6253;&#x7684;&#x5FAE;&#x4FE1;ID
+ |      :return: &#x65E0;
+ |  
+ |  voice_phone_to_chat_room(self, self_wx, to_chat_room, wx_id_list)
+ |      &#x7FA4;&#x804A;&#x8BED;&#x97F3;&#x7535;&#x8BDD;
+ |      :param self_wx: &#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID
+ |      :param to_chat_room: &#x8981;&#x62E8;&#x6253;&#x7684;&#x7FA4;ID
+ |      :param wx_id_list: &#x8981;&#x62E8;&#x6253;&#x7684;&#x7FA4;&#x6210;&#x5458;&#x5FAE;&#x4FE1;ID&#x5217;&#x8868;
+ |      :return: &#x65E0;
+ |  
  |  ----------------------------------------------------------------------
 </code></pre>
 <h2 id="&#x58F0;&#x660E;">&#x58F0;&#x660E;</h2>
@@ -1391,7 +1467,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"WeChatPYAPI介绍","level":"1.1","depth":1,"next":{"title":"免费版跟付费版的区别","level":"1.2","depth":1,"path":"教程/免费版跟付费版区别.md","ref":"教程/免费版跟付费版区别.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2022-07-14T18:34:26.421Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-14T18:40:05.392Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"WeChatPYAPI介绍","level":"1.1","depth":1,"next":{"title":"免费版跟付费版的区别","level":"1.2","depth":1,"path":"教程/免费版跟付费版区别.md","ref":"教程/免费版跟付费版区别.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2022-07-20T15:33:05.373Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-20T15:52:24.572Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

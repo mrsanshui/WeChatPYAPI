@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>3、保存图片 · GitBook</title>
+        <title>8、获取当前聊天窗口信息 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="038-开启关闭保存语音.html" />
+    <link rel="next" href="055-语音电话.html" />
     
     
-    <link rel="prev" href="042-取消关注公众号.html" />
+    <link rel="prev" href="049-获取小程序code.html" />
     
 
     </head>
@@ -838,7 +838,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.10.3" data-path="033-保存图片.html">
+        <li class="chapter " data-level="1.10.3" data-path="033-保存图片.html">
             
                 <a href="033-保存图片.html">
             
@@ -903,7 +903,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.8" data-path="054-获取当前聊天窗口信息.html">
+        <li class="chapter active" data-level="1.10.8" data-path="054-获取当前聊天窗口信息.html">
             
                 <a href="054-获取当前聊天窗口信息.html">
             
@@ -1016,7 +1016,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >3、保存图片</a>
+        <a href=".." >8、获取当前聊天窗口信息</a>
     </h1>
 </div>
 
@@ -1031,17 +1031,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x4FDD;&#x5B58;&#x56FE;&#x7247;">&#x4FDD;&#x5B58;&#x56FE;&#x7247;</h1>
+                                <h1 id="&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x804A;&#x5929;&#x7A97;&#x53E3;&#x4FE1;&#x606F;">&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x804A;&#x5929;&#x7A97;&#x53E3;&#x4FE1;&#x606F;</h1>
 <p><strong>&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="lang-python">w.save_img(
-    self_wx=<span class="hljs-string">&quot;wxid_xxx&quot;</span>,
-    save_path=<span class="hljs-string">r&quot;C:\1.jpg&quot;</span>,
-    msg_data=&#x6D88;&#x606F;&#x6570;&#x636E;
+<pre><code class="lang-python">w.get_cur_window_info(
+    self_wx=<span class="hljs-string">&quot;wxid_xxx&quot;</span>
 )
 </code></pre>
-<blockquote>
-<p>&#x5728;&#x6536;&#x5230;&#x56FE;&#x7247;&#x7C7B;&#x578B;&#x7684;&#x6D88;&#x606F;&#x65F6;&#xFF0C;&#x63D0;&#x53D6; file_path&#xFF0C;&#x7136;&#x540E;&#x4F11;&#x7720;1-2&#x79D2;&#xFF0C;&#x7B49;&#x56FE;&#x7247;&#x5B8C;&#x5168;&#x4E0B;&#x8F7D;&#x4E0B;&#x6765;&#x4EE5;&#x540E;&#x518D;&#x8C03;&#x7528;&#x8BE5;&#x63A5;&#x53E3;&#xFF08;&#x9632;&#x6B62;&#x67D0;&#x4E9B;&#x56FE;&#x7247;&#x8FC7;&#x5927;&#xFF0C;&#x8FD8;&#x672A;&#x5B8C;&#x5168;&#x4E0B;&#x8F7D;&#xFF09;</p>
-</blockquote>
 <p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
@@ -1055,16 +1050,41 @@
 <td style="text-align:center">self_wx</td>
 <td style="text-align:center">&#x5F53;&#x524D;&#x5FAE;&#x4FE1;ID</td>
 </tr>
+</tbody>
+</table>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong></p>
+<ul>
+<li>List&#x6570;&#x636E;</li>
+</ul>
+<table>
+<thead>
 <tr>
-<td style="text-align:center">save_path</td>
-<td style="text-align:center">&#x4FDD;&#x5B58;&#x56FE;&#x7247;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</td>
+<th style="text-align:center">&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">wx_id</td>
+<td style="text-align:center">&#x804A;&#x5929;&#x5BF9;&#x8C61;&#x7684;&#x5FAE;&#x4FE1;ID&#x3001;&#x7FA4;ID&#x3001;&#x516C;&#x4F17;&#x53F7;ID&#x7B49;</td>
 </tr>
 <tr>
-<td style="text-align:center">msg_data</td>
-<td style="text-align:center">&#x6D88;&#x606F;&#x6570;&#x636E;</td>
+<td style="text-align:center">account</td>
+<td style="text-align:center">&#x804A;&#x5929;&#x5BF9;&#x8C61;&#x7684;&#x8D26;&#x53F7;</td>
+</tr>
+<tr>
+<td style="text-align:center">nick_name</td>
+<td style="text-align:center">&#x804A;&#x5929;&#x5BF9;&#x8C61;&#x7684;&#x6635;&#x79F0;</td>
 </tr>
 </tbody>
 </table>
+<p><strong>&#x8FD4;&#x56DE;&#x793A;&#x4F8B;</strong>&#xFF1A;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;wx_id&quot;</span>: <span class="hljs-string">&quot;wxid_xxxx&quot;</span>,
+    <span class="hljs-string">&quot;account&quot;</span>: <span class="hljs-string">&quot;xxx&quot;</span>,
+    <span class="hljs-string">&quot;nick_name&quot;</span>: <span class="hljs-string">&quot;&#x6211;&#x662F;&#x6635;&#x79F0;&quot;</span>
+}
+</code></pre>
 
                                 
                                 </section>
@@ -1092,12 +1112,12 @@
 
             
                 
-                <a href="042-取消关注公众号.html" class="navigation navigation-prev " aria-label="Previous page: 2、取消关注公众号">
+                <a href="049-获取小程序code.html" class="navigation navigation-prev " aria-label="Previous page: 7、获取小程序code">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="038-开启关闭保存语音.html" class="navigation navigation-next " aria-label="Next page: 4、开启/关闭保存语音">
+                <a href="055-语音电话.html" class="navigation navigation-next " aria-label="Next page: 9、语音电话">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1108,7 +1128,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3、保存图片","level":"1.10.3","depth":2,"next":{"title":"4、开启/关闭保存语音","level":"1.10.4","depth":2,"path":"教程/038-开启关闭保存语音.md","ref":"教程/038-开启关闭保存语音.md","articles":[]},"previous":{"title":"2、取消关注公众号","level":"1.10.2","depth":2,"path":"教程/042-取消关注公众号.md","ref":"教程/042-取消关注公众号.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/033-保存图片.md","mtime":"2022-07-20T15:48:05.186Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-20T15:52:24.572Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"8、获取当前聊天窗口信息","level":"1.10.8","depth":2,"next":{"title":"9、语音电话","level":"1.10.9","depth":2,"path":"教程/055-语音电话.md","ref":"教程/055-语音电话.md","articles":[]},"previous":{"title":"7、获取小程序code","level":"1.10.7","depth":2,"path":"教程/049-获取小程序code.md","ref":"教程/049-获取小程序code.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/054-获取当前聊天窗口信息.md","mtime":"2022-07-20T15:38:34.550Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-20T15:52:24.572Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
