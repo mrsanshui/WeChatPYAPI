@@ -12,12 +12,12 @@
   - 麻雀虽小五脏俱全！
   - 不支持长时间运行
   - 不再维护更新
-  - 微信版本：3.3.0.115
+  - 微信版本：3.6.0.18
 - 付费版：
   - 功能更加强大、稳定！
   - 支持长时间运行
   - 售后有保障！持续更新迭代
-  - 微信版本：3.7.0.29
+  - 微信版本：3.9.2.23
 
 > <span style="color: red">功能区别请打开《接口使用文档》进行查看</span>
 
@@ -47,6 +47,12 @@
 
 
 
+## 学习 & 参考
+
+https://github.com/mrsanshui/WeChatApi.git
+
+
+
 ## help(WeChatPYApi)
 
 ```python
@@ -62,129 +68,93 @@ class WeChatPYApi(builtins.object)
  |      :param logger: 日志器句柄
  |      :param kwargs: 略
  |  
- |  add_friend(self, self_wx, to_wx, msg)
+ |  add_friend(self, wx_id_or_v3, msg)
  |      添加好友
- |      :param self_wx: 当前微信ID
- |      :param to_wx: 要添加的微信ID
+ |      :param wx_id_or_v3: 要添加的微信ID或者v3数据
  |      :param msg: 添加时的打招呼消息
  |      :return: 无
  |  
- |  agree_friend(self, self_wx, msg_data)
+ |  agree_friend(self, msg_data)
  |      同意添加好友请求
- |      :param self_wx: 当前微信ID
  |      :param msg_data: 好友请求时的消息数据
  |      :return: 无
  |  
- |  agree_friend_invite_join_chat_room(self, self_wx, msg_data)
- |      同意好友邀请进群
- |      :param self_wx: 当前微信ID
- |      :param msg_data: 消息数据
- |      :return: 无
- |  
- |  alter_chat_room_name(self, self_wx, to_chat_room, name)
+ |  alter_chat_room_name(self, to_chat_room, name)
  |      修改群名称
- |      :param self_wx: 当前微信ID
  |      :param to_chat_room: 群ID
  |      :param name: 群名称
  |      :return: 无
  |  
- |  alter_friend_remark(self, self_wx, to_wx, remark)
+ |  alter_friend_remark(self, to_wx, remark)
  |      修改好友备注
- |      :param self_wx: 当前微信ID
  |      :param to_wx: 好友微信ID
  |      :param remark: 备注内容
  |      :return: 无
  |  
- |  alter_my_name_in_chat_room(self, self_wx, to_chat_room, name)
+ |  alter_my_name_in_chat_room(self, to_chat_room, name)
  |      修改我在群里的昵称
- |      :param self_wx: 当前微信ID
  |      :param to_chat_room: 群ID
  |      :param name: 昵称
  |      :return: 无
  |  
- |  collection(self, self_wx, msg_data)
+ |  collection(self, msg_data)
  |      收款
- |      :param self_wx: 当前微信ID
  |      :param msg_data: 消息数据
  |      :return: 无
  |  
- |  comment_moments(self, self_wx, moments_id, content)
+ |  comment_moments(self, moments_id, content)
  |      朋友圈评论
- |      :param self_wx: 当前微信ID
  |      :param moments_id: 朋友圈ID
  |      :param content: 评论内容
  |      :return: 无
  |  
- |  create_chat_room(self, self_wx, wx_id_list)
+ |  create_chat_room(self, wx_id_list)
  |      创建群聊
- |      :param self_wx: 当前微信ID
  |      :param wx_id_list: 邀请进群的微信ID列表
- |      :return: 无
+ |      :return: 群ID
  |  
- |  del_comment_moments(self, self_wx, moments_id, comment_id)
+ |  del_comment_moments(self, moments_id, comment_id)
  |      朋友圈删除评论
- |      :param self_wx: 当前微信ID
  |      :param moments_id: 朋友圈ID
  |      :param comment_id: 评论ID
  |      :return: 无
  |  
- |  delete_chat_room_member(self, self_wx, to_chat_room, to_wx_list)
+ |  delete_chat_room_member(self, to_chat_room, to_wx_list)
  |      踢出群成员
- |      :param self_wx: 当前微信ID
  |      :param to_chat_room: 群ID
  |      :param to_wx_list: 群成员微信ID列表
  |      :return: 无
  |  
- |  delete_friend(self, self_wx, to_wx)
+ |  delete_friend(self, to_wx)
  |      删除好友
- |      :param self_wx: 当前微信ID
  |      :param to_wx: 要删除的微信ID
  |      :return: 无
  |  
- |  exit_chat_room(self, self_wx, to_chat_room)
+ |  exit_chat_room(self, to_chat_room)
  |      退出群聊
- |      :param self_wx: 当前微信ID
  |      :param to_chat_room: 群ID
  |      :return: 无
  |  
- |  follow_mp(self, self_wx, mp_id)
+ |  follow_mp(self, mp_id)
  |      关注公众号
- |      :param self_wx: 当前微信ID
  |      :param mp_id: 公众号ID
  |      :return: 无
  |  
- |  get_chat_room_members(self, self_wx, to_chat_room, want_avatar=True)
+ |  get_chat_room_members(self, to_chat_room)
  |      获取群成员列表
- |      :param self_wx: 当前微信ID
  |      :param to_chat_room: 群ID
- |      :param want_avatar: True:需要头像地址(速度慢) False:不需要头像地址(速度快)
  |      :return: list数据
  |  
- |  get_chat_room_members_num(self, self_wx, to_chat_room)
- |      获取群成员数量
- |      :param self_wx: 当前微信ID
- |      :param to_chat_room: 群ID
- |      :return: 群成员数量
+ |  get_db_name_list(self)
+ |      获取所有数据库名称
+ |      :return: List数据
  |  
- |  get_chat_room_members_of_work(self, self_wx, to_chat_room)
- |      获取企业群成员列表
- |      :param self_wx: 当前微信ID
- |      :param to_chat_room: 企业群ID
- |      :return: list数据
- |  
- |  get_cur_window_info(self, self_wx)
- |      获取当前聊天窗口信息
- |      :param self_wx: 当前微信ID
- |      :return: dict数据
- |  
- |  get_login_state(self, self_wx)
+ |  get_login_state(self)
  |      获取微信登录状态
- |      :param self_wx: 当前微信ID
  |      :return: True:已登录 False:未登录
  |  
- |  get_moments(self, self_wx, last_id=None)
+ |  get_moments(self, last_id=None)
  |      获取朋友圈数据
- |      :param self_wx: 当前微信ID
  |      :param last_id: 最后一条朋友圈的ID【翻页必传】
  |      :return: List数据
  |  
@@ -192,91 +162,94 @@ class WeChatPYApi(builtins.object)
  |      获取个人信息
  |      :return: 未登录时返回None，登录成功返回字典数据
  |  
- |  get_small_app_code(self, self_wx, app_id)
+ |  get_small_app_code(self, app_id)
  |      获取小程序code
- |      :param self_wx: 当前微信ID
  |      :param app_id: 小程序的AppId
  |      :return: 小程序code
  |  
- |  invite_friend_enter_chat_room(self, self_wx, to_chat_room, to_wx_list)
+ |  invite_friend_enter_chat_room(self, to_chat_room, to_wx_list)
  |      邀请好友进群
- |      :param self_wx: 当前微信ID
  |      :param to_chat_room: 群ID
  |      :param to_wx_list: 好友微信ID列表
  |      :return: 无
  |  
- |  like_moments(self, self_wx, moments_id, state)
+ |  like_moments(self, moments_id, state)
  |      朋友圈点赞/取消点赞
- |      :param self_wx: 当前微信ID
  |      :param moments_id: 朋友圈ID
  |      :param state: True:点赞 False:取消点赞
  |      :return: 无
  |  
- |  logout(self, self_wx, exit_proc=False)
+ |  logout(self)
  |      退出登录
- |      :param self_wx: 当前微信ID
- |      :param exit_proc: True:退出登录并且退出微信进程 False:仅退出登录
  |      :return: 无
  |  
- |  mask_msg_switch(self, self_wx, to_id, switch)
+ |  mask_msg_switch(self, to_id, switch)
  |      开启/关闭消息免打扰
- |      :param self_wx: 当前微信ID
  |      :param to_id: 好友ID/群ID
  |      :param switch: True:开启免打扰 False:关闭免打扰
  |      :return: 无
  |  
- |  network_query_wx_info(self, self_wx, key)
- |      网络查询微信信息
- |      :param self_wx: 当前微信ID
- |      :param key: 要查询的手机号/QQ号/微信号
- |      :return: dict数据
- |  
- |  pull_label_list(self, self_wx)
+ |  pull_label_list(self)
  |      拉取标签列表
- |      :param self_wx: 当前微信ID
  |      :return: list数据
  |  
- |  pull_list(self, self_wx, pull_type, want_avatar=True)
+ |  pull_list(self, pull_type)
  |      拉取列表（好友/群/公众号/其他）
- |      :param self_wx: 当前微信ID
  |      :param pull_type: 好友:1 群:2 公众号:3 其他:4
- |      :param want_avatar: True:需要头像地址(速度慢) False:不需要头像地址(速度快)
  |      :return: list数据
  |  
- |  pull_list_of_work(self, self_wx)
- |      拉取企业微信列表（好友/群）
- |      :param self_wx: 当前微信ID
- |      :return: dict数据
- |  
- |  query_friend_info(self, self_wx, to_wx)
+ |  query_friend_info(self, to_wx)
  |      查询好友信息
- |      :param self_wx: 当前微信ID
  |      :param to_wx: 要查询的微信ID
  |      :return: dict数据
  |  
- |  save_img(self, self_wx, save_path, msg_data)
+ |  query_friend_info_by_net(self, to_wx)
+ |      网络查询好友信息
+ |      :param to_wx: 要查询的微信ID
+ |      :return: dict数据
+ |  
+ |  query_member_nick_name(self, to_chat_room, to_wx)
+ |      查询群成员的群昵称
+ |      :param to_chat_room: 群ID
+ |      :param to_wx: 群成员的微信ID
+ |      :return: 群内昵称
+ |  
+ |  query_wx_info_by_net(self, key)
+ |      网络查询陌生人信息
+ |      :param key: 手机号/QQ号/微信号
+ |      :return: dict数据
+ |  
+ |  refund(self, msg_data)
+ |      退款
+ |      :param msg_data: 消息数据
+ |      :return: 无
+ |  
+ |  save_img(self, save_path, msg_data)
  |      保存图片
- |      :param self_wx: 当前微信ID
  |      :param save_path: 保存图片的绝对路径
  |      :param msg_data: 消息数据
  |      :return: 无
  |  
- |  save_voice_switch(self, self_wx, save_dir_path, switch)
+ |  save_to_addr_book(self, to_chat_room, switch)
+ |      群聊保存/取消保存到通讯录
+ |      :param to_chat_room: 群ID
+ |      :param switch: True:保存 False:取消保存
+ |      :return:
+ |  
+ |  save_voice_switch(self, save_dir_path, switch)
  |      开启/关闭保存语音
- |      :param self_wx: 当前微信ID
  |      :param save_dir_path: 保存语音的绝对路径【目录路径】
  |      :param switch: True:开启 False:关闭
  |      :return: 无
  |  
- |  scan_code_into_chat_room(self, self_wx, url)
- |      扫码进群
- |      :param self_wx: 当前微信ID
- |      :param url: 群二维码识别出来的url
- |      :return: 无
+ |  select_db(self, db_name, sql_text)
+ |      查询数据库，注意，返字段取决于你的查询语句，查询结果较多可能会导致崩溃，建议运用好sql语句中的limit
+ |      :param db_name: 数据库名称
+ |      :param sql_text: sql语句
+ |      :return: 查询结果【字典数据】
  |  
- |  send_card_link(self, self_wx, to_wx, title, desc, target_url, img_url)
+ |  send_card_link(self, to_wx, title, desc, target_url, img_url)
  |      发送卡片链接
- |      :param self_wx: 当前微信ID
  |      :param to_wx: 接收者微信ID
  |      :param title: 卡片标题
  |      :param desc: 卡片描述
@@ -284,123 +257,77 @@ class WeChatPYApi(builtins.object)
  |      :param img_url: 卡片封面地址
  |      :return: 无
  |  
- |  send_file(self, self_wx, to_wx, path)
+ |  send_file(self, to_wx, path)
  |      发送文件/视频消息
- |      :param self_wx: 当前微信ID
  |      :param to_wx: 接收者微信ID
  |      :param path: 文件/视频的绝对路径
  |      :return: 无
  |  
- |  send_friend_card(self, self_wx, to_wx, friend_wx, friend_name)
+ |  send_friend_card(self, to_wx, friend_wx, friend_name)
  |      发送好友名片
- |      :param self_wx: 当前微信ID
  |      :param to_wx: 接收者微信ID
  |      :param friend_wx: 好友微信ID
  |      :param friend_name: 好友昵称
  |      :return: 无
  |  
- |  send_gif(self, self_wx, to_wx, path)
+ |  send_gif(self, to_wx, path)
  |      发送GIF表情
- |      :param self_wx: 当前微信ID
  |      :param to_wx: 接收者微信ID
  |      :param path: gif图片的绝对路径
  |      :return: 无
  |  
- |  send_img(self, self_wx, to_wx, path)
+ |  send_img(self, to_wx, path)
  |      发送图片消息
- |      :param self_wx: 当前微信ID
  |      :param to_wx: 接收者微信ID
  |      :param path: 图片的绝对路径
  |      :return: 无
  |  
- |  send_mp_card(self, self_wx, to_wx, mp_id, mp_name)
+ |  send_mp_card(self, to_wx, mp_id, mp_name)
  |      发送公众号名片
- |      :param self_wx: 当前微信ID
  |      :param to_wx: 接收者微信ID
  |      :param mp_id: 公众号ID
  |      :param mp_name: 公众号名称
- |      :return: 无
- |  
- |  send_notice(self, self_wx, to_chat_room, msg)
- |      发送群公告
- |      :param self_wx: 当前微信ID
- |      :param to_chat_room: 群ID
- |      :param msg: 公告内容
- |      :return: 无
- |  
- |  send_small_app(self, self_wx, to_wx, img_path, xml_str)
- |      发送小程序
- |      :param self_wx: 当前微信ID
- |      :param to_wx: 接收者微信ID
- |      :param img_path: 图片的绝对路径
- |      :param xml_str: 小程序的XML字符串
  |      :return:
  |  
- |  send_text(self, self_wx, to_wx, msg)
+ |  send_notice(self, to_chat_room, content)
+ |      发送群公告
+ |      :param to_chat_room: 群ID
+ |      :param content: 公告内容
+ |      :return: 无
+ |  
+ |  send_text(self, to_wx, msg)
  |      发送文本消息
- |      :param self_wx: 当前微信ID
  |      :param to_wx: 接收者微信ID
  |      :param msg: 消息内容
  |      :return: 无
  |  
- |  send_text_and_at_all(self, self_wx, to_chat_room, msg)
+ |  send_text_and_at_all(self, to_chat_room, msg)
  |      群聊发送文本信息并且@所有人
- |      :param self_wx: 当前微信ID
  |      :param to_chat_room: 群ID
  |      :param msg: 文本消息
  |      :return: 无
  |  
- |  send_text_and_at_member(self, self_wx, to_chat_room, to_wx_list, msg)
+ |  send_text_and_at_member(self, to_chat_room, to_wx_list, msg)
  |      群聊发送文本信息并且@指定群成员
- |      :param self_wx: 当前微信ID
  |      :param to_chat_room: 群ID
  |      :param to_wx_list: @人的微信ID列表
  |      :param msg: 文本消息
  |      :return: 无
  |  
- |  send_xml(self, self_wx, to_wx, xml_str)
- |      发送xml消息
- |      :param self_wx: 当前微信ID
- |      :param to_wx: 接收者微信ID
- |      :param xml_str: XML字符串
- |      :return: 无
- |  
  |  start_wx(self, path=None)
- |      启动微信，目前支持微信版本：V-3.7.0.29
+ |      启动微信，目前支持微信版本：V-3.9.2.23
  |      :param path: 保存登录二维码的绝对路径
  |      :return: (errno:状态码，errmsg:说明)
  |  
- |  top_chat_switch(self, self_wx, to_id, switch)
+ |  top_chat_switch(self, to_id, switch)
  |      置顶/取消置顶聊天
- |      :param self_wx: 当前微信ID
  |      :param to_id: 好友ID/群ID
  |      :param switch: True:置顶 False:取消置顶
  |      :return: 无
  |  
- |  un_follow_mp(self, self_wx, mp_id)
+ |  un_follow_mp(self, mp_id)
  |      取消关注公众号
- |      :param self_wx: 当前微信ID
  |      :param mp_id: 公众号ID
- |      :return: 无
- |  
- |  v3_add_friend(self, self_wx, v3, msg)
- |      通过v3数据添加好友
- |      :param self_wx: 当前微信ID
- |      :param v3: v3数据
- |      :param msg: 添加时的打招呼消息
- |      :return: 无
- |  
- |  voice_phone(self, self_wx, to_wx)
- |      语音电话
- |      :param self_wx: 当前微信ID
- |      :param to_wx: 要拨打的微信ID
- |      :return: 无
- |  
- |  voice_phone_to_chat_room(self, self_wx, to_chat_room, wx_id_list)
- |      群聊语音电话
- |      :param self_wx: 当前微信ID
- |      :param to_chat_room: 要拨打的群ID
- |      :param wx_id_list: 要拨打的群成员微信ID列表
  |      :return: 无
  |  
  |  ----------------------------------------------------------------------
