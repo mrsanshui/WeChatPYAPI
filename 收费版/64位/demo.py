@@ -73,8 +73,6 @@ def main():
     lists = w.pull_list(pull_type=3)
     print(lists)
 
-    print(w.pull_label_list())
-
     # 获取朋友圈数据
     # moments = w.get_moments()
     # if not moments:
