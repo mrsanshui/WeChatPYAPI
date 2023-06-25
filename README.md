@@ -314,6 +314,12 @@ class WeChatPYApi(builtins.object)
  |      :param msg: 文本消息
  |      :return: 无
  |  
+ |  send_xml(self, to_wx, xml_str)
+ |      发送XML消息
+ |      :param to_wx: 接收者微信ID
+ |      :param xml_str: XML字符串
+ |      :return: 无
+ |  
  |  start_wx(self, path=None)
  |      启动微信，目前支持微信版本：V-3.9.2.23
  |      :param path: 保存登录二维码的绝对路径
