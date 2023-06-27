@@ -403,6 +403,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.11" data-path="教程/050-转发任意消息.html">
+            
+                <a href="教程/050-转发任意消息.html">
+            
+                    
+                    11、转发任意消息
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1159,6 +1172,12 @@
  |      :param mp_id: &#x516C;&#x4F17;&#x53F7;ID
  |      :return: &#x65E0;
  |  
+ |  forward_msg(self, to_wx, msg_id)
+ |      &#x8F6C;&#x53D1;&#x4EFB;&#x610F;&#x6D88;&#x606F;
+ |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x5FAE;&#x4FE1;ID
+ |      :param msg_id: &#x6D88;&#x606F;ID
+ |      :return: &#x65E0;
+ |  
  |  get_chat_room_members(self, to_chat_room)
  |      &#x83B7;&#x53D6;&#x7FA4;&#x6210;&#x5458;&#x5217;&#x8868;
  |      :param to_chat_room: &#x7FA4;ID
@@ -1265,7 +1284,7 @@
  |      &#x67E5;&#x8BE2;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x6CE8;&#x610F;&#xFF0C;&#x8FD4;&#x5B57;&#x6BB5;&#x53D6;&#x51B3;&#x4E8E;&#x4F60;&#x7684;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#xFF0C;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x8F83;&#x591A;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x5D29;&#x6E83;&#xFF0C;&#x5EFA;&#x8BAE;&#x8FD0;&#x7528;&#x597D;sql&#x8BED;&#x53E5;&#x4E2D;&#x7684;limit
  |      :param db_name: &#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;
  |      :param sql_text: sql&#x8BED;&#x53E5;
- |      :return: &#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x3010;&#x5B57;&#x5178;&#x6570;&#x636E;&#x3011;
+ |      :return: &#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x3010;List&#x6570;&#x636E;&#x3011;
  |  
  |  send_card_link(self, to_wx, title, desc, target_url, img_url)
  |      &#x53D1;&#x9001;&#x5361;&#x7247;&#x94FE;&#x63A5;
@@ -1401,7 +1420,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"WeChatPYAPI介绍","level":"1.1","depth":1,"next":{"title":"免费版跟付费版的区别","level":"1.2","depth":1,"path":"教程/免费版跟付费版区别.md","ref":"教程/免费版跟付费版区别.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2023-06-25T13:46:37.809Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-25T13:47:49.516Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"WeChatPYAPI介绍","level":"1.1","depth":1,"next":{"title":"免费版跟付费版的区别","level":"1.2","depth":1,"path":"教程/免费版跟付费版区别.md","ref":"教程/免费版跟付费版区别.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2023-06-27T18:36:13.682Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-27T18:52:42.915Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

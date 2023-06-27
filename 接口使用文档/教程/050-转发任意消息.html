@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>7、查询群成员的群昵称 · GitBook</title>
+        <title>11、转发任意消息 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="031-修改我在群里的昵称.html" />
     
-    
-    <link rel="prev" href="029-群聊保存取消保存到通讯录.html" />
+    <link rel="prev" href="016-发送公众号卡片.html" />
     
 
     </head>
@@ -405,7 +403,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.11" data-path="050-转发任意消息.html">
+        <li class="chapter active" data-level="1.5.11" data-path="050-转发任意消息.html">
             
                 <a href="050-转发任意消息.html">
             
@@ -625,7 +623,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.7" data-path="030-查询群成员的群昵称.html">
+        <li class="chapter " data-level="1.7.7" data-path="030-查询群成员的群昵称.html">
             
                 <a href="030-查询群成员的群昵称.html">
             
@@ -1034,7 +1032,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >7、查询群成员的群昵称</a>
+        <a href=".." >11、转发任意消息</a>
     </h1>
 </div>
 
@@ -1049,11 +1047,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x67E5;&#x8BE2;&#x7FA4;&#x6210;&#x5458;&#x7684;&#x7FA4;&#x6635;&#x79F0;">&#x67E5;&#x8BE2;&#x7FA4;&#x6210;&#x5458;&#x7684;&#x7FA4;&#x6635;&#x79F0;</h1>
+                                <h1 id="&#x8F6C;&#x53D1;&#x4EFB;&#x610F;&#x6D88;&#x606F;">&#x8F6C;&#x53D1;&#x4EFB;&#x610F;&#x6D88;&#x606F;</h1>
 <p><strong>&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="lang-python">w.query_member_nick_name(
-    to_chat_room=<span class="hljs-string">&quot;xxx@chatroom&quot;</span>,
-    to_wx=<span class="hljs-string">&quot;wxid_xxx&quot;</span>
+<pre><code class="lang-python">w.forward_msg(
+    to_wx=<span class="hljs-string">&quot;wxid_xxx&quot;</span>,
+    msg_id=<span class="hljs-string">&quot;3921711251800000000&quot;</span>
 )
 </code></pre>
 <p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
@@ -1066,27 +1064,12 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">to_chat_room</td>
-<td style="text-align:center">&#x7FA4;ID</td>
-</tr>
-<tr>
 <td style="text-align:center">to_wx</td>
-<td style="text-align:center">&#x7FA4;&#x6210;&#x5458;&#x7684;&#x5FAE;&#x4FE1;ID</td>
+<td style="text-align:center">&#x63A5;&#x6536;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID/&#x7FA4;ID</td>
 </tr>
-</tbody>
-</table>
-<p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong></p>
-<table>
-<thead>
 <tr>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">str</td>
-<td style="text-align:center">&#x7FA4;&#x6635;&#x79F0;</td>
+<td style="text-align:center">msg_id</td>
+<td style="text-align:center">&#x6D88;&#x606F;ID(&#x6D88;&#x606F;&#x56DE;&#x8C03;&#x4E2D;&#x83B7;&#x53D6;)</td>
 </tr>
 </tbody>
 </table>
@@ -1117,14 +1100,10 @@
 
             
                 
-                <a href="029-群聊保存取消保存到通讯录.html" class="navigation navigation-prev " aria-label="Previous page: 6、群聊保存、取消保存到通讯录">
+                <a href="016-发送公众号卡片.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 10、发送公众号卡片">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="031-修改我在群里的昵称.html" class="navigation navigation-next " aria-label="Next page: 8、修改我在群里的昵称">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1133,7 +1112,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"7、查询群成员的群昵称","level":"1.7.7","depth":2,"next":{"title":"8、修改我在群里的昵称","level":"1.7.8","depth":2,"path":"教程/031-修改我在群里的昵称.md","ref":"教程/031-修改我在群里的昵称.md","articles":[]},"previous":{"title":"6、群聊保存、取消保存到通讯录","level":"1.7.6","depth":2,"path":"教程/029-群聊保存取消保存到通讯录.md","ref":"教程/029-群聊保存取消保存到通讯录.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/030-查询群成员的群昵称.md","mtime":"2023-06-24T14:59:43.546Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-27T18:52:42.915Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"11、转发任意消息","level":"1.5.11","depth":2,"next":{"title":"4、好友操作","level":"1.6","depth":1,"ref":"","articles":[{"title":"1、添加好友","level":"1.6.1","depth":2,"path":"教程/017-添加好友.md","ref":"教程/017-添加好友.md","articles":[]},{"title":"2、删除好友","level":"1.6.2","depth":2,"path":"教程/018-删除好友.md","ref":"教程/018-删除好友.md","articles":[]},{"title":"3、同意添加好友请求","level":"1.6.3","depth":2,"path":"教程/019-同意添加好友请求.md","ref":"教程/019-同意添加好友请求.md","articles":[]},{"title":"4、修改好友备注","level":"1.6.4","depth":2,"path":"教程/020-修改好友备注.md","ref":"教程/020-修改好友备注.md","articles":[]},{"title":"5、本地查询好友信息","level":"1.6.5","depth":2,"path":"教程/021-本地查询好友信息.md","ref":"教程/021-本地查询好友信息.md","articles":[]},{"title":"6、网络查询好友信息","level":"1.6.6","depth":2,"path":"教程/022-网络查询好友信息.md","ref":"教程/022-网络查询好友信息.md","articles":[]},{"title":"7、网络查询陌生人信息","level":"1.6.7","depth":2,"path":"教程/023-网络查询陌生人信息.md","ref":"教程/023-网络查询陌生人信息.md","articles":[]}]},"previous":{"title":"10、发送公众号卡片","level":"1.5.10","depth":2,"path":"教程/016-发送公众号卡片.md","ref":"教程/016-发送公众号卡片.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/050-转发任意消息.md","mtime":"2023-06-27T18:42:54.585Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-27T18:52:42.915Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

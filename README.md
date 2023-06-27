@@ -140,6 +140,12 @@ class WeChatPYApi(builtins.object)
  |      :param mp_id: 公众号ID
  |      :return: 无
  |  
+ |  forward_msg(self, to_wx, msg_id)
+ |      转发任意消息
+ |      :param to_wx: 接收者微信ID
+ |      :param msg_id: 消息ID
+ |      :return: 无
+ |  
  |  get_chat_room_members(self, to_chat_room)
  |      获取群成员列表
  |      :param to_chat_room: 群ID
@@ -246,7 +252,7 @@ class WeChatPYApi(builtins.object)
  |      查询数据库，注意，返字段取决于你的查询语句，查询结果较多可能会导致崩溃，建议运用好sql语句中的limit
  |      :param db_name: 数据库名称
  |      :param sql_text: sql语句
- |      :return: 查询结果【字典数据】
+ |      :return: 查询结果【List数据】
  |  
  |  send_card_link(self, to_wx, title, desc, target_url, img_url)
  |      发送卡片链接
