@@ -196,6 +196,11 @@ class WeChatPYApi(builtins.object)
  |      :param switch: True:开启免打扰 False:关闭免打扰
  |      :return: 无
  |  
+ |  ocr_recognition(self, path)
+ |      OCR文字识别
+ |      :param path: 图片的绝对路径
+ |      :return: 识别结果
+ |  
  |  pull_label_list(self)
  |      拉取标签列表
  |      :return: list数据

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>3、朋友圈评论 · GitBook</title>
+        <title>5、OCR文字识别 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="040-朋友圈删除评论.html" />
+    <link rel="next" href="接收消息.html" />
     
     
-    <link rel="prev" href="038-朋友圈点赞取消点赞.html" />
+    <link rel="prev" href="047-开启关闭保存语音.html" />
     
 
     </head>
@@ -799,7 +799,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.10.3" data-path="039-朋友圈评论.html">
+        <li class="chapter " data-level="1.10.3" data-path="039-朋友圈评论.html">
             
                 <a href="039-朋友圈评论.html">
             
@@ -973,7 +973,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.5" data-path="051-OCR文字识别.html">
+        <li class="chapter active" data-level="1.13.5" data-path="051-OCR文字识别.html">
             
                 <a href="051-OCR文字识别.html">
             
@@ -1047,7 +1047,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >3、朋友圈评论</a>
+        <a href=".." >5、OCR文字识别</a>
     </h1>
 </div>
 
@@ -1062,12 +1062,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x670B;&#x53CB;&#x5708;&#x8BC4;&#x8BBA;">&#x670B;&#x53CB;&#x5708;&#x8BC4;&#x8BBA;</h1>
+                                <h1 id="ocr&#x6587;&#x5B57;&#x8BC6;&#x522B;">OCR&#x6587;&#x5B57;&#x8BC6;&#x522B;</h1>
 <p><strong>&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="lang-python">w.comment_moments(
-    moments_id=<span class="hljs-string">&quot;1300000&quot;</span>,
-    content=<span class="hljs-string">&quot;&#x6211;&#x662F;&#x8BC4;&#x8BBA;&#x5185;&#x5BB9;&quot;</span>
+<pre><code class="lang-python">result = w.ocr_recognition(
+    path=<span class="hljs-string">&quot;C:\\1.png&quot;</span>
 )
+print(result)
 </code></pre>
 <p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
@@ -1079,12 +1079,23 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">moments_id</td>
-<td style="text-align:center">&#x670B;&#x53CB;&#x5708;ID</td>
+<td style="text-align:center">path</td>
+<td style="text-align:center">&#x56FE;&#x7247;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</td>
 </tr>
+</tbody>
+</table>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong></p>
+<table>
+<thead>
 <tr>
-<td style="text-align:center">content</td>
-<td style="text-align:center">&#x8BC4;&#x8BBA;&#x5185;&#x5BB9;</td>
+<th style="text-align:center">&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">str</td>
+<td style="text-align:center">&#x8BC6;&#x522B;&#x7ED3;&#x679C;</td>
 </tr>
 </tbody>
 </table>
@@ -1115,12 +1126,12 @@
 
             
                 
-                <a href="038-朋友圈点赞取消点赞.html" class="navigation navigation-prev " aria-label="Previous page: 2、朋友圈点赞/取消点赞">
+                <a href="047-开启关闭保存语音.html" class="navigation navigation-prev " aria-label="Previous page: 4、开启/关闭保存语音">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="040-朋友圈删除评论.html" class="navigation navigation-next " aria-label="Next page: 4、朋友圈删除评论">
+                <a href="接收消息.html" class="navigation navigation-next " aria-label="Next page: 接收消息">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1131,7 +1142,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3、朋友圈评论","level":"1.10.3","depth":2,"next":{"title":"4、朋友圈删除评论","level":"1.10.4","depth":2,"path":"教程/040-朋友圈删除评论.md","ref":"教程/040-朋友圈删除评论.md","articles":[]},"previous":{"title":"2、朋友圈点赞/取消点赞","level":"1.10.2","depth":2,"path":"教程/038-朋友圈点赞取消点赞.md","ref":"教程/038-朋友圈点赞取消点赞.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/039-朋友圈评论.md","mtime":"2023-06-24T15:06:26.684Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-10-05T19:45:23.097Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5、OCR文字识别","level":"1.13.5","depth":2,"next":{"title":"接收消息","level":"1.14","depth":1,"path":"教程/接收消息.md","ref":"教程/接收消息.md","articles":[]},"previous":{"title":"4、开启/关闭保存语音","level":"1.13.4","depth":2,"path":"教程/047-开启关闭保存语音.md","ref":"教程/047-开启关闭保存语音.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/051-OCR文字识别.md","mtime":"2023-10-05T19:39:38.036Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-10-05T19:45:23.097Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
