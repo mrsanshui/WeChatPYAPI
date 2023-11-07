@@ -147,6 +147,11 @@ class WeChatPYApi(builtins.object)
  |      :param msg_id: 消息ID
  |      :return: 无
  |  
+ |  get_access_url(self, url)
+ |      获取外部浏览器可访问的URL
+ |      :param url: 只能在微信中打开的URL（如公众号链接）
+ |      :return: 可访问的URL
+ |  
  |  get_chat_room_members(self, to_chat_room)
  |      获取群成员列表
  |      :param to_chat_room: 群ID
@@ -196,10 +201,11 @@ class WeChatPYApi(builtins.object)
  |      :param switch: True:开启免打扰 False:关闭免打扰
  |      :return: 无
  |  
- |  ocr_recognition(self, path)
+ |  ocr_recognition(self, path, is_split=False)
  |      OCR文字识别
  |      :param path: 图片的绝对路径
- |      :return: 识别结果
+ |      :param is_split: 是否分段返回
+ |      :return: 识别结果（分段模式返回list）
  |  
  |  pull_label_list(self)
  |      拉取标签列表

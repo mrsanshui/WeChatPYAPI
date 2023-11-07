@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>6、发送XML消息 · GitBook</title>
+        <title>3、获取外部浏览器可访问的URL · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="013-发送GIF表情消息.html" />
     
-    
-    <link rel="prev" href="012-发送卡片链接.html" />
+    <link rel="prev" href="036-取消关注公众号.html" />
     
 
     </head>
@@ -340,7 +338,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.6" data-path="049-发送XML消息.html">
+        <li class="chapter " data-level="1.5.6" data-path="049-发送XML消息.html">
             
                 <a href="049-发送XML消息.html">
             
@@ -754,7 +752,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.3" data-path="052-获取外部浏览器可访问的URL.html">
+        <li class="chapter active" data-level="1.9.3" data-path="052-获取外部浏览器可访问的URL.html">
             
                 <a href="052-获取外部浏览器可访问的URL.html">
             
@@ -1060,7 +1058,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >6、发送XML消息</a>
+        <a href=".." >3、获取外部浏览器可访问的URL</a>
     </h1>
 </div>
 
@@ -1075,12 +1073,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x53D1;&#x9001;xml&#x6D88;&#x606F;">&#x53D1;&#x9001;XML&#x6D88;&#x606F;</h1>
+                                <h1 id="&#x83B7;&#x53D6;&#x5916;&#x90E8;&#x6D4F;&#x89C8;&#x5668;&#x53EF;&#x8BBF;&#x95EE;&#x7684;url">&#x83B7;&#x53D6;&#x5916;&#x90E8;&#x6D4F;&#x89C8;&#x5668;&#x53EF;&#x8BBF;&#x95EE;&#x7684;URL</h1>
 <p><strong>&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="lang-python">w.send_xml(
-    to_wx=<span class="hljs-string">&quot;wxid_xxx&quot;</span>,
-    xml_str=<span class="hljs-string">&quot;&lt;xml&gt;...&lt;/xml&gt;&quot;</span>
-)
+<pre><code class="lang-python">access_url = w.get_access_url(<span class="hljs-string">&quot;http://xxx.xx&quot;</span>)
+print(access_url)
 </code></pre>
 <p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
@@ -1092,12 +1088,23 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">to_wx</td>
-<td style="text-align:center">&#x63A5;&#x6536;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID/&#x7FA4;ID</td>
+<td style="text-align:center">url</td>
+<td style="text-align:center">&#x53EA;&#x80FD;&#x5728;&#x5FAE;&#x4FE1;&#x4E2D;&#x6253;&#x5F00;&#x7684;URL&#xFF08;&#x5982;&#x516C;&#x4F17;&#x53F7;&#x94FE;&#x63A5;&#xFF09;</td>
 </tr>
+</tbody>
+</table>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong></p>
+<table>
+<thead>
 <tr>
-<td style="text-align:center">xml_str</td>
-<td style="text-align:center">XML&#x5B57;&#x7B26;&#x4E32; (&#x53C2;&#x8003;&#x6D88;&#x606F;&#x63A8;&#x9001;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x683C;&#x5F0F;)</td>
+<th style="text-align:center">&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">str</td>
+<td style="text-align:center">&#x53EF;&#x8BBF;&#x95EE;&#x7684;URL</td>
 </tr>
 </tbody>
 </table>
@@ -1128,14 +1135,10 @@
 
             
                 
-                <a href="012-发送卡片链接.html" class="navigation navigation-prev " aria-label="Previous page: 5、发送卡片链接">
+                <a href="036-取消关注公众号.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 2、取消关注公众号">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="013-发送GIF表情消息.html" class="navigation navigation-next " aria-label="Next page: 7、发送GIF表情消息">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1144,7 +1147,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6、发送XML消息","level":"1.5.6","depth":2,"next":{"title":"7、发送GIF表情消息","level":"1.5.7","depth":2,"path":"教程/013-发送GIF表情消息.md","ref":"教程/013-发送GIF表情消息.md","articles":[]},"previous":{"title":"5、发送卡片链接","level":"1.5.5","depth":2,"path":"教程/012-发送卡片链接.md","ref":"教程/012-发送卡片链接.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/049-发送XML消息.md","mtime":"2023-06-25T13:23:49.807Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-11-07T18:23:38.563Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3、获取外部浏览器可访问的URL","level":"1.9.3","depth":2,"next":{"title":"8、朋友圈","level":"1.10","depth":1,"ref":"","articles":[{"title":"1、获取朋友圈数据","level":"1.10.1","depth":2,"path":"教程/037-获取朋友圈数据.md","ref":"教程/037-获取朋友圈数据.md","articles":[]},{"title":"2、朋友圈点赞/取消点赞","level":"1.10.2","depth":2,"path":"教程/038-朋友圈点赞取消点赞.md","ref":"教程/038-朋友圈点赞取消点赞.md","articles":[]},{"title":"3、朋友圈评论","level":"1.10.3","depth":2,"path":"教程/039-朋友圈评论.md","ref":"教程/039-朋友圈评论.md","articles":[]},{"title":"4、朋友圈删除评论","level":"1.10.4","depth":2,"path":"教程/040-朋友圈删除评论.md","ref":"教程/040-朋友圈删除评论.md","articles":[]}]},"previous":{"title":"2、取消关注公众号","level":"1.9.2","depth":2,"path":"教程/036-取消关注公众号.md","ref":"教程/036-取消关注公众号.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/052-获取外部浏览器可访问的URL.md","mtime":"2023-11-07T18:22:16.570Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-11-07T18:23:38.563Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
