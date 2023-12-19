@@ -27,11 +27,9 @@ def on_exit(wx_id):
 
 
 def main():
-    # 初次使用需要pip安装四个库：
+    # 初次使用需要pip安装两个库：
     # pip install requests
     # pip install pycryptodomex
-    # pip install psutil
-    # pip install pywin32
 
     # 查看帮助
     help(WeChatPYApi)

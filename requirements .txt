@@ -1,4 +1,2 @@
 requests
 pycryptodomex
-psutil
-pywin32
