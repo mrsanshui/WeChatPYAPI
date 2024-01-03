@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>接收消息 · GitBook</title>
+        <title>6、获取当前微信进程的PID · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../常见问题及解决方案.html" />
+    <link rel="next" href="054-自动下载图片视频文件.html" />
     
     
-    <link rel="prev" href="055-获取当前聊天窗口信息.html" />
+    <link rel="prev" href="051-OCR文字识别.html" />
     
 
     </head>
@@ -999,7 +999,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.6" data-path="053-获取当前微信进程的PID.html">
+        <li class="chapter active" data-level="1.13.6" data-path="053-获取当前微信进程的PID.html">
             
                 <a href="053-获取当前微信进程的PID.html">
             
@@ -1043,7 +1043,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.14" data-path="接收消息.html">
+        <li class="chapter " data-level="1.14" data-path="接收消息.html">
             
                 <a href="接收消息.html">
             
@@ -1099,7 +1099,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >接收消息</a>
+        <a href=".." >6、获取当前微信进程的PID</a>
     </h1>
 </div>
 
@@ -1114,173 +1114,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x63A5;&#x6536;&#x6D88;&#x606F;">&#x63A5;&#x6536;&#x6D88;&#x606F;</h1>
-<ul>
-<li><h4 id="&#x804A;&#x5929;&#x6D88;&#x606F;&#x3010;type100&#x3011;&#xFF1A;">&#x804A;&#x5929;&#x6D88;&#x606F;&#x3010;type=100&#x3011;&#xFF1A;</h4>
-</li>
-</ul>
-<pre><code class="lang-json">{
-    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-number">100</span>, <span class="hljs-comment">// &#x63A8;&#x9001;&#x7C7B;&#x578B;&#xFF0C;&#x56FA;&#x5B9A;&#x4E3A;100</span>
-    <span class="hljs-string">&quot;msg_type&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-comment">// &#x6D88;&#x606F;&#x7C7B;&#x578B;</span>
-    <span class="hljs-string">&quot;local_id&quot;</span>: <span class="hljs-string">&quot;1381&quot;</span>, <span class="hljs-comment">// &#x6D88;&#x606F;&#x4F4D;&#x7F6E;ID</span>
-    <span class="hljs-string">&quot;msg_id&quot;</span>: <span class="hljs-string">&quot;3921711251800000000&quot;</span>, <span class="hljs-comment">// &#x6D88;&#x606F;ID&#x3010;&#x81EA;&#x5DF1;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x65F6;&#x4E3A;0&#x3011;</span>
-    <span class="hljs-string">&quot;wx_id&quot;</span>: <span class="hljs-string">&quot;wxid_xxxx&quot;</span>, <span class="hljs-comment">// &#x5FAE;&#x4FE1;ID</span>
-    <span class="hljs-string">&quot;at_list&quot;</span>: [<span class="hljs-string">&quot;wxid_xxx1&quot;</span>, <span class="hljs-string">&quot;wxid_xxx2&quot;</span>], <span class="hljs-comment">// &#x7FA4;&#x6D88;&#x606F;&#x827E;&#x7279;&#x4EBA;&#x5217;&#x8868;&#xFF0C;&#x827E;&#x7279;&#x6240;&#x6709;&#x4EBA;&#x5C31;&#x662F;&#x3010;notify@all&#x3011;</span>
-    <span class="hljs-string">&quot;content&quot;</span>: <span class="hljs-string">&quot;&#x4F60;&#x597D;&#x9E2D;&quot;</span>, <span class="hljs-comment">// &#x6D88;&#x606F;&#x5185;&#x5BB9;</span>
-    <span class="hljs-string">&quot;sender&quot;</span>: <span class="hljs-string">&quot;wxid_xxxx&quot;</span>, <span class="hljs-comment">// &#x5982;&#x679C;&#x662F;&#x7FA4;&#x6D88;&#x606F;&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x4E3A;&#x53D1;&#x9001;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID&#xFF0C;&#x5426;&#x5219;&#x4E3A;&#x7A7A;</span>
-    <span class="hljs-string">&quot;file_path&quot;</span>: <span class="hljs-string">&quot;E:\\&#x5FAE;&#x4FE1;&#x7F13;&#x5B58;\\WeChat Files\\xxxxx&quot;</span>, <span class="hljs-comment">// &#x6D88;&#x606F;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</span>
-    <span class="hljs-string">&quot;time_stamp&quot;</span>: <span class="hljs-number">1682944354</span>, <span class="hljs-comment">// &#x53D1;&#x9001;&#x65F6;&#x95F4;</span>
-    <span class="hljs-string">&quot;is_self_msg&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-comment">// &#x662F;&#x5426;&#x662F;&#x81EA;&#x5DF1;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F; 0:&#x522B;&#x4EBA;&#x53D1;&#x6765;&#x7684; 1:&#x81EA;&#x5DF1;&#x53D1;&#x7684;</span>
-    <span class="hljs-string">&quot;is_pc_msg&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-comment">// &#x662F;&#x5426;&#x662F;PC&#x7AEF;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;(&#x4EC5;&#x7528;&#x4E8E;&#x5224;&#x65AD;&#x81EA;&#x5DF1;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x522B;&#x4EBA;&#x53D1;&#x9001;&#x7684;&#x90FD;&#x662F;0) 0:&#x5426; 1:&#x662F;</span>
-    <span class="hljs-string">&quot;self_wx_id&quot;</span>: <span class="hljs-string">&quot;wxid_xxxx&quot;</span>, <span class="hljs-comment">// &#x81EA;&#x5DF1;&#x7684;&#x5FAE;&#x4FE1;ID</span>
-    <span class="hljs-comment">//&#x5F53;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x4E3A;&#x8F6C;&#x8D26;&#x65F6;&#xFF0C;&#x624D;&#x6709;detail&#x5B57;&#x6BB5;</span>
-    <span class="hljs-string">&quot;detail&quot;</span>: {
-        <span class="hljs-string">&quot;amount&quot;</span>: <span class="hljs-string">&quot;0.01&quot;</span>, <span class="hljs-comment">//&#x91D1;&#x989D;</span>
-        <span class="hljs-string">&quot;is_real_time&quot;</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">//&#x662F;&#x5426;&#x662F;&#x5B9E;&#x65F6;&#x8F6C;&#x8D26;</span>
-        <span class="hljs-string">&quot;is_recv&quot;</span>: <span class="hljs-literal">true</span> <span class="hljs-comment">//&#x662F;&#x5426;&#x522B;&#x4EBA;&#x8F6C;&#x7ED9;&#x6211;&#x7684;</span>
-    }
-}
+                                <h1 id="&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5FAE;&#x4FE1;&#x8FDB;&#x7A0B;&#x7684;pid">&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5FAE;&#x4FE1;&#x8FDB;&#x7A0B;&#x7684;PID</h1>
+<p><strong>&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</strong></p>
+<pre><code class="lang-python">pid = w.get_cur_wx_pid()
+print(pid)
 </code></pre>
-<ul>
-<li><h4 id="&#x64A4;&#x56DE;&#x6D88;&#x606F;&#x3010;type666&#x3011;&#xFF1A;">&#x64A4;&#x56DE;&#x6D88;&#x606F;&#x3010;type=666&#x3011;&#xFF1A;</h4>
-</li>
-</ul>
-<pre><code class="lang-json">{
-    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-number">666</span>, <span class="hljs-comment">// &#x63A8;&#x9001;&#x7C7B;&#x578B;&#xFF0C;&#x56FA;&#x5B9A;&#x4E3A;666</span>
-    <span class="hljs-string">&quot;msg_type&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-comment">// &#x6D88;&#x606F;&#x7C7B;&#x578B;</span>
-    <span class="hljs-string">&quot;is_self_revoke&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-comment">// &#x662F;&#x5426;&#x662F;&#x81EA;&#x5DF1;&#x64A4;&#x56DE;&#x7684; 0&#x5426; 1&#x662F;</span>
-    <span class="hljs-string">&quot;time_stamp&quot;</span>: <span class="hljs-number">1682944354</span>, <span class="hljs-comment">// &#x53D1;&#x9001;&#x65F6;&#x95F4;&#x3010;&#x6CE8;&#x610F;&#xFF01;&#x662F;&#x53D1;&#x9001;&#x65F6;&#x95F4;&#xFF0C;&#x4E0D;&#x662F;&#x64A4;&#x56DE;&#x65F6;&#x95F4;&#x3011;</span>
-    <span class="hljs-string">&quot;wx_id&quot;</span>: <span class="hljs-string">&quot;wxid_xxxx&quot;</span>, <span class="hljs-comment">// &#x5FAE;&#x4FE1;ID/&#x7FA4;ID</span>
-    <span class="hljs-string">&quot;content&quot;</span>: <span class="hljs-string">&quot;&#x4F60;&#x597D;&#x9E2D;&quot;</span>, <span class="hljs-comment">// &#x6D88;&#x606F;&#x5185;&#x5BB9;</span>
-    <span class="hljs-string">&quot;member_wx_id&quot;</span>: <span class="hljs-string">&quot;wxid_xxxx&quot;</span>, <span class="hljs-comment">// &#x5982;&#x679C;&#x662F;&#x7FA4;&#x91CC;&#x7684;&#x64A4;&#x56DE;&#x6D88;&#x606F;&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x4E3A;&#x7FA4;&#x6210;&#x5458;&#x7684;&#x5FAE;&#x4FE1;ID&#xFF0C;&#x5426;&#x5219;&#x4E3A;&#x7A7A;</span>
-    <span class="hljs-string">&quot;self_wx_id&quot;</span>: <span class="hljs-string">&quot;wxid_xxxx&quot;</span>, <span class="hljs-comment">// &#x81EA;&#x5DF1;&#x7684;&#x5FAE;&#x4FE1;ID</span>
-}
-</code></pre>
-<ul>
-<li><h4 id="&#x7FA4;&#x6210;&#x5458;&#x9000;&#x7FA4;&#x901A;&#x77E5;&#x3010;type444&#x3011;">&#x7FA4;&#x6210;&#x5458;&#x9000;&#x7FA4;&#x901A;&#x77E5;&#x3010;type=444&#x3011;</h4>
-</li>
-</ul>
-<pre><code class="lang-json">{
-    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-number">444</span>, <span class="hljs-comment">// &#x63A8;&#x9001;&#x7C7B;&#x578B;&#xFF0C;&#x56FA;&#x5B9A;&#x4E3A;444</span>
-    <span class="hljs-string">&quot;chat_room_id&quot;</span>: <span class="hljs-string">&quot;24006830444@chatroom&quot;</span>, <span class="hljs-comment">// &#x7FA4;ID</span>
-    <span class="hljs-comment">/* &#x9000;&#x7FA4;&#x8005;&#x7684;&#x4FE1;&#x606F;&#x5217;&#x8868; */</span>
-    <span class="hljs-string">&quot;member_list&quot;</span>:[
-        {
-            <span class="hljs-string">&quot;room_name&quot;</span>:<span class="hljs-string">&quot;&quot;</span>, <span class="hljs-comment">// &#x7FA4;&#x6635;&#x79F0;</span>
-            <span class="hljs-string">&quot;wx_id&quot;</span>:<span class="hljs-string">&quot;wxid_77kvk5hfobse21&quot;</span> <span class="hljs-comment">// &#x5FAE;&#x4FE1;ID</span>
-        }
-    ],
-    <span class="hljs-string">&quot;msg&quot;</span>: <span class="hljs-string">&quot;&#x9000;&#x7FA4;&#x4E8B;&#x4EF6;&quot;</span>, <span class="hljs-comment">// &#x63D0;&#x793A;&#x5185;&#x5BB9;</span>
-    <span class="hljs-string">&quot;self_wx_id&quot;</span>: <span class="hljs-string">&quot;wxid_xxxx&quot;</span>, <span class="hljs-comment">// &#x81EA;&#x5DF1;&#x7684;&#x5FAE;&#x4FE1;ID</span>
-}
-</code></pre>
-<ul>
-<li><h4 id="&#x804A;&#x5929;&#x64A4;&#x56DE;&#x6D88;&#x606F;&#x7684;&#x7C7B;&#x578B;&#x8BF4;&#x660E;&#x3010;msgtype&#x3011;&#xFF1A;">&#x804A;&#x5929;/&#x64A4;&#x56DE;&#x6D88;&#x606F;&#x7684;&#x7C7B;&#x578B;&#x8BF4;&#x660E;&#x3010;msg_type&#x3011;&#xFF1A;</h4>
-</li>
-</ul>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">&#x6D88;&#x606F;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x7C7B;&#x578B;</th>
 <th style="text-align:center">&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">&#x6587;&#x672C;&#x6D88;&#x606F;</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">&#x56FE;&#x7247;&#x6D88;&#x606F;</td>
-</tr>
-<tr>
-<td style="text-align:center">34</td>
-<td style="text-align:center">&#x8BED;&#x97F3;&#x6D88;&#x606F;</td>
-</tr>
-<tr>
-<td style="text-align:center">37</td>
-<td style="text-align:center">&#x597D;&#x53CB;&#x8BF7;&#x6C42;</td>
-</tr>
-<tr>
-<td style="text-align:center">40</td>
-<td style="text-align:center">&#x53EF;&#x80FD;&#x662F;&#x597D;&#x53CB;&#x6D88;&#x606F;</td>
-</tr>
-<tr>
-<td style="text-align:center">42</td>
-<td style="text-align:center">&#x4E2A;&#x4EBA;&#x540D;&#x7247;</td>
-</tr>
-<tr>
-<td style="text-align:center">43</td>
-<td style="text-align:center">&#x89C6;&#x9891;&#x6D88;&#x606F;</td>
-</tr>
-<tr>
-<td style="text-align:center">47</td>
-<td style="text-align:center">&#x81EA;&#x5B9A;&#x4E49;&#x8868;&#x60C5;&#x5305;</td>
-</tr>
-<tr>
-<td style="text-align:center">48</td>
-<td style="text-align:center">&#x4F4D;&#x7F6E;&#x6D88;&#x606F;</td>
-</tr>
-<tr>
-<td style="text-align:center">49</td>
-<td style="text-align:center">&#x5171;&#x4EAB;&#x5B9E;&#x65F6;&#x4F4D;&#x7F6E;&#x3001;&#x7B49;xml&#x6D88;&#x606F;</td>
-</tr>
-<tr>
-<td style="text-align:center">50</td>
-<td style="text-align:center">&#x672A;&#x77E5;&#x6D88;&#x606F;</td>
-</tr>
-<tr>
-<td style="text-align:center">51</td>
-<td style="text-align:center">&#x5FAE;&#x4FE1;&#x521D;&#x59CB;&#x5316;&#x6D88;&#x606F;</td>
-</tr>
-<tr>
-<td style="text-align:center">52</td>
-<td style="text-align:center">&#x672A;&#x77E5;&#x6D88;&#x606F;</td>
-</tr>
-<tr>
-<td style="text-align:center">53</td>
-<td style="text-align:center">&#x672A;&#x77E5;&#x6D88;&#x606F;</td>
-</tr>
-<tr>
-<td style="text-align:center">62</td>
-<td style="text-align:center">&#x5C0F;&#x89C6;&#x9891;&#x6D88;&#x606F;</td>
-</tr>
-<tr>
-<td style="text-align:center">490</td>
-<td style="text-align:center">&#x5FAE;&#x4FE1;&#x8F6C;&#x8D26;</td>
-</tr>
-<tr>
-<td style="text-align:center">491</td>
-<td style="text-align:center">&#x9080;&#x8BF7;&#x8FDB;&#x7FA4;</td>
-</tr>
-<tr>
-<td style="text-align:center">492</td>
-<td style="text-align:center">&#x5361;&#x7247;&#x94FE;&#x63A5;</td>
-</tr>
-<tr>
-<td style="text-align:center">493</td>
-<td style="text-align:center">&#x6587;&#x4EF6;</td>
-</tr>
-<tr>
-<td style="text-align:center">494</td>
-<td style="text-align:center">&#x5C0F;&#x7A0B;&#x5E8F;</td>
-</tr>
-<tr>
-<td style="text-align:center">666</td>
-<td style="text-align:center">&#x64A4;&#x56DE;&#x6D88;&#x606F;</td>
-</tr>
-<tr>
-<td style="text-align:center">9999</td>
-<td style="text-align:center">&#x672A;&#x77E5;&#x6D88;&#x606F;</td>
-</tr>
-<tr>
-<td style="text-align:center">10002</td>
-<td style="text-align:center">&#x63D0;&#x73B0;&#x6D88;&#x606F;</td>
-</tr>
-<tr>
-<td style="text-align:center">10000</td>
-<td style="text-align:center">&#x7CFB;&#x7EDF;&#x6D88;&#x606F;</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">&#x8FDB;&#x7A0B;PID</td>
 </tr>
 </tbody>
 </table>
@@ -1311,12 +1161,12 @@
 
             
                 
-                <a href="055-获取当前聊天窗口信息.html" class="navigation navigation-prev " aria-label="Previous page: 8、获取当前聊天窗口信息">
+                <a href="051-OCR文字识别.html" class="navigation navigation-prev " aria-label="Previous page: 5、OCR文字识别">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../常见问题及解决方案.html" class="navigation navigation-next " aria-label="Next page: 常见问题及解决方案">
+                <a href="054-自动下载图片视频文件.html" class="navigation navigation-next " aria-label="Next page: 7、自动下载图片/视频/文件">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1327,7 +1177,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"接收消息","level":"1.14","depth":1,"next":{"title":"常见问题及解决方案","level":"1.15","depth":1,"path":"常见问题及解决方案.md","ref":"常见问题及解决方案.md","articles":[]},"previous":{"title":"8、获取当前聊天窗口信息","level":"1.13.8","depth":2,"path":"教程/055-获取当前聊天窗口信息.md","ref":"教程/055-获取当前聊天窗口信息.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/接收消息.md","mtime":"2024-01-03T13:29:59.307Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-01-03T13:39:04.923Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6、获取当前微信进程的PID","level":"1.13.6","depth":2,"next":{"title":"7、自动下载图片/视频/文件","level":"1.13.7","depth":2,"path":"教程/054-自动下载图片视频文件.md","ref":"教程/054-自动下载图片视频文件.md","articles":[]},"previous":{"title":"5、OCR文字识别","level":"1.13.5","depth":2,"path":"教程/051-OCR文字识别.md","ref":"教程/051-OCR文字识别.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/053-获取当前微信进程的PID.md","mtime":"2024-01-03T13:22:17.144Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-01-03T13:39:04.923Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

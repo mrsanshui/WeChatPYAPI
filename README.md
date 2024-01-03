@@ -157,6 +157,14 @@ class WeChatPYApi(builtins.object)
  |      :param to_chat_room: 群ID
  |      :return: list数据
  |  
+ |  get_cur_window_info(self)
+ |      获取当前聊天窗口信息
+ |      :return: dict数据
+ |  
+ |  get_cur_wx_pid(self)
+ |      获取当前微信进程的PID
+ |      :return: 进程PID
+ |  
  |  get_db_name_list(self)
  |      获取所有数据库名称
  |      :return: List数据
