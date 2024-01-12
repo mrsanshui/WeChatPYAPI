@@ -83,10 +83,9 @@ def main():
         to_wx="filehelper",
         title="QQ",
         desc="437382693",
-        target_url="http://baidu.com",
-        img_url="http://img-haodanku-com.cdn.fudaiapp.com/oimg_643855036504_1627291311.jpg_310x310.jpg"
+        target_url="http://www.baidu.com",
+        img_url="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png"
     )
-    time.sleep(1)
 
     # 处理消息回调
     while True:
