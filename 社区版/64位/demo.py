@@ -84,7 +84,7 @@ def main():
         title="QQ",
         desc="437382693",
         target_url="http://www.baidu.com",
-        img_url="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png"
+        img_url="https://img.alicdn.com/bao/uploaded/TB1AptvRKH2gK0jSZJnXXaT1FXa.png_310x310.jpg"
     )
 
     # 处理消息回调

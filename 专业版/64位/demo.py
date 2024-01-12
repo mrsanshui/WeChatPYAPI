@@ -154,7 +154,7 @@ def main():
     #     title="QQ",
     #     desc="437382693",
     #     target_url="http://www.baidu.com",
-    #     img_url="http://img-haodanku-com.cdn.fudaiapp.com/oimg_643855036504_1627291311.jpg_310x310.jpg"
+    #     img_url="https://img.alicdn.com/bao/uploaded/TB1AptvRKH2gK0jSZJnXXaT1FXa.png_310x310.jpg"
     # )
     # time.sleep(1)
 
