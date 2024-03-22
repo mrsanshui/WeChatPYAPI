@@ -1,4 +1,5 @@
 # 如果你是Python36。请删除37、38、39的pyd文件，其他版本同理
+# 小提示：因为Pycharm无法识别pyd文件，这句话可能会报红，无视或配置一下就行了，不影响使用
 from WeChatPYAPI import WeChatPYApi
 
 import time
