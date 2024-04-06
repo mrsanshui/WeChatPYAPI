@@ -80,6 +80,11 @@ class WeChatPYApi(builtins.object)
  |      :param msg_data: 好友请求时的消息数据
  |      :return: 无
  |  
+ |  agree_friend_invite_join_chat_room(self, msg_data)
+ |      同意好友邀请进群
+ |      :param msg_data: 消息数据
+ |      :return: 群ID
+ |  
  |  alter_chat_room_name(self, to_chat_room, name)
  |      修改群名称
  |      :param to_chat_room: 群ID
@@ -143,7 +148,7 @@ class WeChatPYApi(builtins.object)
  |  
  |  forward_msg(self, to_wx, msg_id)
  |      转发任意消息
- |      :param to_wx: 接收者微信ID
+ |      :param to_wx: 接收者的微信ID/群ID
  |      :param msg_id: 消息ID
  |      :return: 无
  |  
@@ -177,6 +182,12 @@ class WeChatPYApi(builtins.object)
  |      获取朋友圈数据
  |      :param last_id: 最后一条朋友圈的ID【翻页必传】
  |      :return: List数据
+ |  
+ |  get_mp_doc(self, gh_id, next_offset=None)
+ |      获取公众号文章
+ |      :param gh_id: 公众号ID
+ |      :param next_offset: 下一页的偏移【翻页必传】
+ |      :return: Dict数据
  |  
  |  get_self_info(self)
  |      获取个人信息
@@ -224,6 +235,11 @@ class WeChatPYApi(builtins.object)
  |      :param pull_type: 好友:1 群:2 公众号:3 其他:4
  |      :return: list数据
  |  
+ |  qr_code_join_chat_room(self, url)
+ |      群二维码进群
+ |      :param url: 群二维码解析的URL
+ |      :return: 群ID
+ |  
  |  query_friend_info(self, to_wx)
  |      查询好友信息
  |      :param to_wx: 要查询的微信ID
@@ -260,7 +276,7 @@ class WeChatPYApi(builtins.object)
  |      群聊保存/取消保存到通讯录
  |      :param to_chat_room: 群ID
  |      :param switch: True:保存 False:取消保存
- |      :return:
+ |      :return: 无
  |  
  |  save_voice_switch(self, save_dir_path, switch)
  |      开启/关闭保存语音
@@ -276,7 +292,7 @@ class WeChatPYApi(builtins.object)
  |  
  |  send_card_link(self, to_wx, title, desc, target_url, img_url)
  |      发送卡片链接
- |      :param to_wx: 接收者微信ID
+ |      :param to_wx: 接收者的微信ID/群ID
  |      :param title: 卡片标题
  |      :param desc: 卡片描述
  |      :param target_url: 目标地址
@@ -285,35 +301,44 @@ class WeChatPYApi(builtins.object)
  |  
  |  send_file(self, to_wx, path)
  |      发送文件/视频消息
- |      :param to_wx: 接收者微信ID
+ |      :param to_wx: 接收者的微信ID/群ID
  |      :param path: 文件/视频的绝对路径
  |      :return: 无
  |  
  |  send_friend_card(self, to_wx, friend_wx, friend_name)
  |      发送好友名片
- |      :param to_wx: 接收者微信ID
+ |      :param to_wx: 接收者的微信ID/群ID
  |      :param friend_wx: 好友微信ID
  |      :param friend_name: 好友昵称
  |      :return: 无
  |  
  |  send_gif(self, to_wx, path)
  |      发送GIF表情
- |      :param to_wx: 接收者微信ID
+ |      :param to_wx: 接收者的微信ID/群ID
  |      :param path: gif图片的绝对路径
  |      :return: 无
  |  
  |  send_img(self, to_wx, path)
  |      发送图片消息
- |      :param to_wx: 接收者微信ID
+ |      :param to_wx: 接收者的微信ID/群ID
  |      :param path: 图片的绝对路径
+ |      :return: 无
+ |  
+ |  send_location(self, to_wx, lon, lat, address, detail_address)
+ |      发送位置消息
+ |      :param to_wx: 接收者的微信ID/群ID
+ |      :param lon: 经度
+ |      :param lat: 纬度
+ |      :param address: 地址
+ |      :param detail_address: 详细地址
  |      :return: 无
  |  
  |  send_mp_card(self, to_wx, mp_id, mp_name)
  |      发送公众号名片
- |      :param to_wx: 接收者微信ID
+ |      :param to_wx: 接收者的微信ID/群ID
  |      :param mp_id: 公众号ID
  |      :param mp_name: 公众号名称
- |      :return:
+ |      :return: 无
  |  
  |  send_notice(self, to_chat_room, content)
  |      发送群公告
@@ -323,7 +348,7 @@ class WeChatPYApi(builtins.object)
  |  
  |  send_text(self, to_wx, msg)
  |      发送文本消息
- |      :param to_wx: 接收者微信ID
+ |      :param to_wx: 接收者的微信ID/群ID
  |      :param msg: 消息内容
  |      :return: 无
  |  
@@ -340,9 +365,16 @@ class WeChatPYApi(builtins.object)
  |      :param msg: 文本消息
  |      :return: 无
  |  
+ |  send_voice(self, to_wx, path, voice_time)
+ |      发送语音消息
+ |      :param to_wx: 接收者的微信ID/群ID
+ |      :param path: silk文件的绝对路径
+ |      :param voice_time: 语音时长，单位:毫秒
+ |      :return: True:成功 False:失败
+ |  
  |  send_xml(self, to_wx, xml_str)
  |      发送XML消息
- |      :param to_wx: 接收者微信ID
+ |      :param to_wx: 接收者的微信ID/群ID
  |      :param xml_str: XML字符串
  |      :return: 无
  |  

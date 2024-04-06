@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1、拉取列表 · GitBook</title>
+        <title>3、获取公众号文章 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,8 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="007-获取群成员列表.html" />
+    <link rel="next" href="052-获取外部浏览器可访问的URL.html" />
     
+    
+    <link rel="prev" href="036-取消关注公众号.html" />
     
 
     </head>
@@ -215,7 +217,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="006-拉取列表.html">
+        <li class="chapter " data-level="1.4.1" data-path="006-拉取列表.html">
             
                 <a href="006-拉取列表.html">
             
@@ -804,7 +806,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.3" data-path="060-获取公众号文章.html">
+        <li class="chapter active" data-level="1.9.3" data-path="060-获取公众号文章.html">
             
                 <a href="060-获取公众号文章.html">
             
@@ -1162,7 +1164,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >1、拉取列表</a>
+        <a href=".." >3、获取公众号文章</a>
     </h1>
 </div>
 
@@ -1177,39 +1179,32 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x62C9;&#x53D6;&#x5217;&#x8868;">&#x62C9;&#x53D6;&#x5217;&#x8868;</h1>
+                                <h1 id="&#x83B7;&#x53D6;&#x516C;&#x4F17;&#x53F7;&#x6587;&#x7AE0;">&#x83B7;&#x53D6;&#x516C;&#x4F17;&#x53F7;&#x6587;&#x7AE0;</h1>
 <p><strong>&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="lang-python">w.pull_list(
-    pull_type=<span class="hljs-number">1</span>
+<pre><code class="lang-python">result = w.get_mp_doc(
+    gh_id=<span class="hljs-string">&quot;gh_xxx&quot;</span>,
+    next_offset=<span class="hljs-keyword">None</span>
 )
+print(result)
 </code></pre>
 <p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
 <th style="text-align:center">&#x53C2;&#x6570;</th>
+<th style="text-align:center"><strong>&#x662F;&#x5426;&#x5FC5;&#x9009;</strong></th>
 <th style="text-align:center">&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">pull_type</td>
-<td style="text-align:center">&#x597D;&#x53CB;:1 &#x7FA4;:2 &#x516C;&#x4F17;&#x53F7;:3 &#x5176;&#x4ED6;:4</td>
+<td style="text-align:center">next_offset</td>
+<td style="text-align:center">&#x5426;</td>
+<td style="text-align:center">&#x4E0B;&#x4E00;&#x9875;&#x7684;&#x504F;&#x79FB;&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x53EF;&#x5728;&#x9996;&#x9875;&#x7684;&#x8FD4;&#x56DE;&#x6D88;&#x606F;&#x4E2D;&#x83B7;&#x53D6;&#x3010;MsgList.PagingInfo.Offset&#x3011;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x8FD4;&#x56DE;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
-<pre><code>[
-    {
-        &quot;avatar_url&quot;: &quot;http://xxx&quot;,  // &#x5934;&#x50CF;&#x5730;&#x5740;
-        &quot;nick_name&quot;: &quot;xxx&quot;,  // &#x6635;&#x79F0;
-        &quot;remark&quot;: &quot;xxx&quot;,  // &#x5907;&#x6CE8;&#x4FE1;&#x606F;
-        &quot;wx_account&quot;: &quot;xxx&quot;,  // &#x5FAE;&#x4FE1;&#x8D26;&#x53F7;
-        &quot;wx_id&quot;: &quot;wxid_xxx&quot;  // &#x5FAE;&#x4FE1;ID
-    },
-    ...
-]
-</code></pre>
+
                                 
                                 </section>
                             
@@ -1236,8 +1231,12 @@
 
             
                 
+                <a href="036-取消关注公众号.html" class="navigation navigation-prev " aria-label="Previous page: 2、取消关注公众号">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="007-获取群成员列表.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 2、获取群成员列表">
+                
+                <a href="052-获取外部浏览器可访问的URL.html" class="navigation navigation-next " aria-label="Next page: 4、获取外部浏览器可访问的URL">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1248,7 +1247,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1、拉取列表","level":"1.4.1","depth":2,"next":{"title":"2、获取群成员列表","level":"1.4.2","depth":2,"path":"教程/007-获取群成员列表.md","ref":"教程/007-获取群成员列表.md","articles":[]},"previous":{"title":"2、拉取好友/群/成员","level":"1.4","depth":1,"ref":"","articles":[{"title":"1、拉取列表","level":"1.4.1","depth":2,"path":"教程/006-拉取列表.md","ref":"教程/006-拉取列表.md","articles":[]},{"title":"2、获取群成员列表","level":"1.4.2","depth":2,"path":"教程/007-获取群成员列表.md","ref":"教程/007-获取群成员列表.md","articles":[]},{"title":"3、拉取标签列表","level":"1.4.3","depth":2,"path":"教程/048-拉取标签列表.md","ref":"教程/048-拉取标签列表.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/006-拉取列表.md","mtime":"2023-06-24T02:42:33.711Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-06T18:54:09.747Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3、获取公众号文章","level":"1.9.3","depth":2,"next":{"title":"4、获取外部浏览器可访问的URL","level":"1.9.4","depth":2,"path":"教程/052-获取外部浏览器可访问的URL.md","ref":"教程/052-获取外部浏览器可访问的URL.md","articles":[]},"previous":{"title":"2、取消关注公众号","level":"1.9.2","depth":2,"path":"教程/036-取消关注公众号.md","ref":"教程/036-取消关注公众号.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/060-获取公众号文章.md","mtime":"2024-04-06T18:45:58.882Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-06T18:54:09.747Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

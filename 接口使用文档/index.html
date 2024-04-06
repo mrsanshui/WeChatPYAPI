@@ -416,6 +416,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.12" data-path="教程/058-发送位置消息.html">
+            
+                <a href="教程/058-发送位置消息.html">
+            
+                    
+                    12、发送位置消息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="教程/059-发送语音消息.html">
+            
+                <a href="教程/059-发送语音消息.html">
+            
+                    
+                    13、发送语音消息
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -597,12 +623,38 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.5" data-path="教程/028-踢出群成员.html">
+        <li class="chapter " data-level="1.7.5" data-path="教程/056-同意好友邀请进群.html">
+            
+                <a href="教程/056-同意好友邀请进群.html">
+            
+                    
+                    5、同意好友邀请进群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="教程/057-群二维码进群.html">
+            
+                <a href="教程/057-群二维码进群.html">
+            
+                    
+                    6、群二维码进群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="教程/028-踢出群成员.html">
             
                 <a href="教程/028-踢出群成员.html">
             
                     
-                    5、踢出群成员
+                    7、踢出群成员
             
                 </a>
             
@@ -610,12 +662,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.6" data-path="教程/029-群聊保存取消保存到通讯录.html">
+        <li class="chapter " data-level="1.7.8" data-path="教程/029-群聊保存取消保存到通讯录.html">
             
                 <a href="教程/029-群聊保存取消保存到通讯录.html">
             
                     
-                    6、群聊保存、取消保存到通讯录
+                    8、群聊保存、取消保存到通讯录
             
                 </a>
             
@@ -623,12 +675,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.7" data-path="教程/030-查询群成员的群昵称.html">
+        <li class="chapter " data-level="1.7.9" data-path="教程/030-查询群成员的群昵称.html">
             
                 <a href="教程/030-查询群成员的群昵称.html">
             
                     
-                    7、查询群成员的群昵称
+                    9、查询群成员的群昵称
             
                 </a>
             
@@ -636,12 +688,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.8" data-path="教程/031-修改我在群里的昵称.html">
+        <li class="chapter " data-level="1.7.10" data-path="教程/031-修改我在群里的昵称.html">
             
                 <a href="教程/031-修改我在群里的昵称.html">
             
                     
-                    8、修改我在群里的昵称
+                    10、修改我在群里的昵称
             
                 </a>
             
@@ -649,12 +701,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.9" data-path="教程/032-退出群聊.html">
+        <li class="chapter " data-level="1.7.11" data-path="教程/032-退出群聊.html">
             
                 <a href="教程/032-退出群聊.html">
             
                     
-                    9、退出群聊
+                    11、退出群聊
             
                 </a>
             
@@ -752,12 +804,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.3" data-path="教程/052-获取外部浏览器可访问的URL.html">
+        <li class="chapter " data-level="1.9.3" data-path="教程/060-获取公众号文章.html">
+            
+                <a href="教程/060-获取公众号文章.html">
+            
+                    
+                    3、获取公众号文章
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="教程/052-获取外部浏览器可访问的URL.html">
             
                 <a href="教程/052-获取外部浏览器可访问的URL.html">
             
                     
-                    3、获取外部浏览器可访问的URL
+                    4、获取外部浏览器可访问的URL
             
                 </a>
             
@@ -1177,6 +1242,11 @@
  |      :param msg_data: &#x597D;&#x53CB;&#x8BF7;&#x6C42;&#x65F6;&#x7684;&#x6D88;&#x606F;&#x6570;&#x636E;
  |      :return: &#x65E0;
  |  
+ |  agree_friend_invite_join_chat_room(self, msg_data)
+ |      &#x540C;&#x610F;&#x597D;&#x53CB;&#x9080;&#x8BF7;&#x8FDB;&#x7FA4;
+ |      :param msg_data: &#x6D88;&#x606F;&#x6570;&#x636E;
+ |      :return: &#x7FA4;ID
+ |  
  |  alter_chat_room_name(self, to_chat_room, name)
  |      &#x4FEE;&#x6539;&#x7FA4;&#x540D;&#x79F0;
  |      :param to_chat_room: &#x7FA4;ID
@@ -1240,7 +1310,7 @@
  |  
  |  forward_msg(self, to_wx, msg_id)
  |      &#x8F6C;&#x53D1;&#x4EFB;&#x610F;&#x6D88;&#x606F;
- |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x5FAE;&#x4FE1;ID
+ |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID/&#x7FA4;ID
  |      :param msg_id: &#x6D88;&#x606F;ID
  |      :return: &#x65E0;
  |  
@@ -1274,6 +1344,12 @@
  |      &#x83B7;&#x53D6;&#x670B;&#x53CB;&#x5708;&#x6570;&#x636E;
  |      :param last_id: &#x6700;&#x540E;&#x4E00;&#x6761;&#x670B;&#x53CB;&#x5708;&#x7684;ID&#x3010;&#x7FFB;&#x9875;&#x5FC5;&#x4F20;&#x3011;
  |      :return: List&#x6570;&#x636E;
+ |  
+ |  get_mp_doc(self, gh_id, next_offset=None)
+ |      &#x83B7;&#x53D6;&#x516C;&#x4F17;&#x53F7;&#x6587;&#x7AE0;
+ |      :param gh_id: &#x516C;&#x4F17;&#x53F7;ID
+ |      :param next_offset: &#x4E0B;&#x4E00;&#x9875;&#x7684;&#x504F;&#x79FB;&#x3010;&#x7FFB;&#x9875;&#x5FC5;&#x4F20;&#x3011;
+ |      :return: Dict&#x6570;&#x636E;
  |  
  |  get_self_info(self)
  |      &#x83B7;&#x53D6;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;
@@ -1321,6 +1397,11 @@
  |      :param pull_type: &#x597D;&#x53CB;:1 &#x7FA4;:2 &#x516C;&#x4F17;&#x53F7;:3 &#x5176;&#x4ED6;:4
  |      :return: list&#x6570;&#x636E;
  |  
+ |  qr_code_join_chat_room(self, url)
+ |      &#x7FA4;&#x4E8C;&#x7EF4;&#x7801;&#x8FDB;&#x7FA4;
+ |      :param url: &#x7FA4;&#x4E8C;&#x7EF4;&#x7801;&#x89E3;&#x6790;&#x7684;URL
+ |      :return: &#x7FA4;ID
+ |  
  |  query_friend_info(self, to_wx)
  |      &#x67E5;&#x8BE2;&#x597D;&#x53CB;&#x4FE1;&#x606F;
  |      :param to_wx: &#x8981;&#x67E5;&#x8BE2;&#x7684;&#x5FAE;&#x4FE1;ID
@@ -1357,7 +1438,7 @@
  |      &#x7FA4;&#x804A;&#x4FDD;&#x5B58;/&#x53D6;&#x6D88;&#x4FDD;&#x5B58;&#x5230;&#x901A;&#x8BAF;&#x5F55;
  |      :param to_chat_room: &#x7FA4;ID
  |      :param switch: True:&#x4FDD;&#x5B58; False:&#x53D6;&#x6D88;&#x4FDD;&#x5B58;
- |      :return:
+ |      :return: &#x65E0;
  |  
  |  save_voice_switch(self, save_dir_path, switch)
  |      &#x5F00;&#x542F;/&#x5173;&#x95ED;&#x4FDD;&#x5B58;&#x8BED;&#x97F3;
@@ -1373,7 +1454,7 @@
  |  
  |  send_card_link(self, to_wx, title, desc, target_url, img_url)
  |      &#x53D1;&#x9001;&#x5361;&#x7247;&#x94FE;&#x63A5;
- |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x5FAE;&#x4FE1;ID
+ |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID/&#x7FA4;ID
  |      :param title: &#x5361;&#x7247;&#x6807;&#x9898;
  |      :param desc: &#x5361;&#x7247;&#x63CF;&#x8FF0;
  |      :param target_url: &#x76EE;&#x6807;&#x5730;&#x5740;
@@ -1382,35 +1463,44 @@
  |  
  |  send_file(self, to_wx, path)
  |      &#x53D1;&#x9001;&#x6587;&#x4EF6;/&#x89C6;&#x9891;&#x6D88;&#x606F;
- |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x5FAE;&#x4FE1;ID
+ |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID/&#x7FA4;ID
  |      :param path: &#x6587;&#x4EF6;/&#x89C6;&#x9891;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
  |      :return: &#x65E0;
  |  
  |  send_friend_card(self, to_wx, friend_wx, friend_name)
  |      &#x53D1;&#x9001;&#x597D;&#x53CB;&#x540D;&#x7247;
- |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x5FAE;&#x4FE1;ID
+ |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID/&#x7FA4;ID
  |      :param friend_wx: &#x597D;&#x53CB;&#x5FAE;&#x4FE1;ID
  |      :param friend_name: &#x597D;&#x53CB;&#x6635;&#x79F0;
  |      :return: &#x65E0;
  |  
  |  send_gif(self, to_wx, path)
  |      &#x53D1;&#x9001;GIF&#x8868;&#x60C5;
- |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x5FAE;&#x4FE1;ID
+ |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID/&#x7FA4;ID
  |      :param path: gif&#x56FE;&#x7247;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
  |      :return: &#x65E0;
  |  
  |  send_img(self, to_wx, path)
  |      &#x53D1;&#x9001;&#x56FE;&#x7247;&#x6D88;&#x606F;
- |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x5FAE;&#x4FE1;ID
+ |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID/&#x7FA4;ID
  |      :param path: &#x56FE;&#x7247;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+ |      :return: &#x65E0;
+ |  
+ |  send_location(self, to_wx, lon, lat, address, detail_address)
+ |      &#x53D1;&#x9001;&#x4F4D;&#x7F6E;&#x6D88;&#x606F;
+ |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID/&#x7FA4;ID
+ |      :param lon: &#x7ECF;&#x5EA6;
+ |      :param lat: &#x7EAC;&#x5EA6;
+ |      :param address: &#x5730;&#x5740;
+ |      :param detail_address: &#x8BE6;&#x7EC6;&#x5730;&#x5740;
  |      :return: &#x65E0;
  |  
  |  send_mp_card(self, to_wx, mp_id, mp_name)
  |      &#x53D1;&#x9001;&#x516C;&#x4F17;&#x53F7;&#x540D;&#x7247;
- |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x5FAE;&#x4FE1;ID
+ |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID/&#x7FA4;ID
  |      :param mp_id: &#x516C;&#x4F17;&#x53F7;ID
  |      :param mp_name: &#x516C;&#x4F17;&#x53F7;&#x540D;&#x79F0;
- |      :return:
+ |      :return: &#x65E0;
  |  
  |  send_notice(self, to_chat_room, content)
  |      &#x53D1;&#x9001;&#x7FA4;&#x516C;&#x544A;
@@ -1420,7 +1510,7 @@
  |  
  |  send_text(self, to_wx, msg)
  |      &#x53D1;&#x9001;&#x6587;&#x672C;&#x6D88;&#x606F;
- |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x5FAE;&#x4FE1;ID
+ |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID/&#x7FA4;ID
  |      :param msg: &#x6D88;&#x606F;&#x5185;&#x5BB9;
  |      :return: &#x65E0;
  |  
@@ -1437,9 +1527,16 @@
  |      :param msg: &#x6587;&#x672C;&#x6D88;&#x606F;
  |      :return: &#x65E0;
  |  
+ |  send_voice(self, to_wx, path, voice_time)
+ |      &#x53D1;&#x9001;&#x8BED;&#x97F3;&#x6D88;&#x606F;
+ |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID/&#x7FA4;ID
+ |      :param path: silk&#x6587;&#x4EF6;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+ |      :param voice_time: &#x8BED;&#x97F3;&#x65F6;&#x957F;&#xFF0C;&#x5355;&#x4F4D;:&#x6BEB;&#x79D2;
+ |      :return: True:&#x6210;&#x529F; False:&#x5931;&#x8D25;
+ |  
  |  send_xml(self, to_wx, xml_str)
  |      &#x53D1;&#x9001;XML&#x6D88;&#x606F;
- |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x5FAE;&#x4FE1;ID
+ |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID/&#x7FA4;ID
  |      :param xml_str: XML&#x5B57;&#x7B26;&#x4E32;
  |      :return: &#x65E0;
  |  
@@ -1505,7 +1602,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"WeChatPYAPI介绍","level":"1.1","depth":1,"next":{"title":"社区版跟专业版的区别","level":"1.2","depth":1,"path":"教程/社区版跟专业版区别.md","ref":"教程/社区版跟专业版区别.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2024-01-03T13:30:45.933Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-15T10:28:02.940Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"WeChatPYAPI介绍","level":"1.1","depth":1,"next":{"title":"社区版跟专业版的区别","level":"1.2","depth":1,"path":"教程/社区版跟专业版区别.md","ref":"教程/社区版跟专业版区别.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2024-04-06T18:53:49.754Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-06T18:54:09.747Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
