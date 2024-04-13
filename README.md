@@ -198,6 +198,10 @@ class WeChatPYApi(builtins.object)
  |      :param app_id: 小程序的AppId
  |      :return: 小程序code
  |  
+ |  hide_wx_windows(self)
+ |      隐藏微信窗口
+ |      :return: 无
+ |  
  |  invite_friend_enter_chat_room(self, to_chat_room, to_wx_list)
  |      邀请好友进群
  |      :param to_chat_room: 群ID
@@ -376,6 +380,10 @@ class WeChatPYApi(builtins.object)
  |      发送XML消息
  |      :param to_wx: 接收者的微信ID/群ID
  |      :param xml_str: XML字符串
+ |      :return: 无
+ |  
+ |  show_wx_windows(self)
+ |      显示微信窗口
  |      :return: 无
  |  
  |  start_wx(self, path=None)

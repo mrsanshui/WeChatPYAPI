@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>9、群聊发送文本信息并且@所有人 · GitBook</title>
+        <title>10、隐藏微信窗口 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="016-发送公众号卡片.html" />
+    <link rel="next" href="接收消息.html" />
     
     
-    <link rel="prev" href="014-群聊发送消息并且@指定群成员.html" />
+    <link rel="prev" href="061-显示微信窗口.html" />
     
 
     </head>
@@ -379,7 +379,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.9" data-path="015-群聊发送文本信息并且@所有人.html">
+        <li class="chapter " data-level="1.5.9" data-path="015-群聊发送文本信息并且@所有人.html">
             
                 <a href="015-群聊发送文本信息并且@所有人.html">
             
@@ -1116,7 +1116,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.10" data-path="062-隐藏微信窗口.html">
+        <li class="chapter active" data-level="1.13.10" data-path="062-隐藏微信窗口.html">
             
                 <a href="062-隐藏微信窗口.html">
             
@@ -1190,7 +1190,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >9、群聊发送文本信息并且@所有人</a>
+        <a href=".." >10、隐藏微信窗口</a>
     </h1>
 </div>
 
@@ -1205,32 +1205,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7FA4;&#x804A;&#x53D1;&#x9001;&#x6587;&#x672C;&#x4FE1;&#x606F;&#x5E76;&#x4E14;&#x6240;&#x6709;&#x4EBA;">&#x7FA4;&#x804A;&#x53D1;&#x9001;&#x6587;&#x672C;&#x4FE1;&#x606F;&#x5E76;&#x4E14;@&#x6240;&#x6709;&#x4EBA;</h1>
+                                <h1 id="&#x9690;&#x85CF;&#x5FAE;&#x4FE1;&#x7A97;&#x53E3;">&#x9690;&#x85CF;&#x5FAE;&#x4FE1;&#x7A97;&#x53E3;</h1>
 <p><strong>&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="lang-python">w.send_text_and_at_all(
-    to_chat_room=<span class="hljs-string">&quot;xxx@chatroom&quot;</span>,
-    msg=<span class="hljs-string">r&quot;&#x4F60;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;&quot;</span>
-)
+<pre><code class="lang-python">w.hide_wx_windows()
 </code></pre>
-<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x53C2;&#x6570;</th>
-<th style="text-align:center">&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">to_chat_room</td>
-<td style="text-align:center">&#x7FA4;ID</td>
-</tr>
-<tr>
-<td style="text-align:center">msg</td>
-<td style="text-align:center">&#x6587;&#x672C;&#x6D88;&#x606F;</td>
-</tr>
-</tbody>
-</table>
 
                                 
                                 </section>
@@ -1258,12 +1236,12 @@
 
             
                 
-                <a href="014-群聊发送消息并且@指定群成员.html" class="navigation navigation-prev " aria-label="Previous page: 8、群聊发送消息并且@指定群成员">
+                <a href="061-显示微信窗口.html" class="navigation navigation-prev " aria-label="Previous page: 9、显示微信窗口">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="016-发送公众号卡片.html" class="navigation navigation-next " aria-label="Next page: 10、发送公众号卡片">
+                <a href="接收消息.html" class="navigation navigation-next " aria-label="Next page: 接收消息">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1274,7 +1252,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"9、群聊发送文本信息并且@所有人","level":"1.5.9","depth":2,"next":{"title":"10、发送公众号卡片","level":"1.5.10","depth":2,"path":"教程/016-发送公众号卡片.md","ref":"教程/016-发送公众号卡片.md","articles":[]},"previous":{"title":"8、群聊发送消息并且@指定群成员","level":"1.5.8","depth":2,"path":"教程/014-群聊发送消息并且@指定群成员.md","ref":"教程/014-群聊发送消息并且@指定群成员.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/015-群聊发送文本信息并且@所有人.md","mtime":"2023-06-24T02:47:24.923Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-13T16:52:46.912Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"10、隐藏微信窗口","level":"1.13.10","depth":2,"next":{"title":"接收消息","level":"1.14","depth":1,"path":"教程/接收消息.md","ref":"教程/接收消息.md","articles":[]},"previous":{"title":"9、显示微信窗口","level":"1.13.9","depth":2,"path":"教程/061-显示微信窗口.md","ref":"教程/061-显示微信窗口.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/062-隐藏微信窗口.md","mtime":"2024-04-13T16:46:48.899Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-13T16:52:46.912Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
