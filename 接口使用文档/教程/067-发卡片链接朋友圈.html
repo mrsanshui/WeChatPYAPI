@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>2、退款 · GitBook</title>
+        <title>9、发卡片链接朋友圈 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="046-保存图片.html" />
     
-    
-    <link rel="prev" href="044-收款.html" />
+    <link rel="prev" href="066-发图文朋友圈.html" />
     
 
     </head>
@@ -903,6 +901,71 @@
             
         </li>
     
+        <li class="chapter " data-level="1.10.5" data-path="063-获取指定好友的朋友圈.html">
+            
+                <a href="063-获取指定好友的朋友圈.html">
+            
+                    
+                    5、获取指定好友的朋友圈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="064-朋友圈上传图片.html">
+            
+                <a href="064-朋友圈上传图片.html">
+            
+                    
+                    6、朋友圈上传图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="065-发送转发朋友圈.html">
+            
+                <a href="065-发送转发朋友圈.html">
+            
+                    
+                    7、发送/转发朋友圈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="066-发图文朋友圈.html">
+            
+                <a href="066-发图文朋友圈.html">
+            
+                    
+                    8、发图文朋友圈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10.9" data-path="067-发卡片链接朋友圈.html">
+            
+                <a href="067-发卡片链接朋友圈.html">
+            
+                    
+                    9、发卡片链接朋友圈
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1012,9 +1075,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.13.2" data-path="045-收款.html">
+        <li class="chapter " data-level="1.13.2" data-path="045-退款.html">
             
-                <a href="045-收款.html">
+                <a href="045-退款.html">
             
                     
                     2、退款
@@ -1190,7 +1253,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >2、退款</a>
+        <a href=".." >9、发卡片链接朋友圈</a>
     </h1>
 </div>
 
@@ -1205,11 +1268,16 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x9000;&#x6B3E;">&#x9000;&#x6B3E;</h1>
+                                <h1 id="&#x53D1;&#x5361;&#x7247;&#x94FE;&#x63A5;&#x670B;&#x53CB;&#x5708;">&#x53D1;&#x5361;&#x7247;&#x94FE;&#x63A5;&#x670B;&#x53CB;&#x5708;</h1>
 <p><strong>&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="lang-python">w.refund(
-    msg_data=&#x6D88;&#x606F;&#x6570;&#x636E;
+<pre><code class="lang-python">result = w.send_card_link_moments(
+    text=<span class="hljs-string">&quot;&#x4ECA;&#x5929;&#x5929;&#x6C14;&#x771F;&#x597D;&#x9E2D;~&quot;</span>, 
+    title=<span class="hljs-string">&quot;&#x6211;&#x662F;&#x6807;&#x9898;&quot;</span>, 
+    desc=<span class="hljs-string">&quot;&#x6211;&#x662F;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;&quot;</span>,
+    target_url=<span class="hljs-string">&quot;https://www.baidu.com&quot;</span>,
+    thumb_url=<span class="hljs-string">&quot;http://xxx&quot;</span>,
 )
+print(result)
 </code></pre>
 <p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
@@ -1221,8 +1289,43 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">msg_data</td>
-<td style="text-align:center">&#x6D88;&#x606F;&#x6570;&#x636E;</td>
+<td style="text-align:center">text</td>
+<td style="text-align:center">&#x6587;&#x672C;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td style="text-align:center">title</td>
+<td style="text-align:center">&#x5361;&#x7247;&#x6807;&#x9898;</td>
+</tr>
+<tr>
+<td style="text-align:center">desc</td>
+<td style="text-align:center">&#x5361;&#x7247;&#x63CF;&#x8FF0;</td>
+</tr>
+<tr>
+<td style="text-align:center">target_url</td>
+<td style="text-align:center">&#x76EE;&#x6807;&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td style="text-align:center">thumb_url</td>
+<td style="text-align:center">&#x5C01;&#x9762;&#x5730;&#x5740;<br>(&#x4E0A;&#x4F20;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7684;thumb_url)</td>
+</tr>
+<tr>
+<td style="text-align:center">is_private</td>
+<td style="text-align:center">False:&#x6240;&#x6709;&#x4EBA;&#x53EF;&#x89C1; True:&#x4EC5;&#x81EA;&#x5DF1;&#x53EF;&#x89C1;<br>(&#x4E0D;&#x4F20;&#x9ED8;&#x8BA4;&#x4E3A;False)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">str</td>
+<td style="text-align:center">&#x670B;&#x53CB;&#x5708;ID</td>
 </tr>
 </tbody>
 </table>
@@ -1253,14 +1356,10 @@
 
             
                 
-                <a href="044-收款.html" class="navigation navigation-prev " aria-label="Previous page: 1、收款">
+                <a href="066-发图文朋友圈.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 8、发图文朋友圈">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="046-保存图片.html" class="navigation navigation-next " aria-label="Next page: 3、保存图片">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1269,7 +1368,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2、退款","level":"1.13.2","depth":2,"next":{"title":"3、保存图片","level":"1.13.3","depth":2,"path":"教程/046-保存图片.md","ref":"教程/046-保存图片.md","articles":[]},"previous":{"title":"1、收款","level":"1.13.1","depth":2,"path":"教程/044-收款.md","ref":"教程/044-收款.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/045-收款.md","mtime":"2023-06-25T05:26:56.423Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-13T16:52:46.912Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"9、发卡片链接朋友圈","level":"1.10.9","depth":2,"next":{"title":"9、小程序","level":"1.11","depth":1,"ref":"","articles":[{"title":"1、获取小程序code","level":"1.11.1","depth":2,"path":"教程/041-获取小程序code.md","ref":"教程/041-获取小程序code.md","articles":[]}]},"previous":{"title":"8、发图文朋友圈","level":"1.10.8","depth":2,"path":"教程/066-发图文朋友圈.md","ref":"教程/066-发图文朋友圈.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/067-发卡片链接朋友圈.md","mtime":"2024-04-19T10:43:22.790Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-19T10:51:42.738Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

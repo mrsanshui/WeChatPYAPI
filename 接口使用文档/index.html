@@ -901,6 +901,71 @@
             
         </li>
     
+        <li class="chapter " data-level="1.10.5" data-path="教程/063-获取指定好友的朋友圈.html">
+            
+                <a href="教程/063-获取指定好友的朋友圈.html">
+            
+                    
+                    5、获取指定好友的朋友圈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="教程/064-朋友圈上传图片.html">
+            
+                <a href="教程/064-朋友圈上传图片.html">
+            
+                    
+                    6、朋友圈上传图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="教程/065-发送转发朋友圈.html">
+            
+                <a href="教程/065-发送转发朋友圈.html">
+            
+                    
+                    7、发送/转发朋友圈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="教程/066-发图文朋友圈.html">
+            
+                <a href="教程/066-发图文朋友圈.html">
+            
+                    
+                    8、发图文朋友圈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="教程/067-发卡片链接朋友圈.html">
+            
+                <a href="教程/067-发卡片链接朋友圈.html">
+            
+                    
+                    9、发卡片链接朋友圈
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1010,9 +1075,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.2" data-path="教程/045-收款.html">
+        <li class="chapter " data-level="1.13.2" data-path="教程/045-退款.html">
             
-                <a href="教程/045-收款.html">
+                <a href="教程/045-退款.html">
             
                     
                     2、退款
@@ -1371,6 +1436,12 @@
  |      :param last_id: &#x6700;&#x540E;&#x4E00;&#x6761;&#x670B;&#x53CB;&#x5708;&#x7684;ID&#x3010;&#x7FFB;&#x9875;&#x5FC5;&#x4F20;&#x3011;
  |      :return: List&#x6570;&#x636E;
  |  
+ |  get_moments_by_friend(self, wx_id, last_id=None)
+ |      &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x597D;&#x53CB;&#x7684;&#x670B;&#x53CB;&#x5708;
+ |      :param wx_id: &#x597D;&#x53CB;&#x7684;&#x5FAE;&#x4FE1;ID
+ |      :param last_id: &#x6700;&#x540E;&#x4E00;&#x6761;&#x670B;&#x53CB;&#x5708;&#x7684;ID&#x3010;&#x7FFB;&#x9875;&#x5FC5;&#x4F20;&#x3011;
+ |      :return: List&#x6570;&#x636E;
+ |  
  |  get_mp_doc(self, gh_id, next_offset=None)
  |      &#x83B7;&#x53D6;&#x516C;&#x4F17;&#x53F7;&#x6587;&#x7AE0;
  |      :param gh_id: &#x516C;&#x4F17;&#x53F7;ID
@@ -1411,6 +1482,11 @@
  |      :param to_id: &#x597D;&#x53CB;ID/&#x7FA4;ID
  |      :param switch: True:&#x5F00;&#x542F;&#x514D;&#x6253;&#x6270; False:&#x5173;&#x95ED;&#x514D;&#x6253;&#x6270;
  |      :return: &#x65E0;
+ |  
+ |  moments_upload_img(self, path)
+ |      &#x670B;&#x53CB;&#x5708;&#x4E0A;&#x4F20;&#x56FE;&#x7247;
+ |      :param path: &#x56FE;&#x7247;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+ |      :return: Dict&#x6570;&#x636E;
  |  
  |  ocr_recognition(self, path, is_split=False)
  |      OCR&#x6587;&#x5B57;&#x8BC6;&#x522B;
@@ -1491,6 +1567,16 @@
  |      :param img_url: &#x5361;&#x7247;&#x5C01;&#x9762;&#x5730;&#x5740;
  |      :return: &#x65E0;
  |  
+ |  send_card_link_moments(self, text, title, desc, target_url, thumb_url, is_private=False)
+ |      &#x53D1;&#x5361;&#x7247;&#x94FE;&#x63A5;&#x670B;&#x53CB;&#x5708;
+ |      :param text: &#x6587;&#x672C;&#x5185;&#x5BB9;
+ |      :param title: &#x5361;&#x7247;&#x6807;&#x9898;
+ |      :param desc: &#x5361;&#x7247;&#x63CF;&#x8FF0;
+ |      :param target_url: &#x76EE;&#x6807;&#x5730;&#x5740;
+ |      :param thumb_url: &#x5C01;&#x9762;&#x5730;&#x5740;&#x3010;&#x4E0A;&#x4F20;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7684;thumb_url&#x3011;
+ |      :param is_private: False:&#x6240;&#x6709;&#x4EBA;&#x53EF;&#x89C1; True:&#x4EC5;&#x81EA;&#x5DF1;&#x53EF;&#x89C1;&#x3010;&#x9ED8;&#x8BA4;&#x4E3A;False&#x3011;
+ |      :return: &#x670B;&#x53CB;&#x5708;ID
+ |  
  |  send_file(self, to_wx, path)
  |      &#x53D1;&#x9001;&#x6587;&#x4EF6;/&#x89C6;&#x9891;&#x6D88;&#x606F;
  |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID/&#x7FA4;ID
@@ -1516,6 +1602,13 @@
  |      :param path: &#x56FE;&#x7247;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
  |      :return: &#x65E0;
  |  
+ |  send_img_text_moments(self, text, img_url_list=None, is_private=False)
+ |      &#x53D1;&#x56FE;&#x6587;&#x670B;&#x53CB;&#x5708;
+ |      :param text: &#x6587;&#x672C;&#x5185;&#x5BB9;
+ |      :param img_url_list: &#x4E0A;&#x4F20;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7684;&#x56FE;&#x7247;url&#x5217;&#x8868;&#x3010;&#x4E0D;&#x4F20;&#x5219;&#x662F;&#x53D1;&#x7EAF;&#x6587;&#x672C;&#x3011;
+ |      :param is_private: False:&#x6240;&#x6709;&#x4EBA;&#x53EF;&#x89C1; True:&#x4EC5;&#x81EA;&#x5DF1;&#x53EF;&#x89C1;&#x3010;&#x9ED8;&#x8BA4;&#x4E3A;False&#x3011;
+ |      :return: &#x670B;&#x53CB;&#x5708;ID
+ |  
  |  send_location(self, to_wx, lon, lat, address, detail_address)
  |      &#x53D1;&#x9001;&#x4F4D;&#x7F6E;&#x6D88;&#x606F;
  |      :param to_wx: &#x63A5;&#x6536;&#x8005;&#x7684;&#x5FAE;&#x4FE1;ID/&#x7FA4;ID
@@ -1537,6 +1630,12 @@
  |      :param to_chat_room: &#x7FA4;ID
  |      :param content: &#x516C;&#x544A;&#x5185;&#x5BB9;
  |      :return: &#x65E0;
+ |  
+ |  send_or_forward_moments(self, xml_content, is_private=False)
+ |      &#x53D1;&#x9001;/&#x8F6C;&#x53D1;&#x670B;&#x53CB;&#x5708;
+ |      :param xml_content: xml&#x5185;&#x5BB9;
+ |      :param is_private: False:&#x6240;&#x6709;&#x4EBA;&#x53EF;&#x89C1; True:&#x4EC5;&#x81EA;&#x5DF1;&#x53EF;&#x89C1;&#x3010;&#x9ED8;&#x8BA4;&#x4E3A;False&#x3011;
+ |      :return: &#x670B;&#x53CB;&#x5708;ID
  |  
  |  send_text(self, to_wx, msg)
  |      &#x53D1;&#x9001;&#x6587;&#x672C;&#x6D88;&#x606F;
@@ -1636,7 +1735,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"WeChatPYAPI介绍","level":"1.1","depth":1,"next":{"title":"社区版跟专业版的区别","level":"1.2","depth":1,"path":"教程/社区版跟专业版区别.md","ref":"教程/社区版跟专业版区别.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2024-04-13T16:48:24.182Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-13T16:52:46.912Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"WeChatPYAPI介绍","level":"1.1","depth":1,"next":{"title":"社区版跟专业版的区别","level":"1.2","depth":1,"path":"教程/社区版跟专业版区别.md","ref":"教程/社区版跟专业版区别.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2024-04-19T10:26:22.471Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-19T10:51:42.738Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

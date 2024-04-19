@@ -183,6 +183,12 @@ class WeChatPYApi(builtins.object)
  |      :param last_id: 最后一条朋友圈的ID【翻页必传】
  |      :return: List数据
  |  
+ |  get_moments_by_friend(self, wx_id, last_id=None)
+ |      获取指定好友的朋友圈
+ |      :param wx_id: 好友的微信ID
+ |      :param last_id: 最后一条朋友圈的ID【翻页必传】
+ |      :return: List数据
+ |  
  |  get_mp_doc(self, gh_id, next_offset=None)
  |      获取公众号文章
  |      :param gh_id: 公众号ID
@@ -223,6 +229,11 @@ class WeChatPYApi(builtins.object)
  |      :param to_id: 好友ID/群ID
  |      :param switch: True:开启免打扰 False:关闭免打扰
  |      :return: 无
+ |  
+ |  moments_upload_img(self, path)
+ |      朋友圈上传图片
+ |      :param path: 图片的绝对路径
+ |      :return: Dict数据
  |  
  |  ocr_recognition(self, path, is_split=False)
  |      OCR文字识别
@@ -303,6 +314,16 @@ class WeChatPYApi(builtins.object)
  |      :param img_url: 卡片封面地址
  |      :return: 无
  |  
+ |  send_card_link_moments(self, text, title, desc, target_url, thumb_url, is_private=False)
+ |      发卡片链接朋友圈
+ |      :param text: 文本内容
+ |      :param title: 卡片标题
+ |      :param desc: 卡片描述
+ |      :param target_url: 目标地址
+ |      :param thumb_url: 封面地址【上传接口返回的thumb_url】
+ |      :param is_private: False:所有人可见 True:仅自己可见【默认为False】
+ |      :return: 朋友圈ID
+ |  
  |  send_file(self, to_wx, path)
  |      发送文件/视频消息
  |      :param to_wx: 接收者的微信ID/群ID
@@ -328,6 +349,13 @@ class WeChatPYApi(builtins.object)
  |      :param path: 图片的绝对路径
  |      :return: 无
  |  
+ |  send_img_text_moments(self, text, img_url_list=None, is_private=False)
+ |      发图文朋友圈
+ |      :param text: 文本内容
+ |      :param img_url_list: 上传接口返回的图片url列表【不传则是发纯文本】
+ |      :param is_private: False:所有人可见 True:仅自己可见【默认为False】
+ |      :return: 朋友圈ID
+ |  
  |  send_location(self, to_wx, lon, lat, address, detail_address)
  |      发送位置消息
  |      :param to_wx: 接收者的微信ID/群ID
@@ -349,6 +377,12 @@ class WeChatPYApi(builtins.object)
  |      :param to_chat_room: 群ID
  |      :param content: 公告内容
  |      :return: 无
+ |  
+ |  send_or_forward_moments(self, xml_content, is_private=False)
+ |      发送/转发朋友圈
+ |      :param xml_content: xml内容
+ |      :param is_private: False:所有人可见 True:仅自己可见【默认为False】
+ |      :return: 朋友圈ID
  |  
  |  send_text(self, to_wx, msg)
  |      发送文本消息
