@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>9、查询群成员的群昵称 · GitBook</title>
+        <title>9、批量查询群成员的群昵称 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -677,12 +677,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.9" data-path="030-查询群成员的群昵称.html">
+        <li class="chapter active" data-level="1.7.9" data-path="030-批量查询群成员的群昵称.html">
             
-                <a href="030-查询群成员的群昵称.html">
+                <a href="030-批量查询群成员的群昵称.html">
             
                     
-                    9、查询群成员的群昵称
+                    9、批量查询群成员的群昵称
             
                 </a>
             
@@ -1255,7 +1255,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >9、查询群成员的群昵称</a>
+        <a href=".." >9、批量查询群成员的群昵称</a>
     </h1>
 </div>
 
@@ -1270,12 +1270,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x67E5;&#x8BE2;&#x7FA4;&#x6210;&#x5458;&#x7684;&#x7FA4;&#x6635;&#x79F0;">&#x67E5;&#x8BE2;&#x7FA4;&#x6210;&#x5458;&#x7684;&#x7FA4;&#x6635;&#x79F0;</h1>
+                                <h1 id="&#x6279;&#x91CF;&#x67E5;&#x8BE2;&#x7FA4;&#x6210;&#x5458;&#x7684;&#x7FA4;&#x6635;&#x79F0;">&#x6279;&#x91CF;&#x67E5;&#x8BE2;&#x7FA4;&#x6210;&#x5458;&#x7684;&#x7FA4;&#x6635;&#x79F0;</h1>
 <p><strong>&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="lang-python">w.query_member_nick_name(
+<pre><code class="lang-python">result = w.batch_query_member_nick_name(
     to_chat_room=<span class="hljs-string">&quot;xxx@chatroom&quot;</span>,
-    to_wx=<span class="hljs-string">&quot;wxid_xxx&quot;</span>
+    wx_id_list=[<span class="hljs-string">&quot;wxid_xxx1&quot;</span>, <span class="hljs-string">&quot;wxid_xxx2&quot;</span>]
 )
+print(result)
 </code></pre>
 <p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
@@ -1291,26 +1292,24 @@
 <td style="text-align:center">&#x7FA4;ID</td>
 </tr>
 <tr>
-<td style="text-align:center">to_wx</td>
-<td style="text-align:center">&#x7FA4;&#x6210;&#x5458;&#x7684;&#x5FAE;&#x4FE1;ID</td>
+<td style="text-align:center">wx_id_list</td>
+<td style="text-align:center">&#x7FA4;&#x6210;&#x5458;&#x7684;&#x5FAE;&#x4FE1;ID&#x5217;&#x8868;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">str</td>
-<td style="text-align:center">&#x7FA4;&#x6635;&#x79F0;</td>
-</tr>
-</tbody>
-</table>
+<p><strong>&#x8FD4;&#x56DE;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-python">[
+    {
+        <span class="hljs-string">&quot;wx_id&quot;</span>: <span class="hljs-string">&quot;wxid_xxx1&quot;</span>,
+        <span class="hljs-string">&quot;room_name&quot;</span>: <span class="hljs-string">&quot;&#x5F20;&#x4E09;&quot;</span>  <span class="hljs-comment"># &#x7FA4;&#x6210;&#x5458;&#x7684;&#x7FA4;&#x6635;&#x79F0;</span>
+    },
+    {
+        <span class="hljs-string">&quot;wx_id&quot;</span>: <span class="hljs-string">&quot;wxid_xxx2&quot;</span>,
+        <span class="hljs-string">&quot;room_name&quot;</span>: <span class="hljs-string">&quot;&#x674E;&#x56DB;&quot;</span>  <span class="hljs-comment"># &#x7FA4;&#x6210;&#x5458;&#x7684;&#x7FA4;&#x6635;&#x79F0;</span>
+    },
+    ...
+]
+</code></pre>
 
                                 
                                 </section>
@@ -1354,7 +1353,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"9、查询群成员的群昵称","level":"1.7.9","depth":2,"next":{"title":"10、修改我在群里的昵称","level":"1.7.10","depth":2,"path":"教程/031-修改我在群里的昵称.md","ref":"教程/031-修改我在群里的昵称.md","articles":[]},"previous":{"title":"8、群聊保存、取消保存到通讯录","level":"1.7.8","depth":2,"path":"教程/029-群聊保存取消保存到通讯录.md","ref":"教程/029-群聊保存取消保存到通讯录.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/030-查询群成员的群昵称.md","mtime":"2023-06-24T14:59:43.546Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-19T10:51:42.738Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"9、批量查询群成员的群昵称","level":"1.7.9","depth":2,"next":{"title":"10、修改我在群里的昵称","level":"1.7.10","depth":2,"path":"教程/031-修改我在群里的昵称.md","ref":"教程/031-修改我在群里的昵称.md","articles":[]},"previous":{"title":"8、群聊保存、取消保存到通讯录","level":"1.7.8","depth":2,"path":"教程/029-群聊保存取消保存到通讯录.md","ref":"教程/029-群聊保存取消保存到通讯录.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/030-批量查询群成员的群昵称.md","mtime":"2024-04-30T02:50:54.819Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-30T03:21:46.456Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

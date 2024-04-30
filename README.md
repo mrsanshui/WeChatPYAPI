@@ -17,7 +17,7 @@
   - 功能更加强大、稳定！
   - 支持长时间运行
   - 持续更新迭代
-  - 微信版本：3.9.2.23
+  - 微信版本：3.9.10.16
 
 > <span style="color: red">功能区别请打开《接口使用文档》进行查看</span>
 
@@ -102,6 +102,12 @@ class WeChatPYApi(builtins.object)
  |      :param to_chat_room: 群ID
  |      :param name: 昵称
  |      :return: 无
+ |  
+ |  batch_query_member_nick_name(self, to_chat_room, wx_id_list)
+ |      批量查询群成员的群昵称
+ |      :param to_chat_room: 群ID
+ |      :param wx_id_list: 群成员的微信ID列表
+ |      :return: List数据
  |  
  |  collection(self, msg_data)
  |      收款
@@ -265,12 +271,6 @@ class WeChatPYApi(builtins.object)
  |      :param to_wx: 要查询的微信ID
  |      :return: dict数据
  |  
- |  query_member_nick_name(self, to_chat_room, to_wx)
- |      查询群成员的群昵称
- |      :param to_chat_room: 群ID
- |      :param to_wx: 群成员的微信ID
- |      :return: 群内昵称
- |  
  |  query_wx_info_by_net(self, key)
  |      网络查询陌生人信息
  |      :param key: 手机号/QQ号/微信号
@@ -421,7 +421,7 @@ class WeChatPYApi(builtins.object)
  |      :return: 无
  |  
  |  start_wx(self, path=None)
- |      启动微信，目前支持微信版本：V-3.9.2.23
+ |      启动微信，目前支持微信版本：V-3.9.10.16
  |      :param path: 保存登录二维码的绝对路径
  |      :return: (errno:状态码，errmsg:说明)
  |  
