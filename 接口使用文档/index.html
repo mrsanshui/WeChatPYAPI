@@ -979,6 +979,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.10.10" data-path="教程/069-下载朋友圈图片.html">
+            
+                <a href="教程/069-下载朋友圈图片.html">
+            
+                    
+                    10、下载朋友圈图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="教程/070-下载朋友圈视频.html">
+            
+                <a href="教程/070-下载朋友圈视频.html">
+            
+                    
+                    11、下载朋友圈视频
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1357,6 +1383,12 @@
  |      :param name: &#x7FA4;&#x540D;&#x79F0;
  |      :return: &#x65E0;
  |  
+ |  alter_friend_desc(self, to_wx, desc)
+ |      &#x4FEE;&#x6539;&#x597D;&#x53CB;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;
+ |      :param to_wx: &#x597D;&#x53CB;&#x5FAE;&#x4FE1;ID
+ |      :param desc: &#x63CF;&#x8FF0;&#x4FE1;&#x606F;
+ |      :return: &#x65E0;
+ |  
  |  alter_friend_remark(self, to_wx, remark)
  |      &#x4FEE;&#x6539;&#x597D;&#x53CB;&#x5907;&#x6CE8;
  |      :param to_wx: &#x597D;&#x53CB;&#x5FAE;&#x4FE1;ID
@@ -1686,6 +1718,24 @@
  |      &#x663E;&#x793A;&#x5FAE;&#x4FE1;&#x7A97;&#x53E3;
  |      :return: &#x65E0;
  |  
+ |  sns_download_img(self, url, md5, key, enc_idx, token, save_path)
+ |      &#x4E0B;&#x8F7D;&#x670B;&#x53CB;&#x5708;&#x56FE;&#x7247;
+ |      :param url: &#x56FE;&#x7247;&#x5730;&#x5740;
+ |      :param key: key
+ |      :param md5: md5
+ |      :param enc_idx: enc_idx
+ |      :param token: token
+ |      :param save_path: &#x4FDD;&#x5B58;&#x8DEF;&#x5F84;
+ |      :return: True:&#x6210;&#x529F; False:&#x5931;&#x8D25;
+ |  
+ |  sns_download_video(self, url, md5, key, save_path)
+ |      &#x4E0B;&#x8F7D;&#x670B;&#x53CB;&#x5708;&#x89C6;&#x9891;
+ |      :param url: &#x89C6;&#x9891;&#x5730;&#x5740;
+ |      :param key: key
+ |      :param md5: md5
+ |      :param save_path: &#x4FDD;&#x5B58;&#x8DEF;&#x5F84;
+ |      :return: True:&#x6210;&#x529F; False:&#x5931;&#x8D25;
+ |  
  |  start_wx(self, path=None)
  |      &#x542F;&#x52A8;&#x5FAE;&#x4FE1;&#xFF0C;&#x76EE;&#x524D;&#x652F;&#x6301;&#x5FAE;&#x4FE1;&#x7248;&#x672C;&#xFF1A;V-3.9.10.16
  |      :param path: &#x4FDD;&#x5B58;&#x767B;&#x5F55;&#x4E8C;&#x7EF4;&#x7801;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
@@ -1748,7 +1798,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"WeChatPYAPI介绍","level":"1.1","depth":1,"next":{"title":"社区版跟专业版的区别","level":"1.2","depth":1,"path":"教程/社区版跟专业版区别.md","ref":"教程/社区版跟专业版区别.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2024-04-30T02:44:45.418Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-04T09:21:27.925Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"WeChatPYAPI介绍","level":"1.1","depth":1,"next":{"title":"社区版跟专业版的区别","level":"1.2","depth":1,"path":"教程/社区版跟专业版区别.md","ref":"教程/社区版跟专业版区别.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2024-05-07T19:11:16.794Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-07T19:15:45.142Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

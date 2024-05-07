@@ -91,6 +91,12 @@ class WeChatPYApi(builtins.object)
  |      :param name: 群名称
  |      :return: 无
  |  
+ |  alter_friend_desc(self, to_wx, desc)
+ |      修改好友描述信息
+ |      :param to_wx: 好友微信ID
+ |      :param desc: 描述信息
+ |      :return: 无
+ |  
  |  alter_friend_remark(self, to_wx, remark)
  |      修改好友备注
  |      :param to_wx: 好友微信ID
@@ -419,6 +425,24 @@ class WeChatPYApi(builtins.object)
  |  show_wx_windows(self)
  |      显示微信窗口
  |      :return: 无
+ |  
+ |  sns_download_img(self, url, md5, key, enc_idx, token, save_path)
+ |      下载朋友圈图片
+ |      :param url: 图片地址
+ |      :param key: key
+ |      :param md5: md5
+ |      :param enc_idx: enc_idx
+ |      :param token: token
+ |      :param save_path: 保存路径
+ |      :return: True:成功 False:失败
+ |  
+ |  sns_download_video(self, url, md5, key, save_path)
+ |      下载朋友圈视频
+ |      :param url: 视频地址
+ |      :param key: key
+ |      :param md5: md5
+ |      :param save_path: 保存路径
+ |      :return: True:成功 False:失败
  |  
  |  start_wx(self, path=None)
  |      启动微信，目前支持微信版本：V-3.9.10.16
