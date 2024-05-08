@@ -402,11 +402,12 @@ class WeChatPYApi(builtins.object)
  |      :param msg: 文本消息
  |      :return: 无
  |  
- |  send_text_and_at_member(self, to_chat_room, to_wx_list, msg)
+ |  send_text_and_at_member(self, to_chat_room, to_wx_list, msg, is_custom=False)
  |      群聊发送文本信息并且@指定群成员
  |      :param to_chat_room: 群ID
  |      :param to_wx_list: @人的微信ID列表
  |      :param msg: 文本消息
+ |      :param is_custom: False:默认@位置 True:自行指定@位置【默认为False】
  |      :return: 无
  |  
  |  send_voice(self, to_wx, path, voice_time)
