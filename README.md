@@ -17,7 +17,7 @@
   - 功能更加强大、稳定！
   - 支持长时间运行
   - 持续更新迭代
-  - 微信版本：3.9.10.16
+  - 微信版本：3.9.10.19
 
 > <span style="color: red">功能区别请打开《接口使用文档》进行查看</span>
 
@@ -30,7 +30,7 @@
 ## 使用教程
 
 1. 克隆该项目<span style="color: red">（请关闭你的杀毒软件，否则可能会误删dll文件）</span>
-2. 选择对应python解释器环境（如果你是32位的python，请打开32位文件夹）
+2. 选择对应python解释器环境（必须是64位的）
 4. 执行文件夹中的demo.py
 4. 使用前请先安装指定版本的微信
 
@@ -446,7 +446,7 @@ class WeChatPYApi(builtins.object)
  |      :return: True:成功 False:失败
  |  
  |  start_wx(self, path=None)
- |      启动微信，目前支持微信版本：V-3.9.10.16
+ |      启动微信，目前支持微信版本：V-3.9.10.19
  |      :param path: 保存登录二维码的绝对路径
  |      :return: (errno:状态码，errmsg:说明)
  |  
