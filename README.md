@@ -69,10 +69,11 @@ class WeChatPYApi(builtins.object)
  |      :param logger: 日志器句柄
  |      :param kwargs: 略
  |  
- |  add_friend(self, wx_id_or_v3, msg)
+ |  add_friend(self, wx_id_or_v3, msg, method=30)
  |      添加好友
  |      :param wx_id_or_v3: 要添加的微信ID或者v3数据
  |      :param msg: 添加时的打招呼消息
+ |      :param method: 添加方式【默认30】
  |      :return: 无
  |  
  |  agree_friend(self, msg_data)
@@ -460,6 +461,17 @@ class WeChatPYApi(builtins.object)
  |      取消关注公众号
  |      :param mp_id: 公众号ID
  |      :return: 无
+ |  
+ |  wx_search(self, keyword, next_offset=0, search_type=0, filter_sort=0, filter_type=0, filter_time=0, filter_scope=0)
+ |      搜一搜
+ |      :param keyword: 关键词
+ |      :param next_offset: 下一页的偏移【翻页必传】
+ |      :param search_type: 搜索类型
+ |      :param filter_sort: 过滤-排序
+ |      :param filter_type: 过滤-类型
+ |      :param filter_time: 过滤-时间
+ |      :param filter_scope: 过滤-范围
+ |      :return: Dict数据
  |  
  |  ----------------------------------------------------------------------
 ```

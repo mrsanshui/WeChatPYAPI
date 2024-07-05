@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>4、获取微信登录状态 · GitBook</title>
+        <title>1、搜一搜 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,6 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="005-退出登录.html" />
-    
-    
-    <link rel="prev" href="003-获取个人信息.html" />
     
 
     </head>
@@ -172,7 +168,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.4" data-path="004-获取微信登录状态.html">
+        <li class="chapter " data-level="1.3.4" data-path="004-获取微信登录状态.html">
             
                 <a href="004-获取微信登录状态.html">
             
@@ -1103,7 +1099,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.13.1" data-path="072-搜一搜.html">
+        <li class="chapter active" data-level="1.13.1" data-path="072-搜一搜.html">
             
                 <a href="072-搜一搜.html">
             
@@ -1339,7 +1335,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >4、获取微信登录状态</a>
+        <a href=".." >1、搜一搜</a>
     </h1>
 </div>
 
@@ -1354,25 +1350,100 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x83B7;&#x53D6;&#x5FAE;&#x4FE1;&#x767B;&#x5F55;&#x72B6;&#x6001;">&#x83B7;&#x53D6;&#x5FAE;&#x4FE1;&#x767B;&#x5F55;&#x72B6;&#x6001;</h1>
+                                <h1 id="&#x641C;&#x4E00;&#x641C;">&#x641C;&#x4E00;&#x641C;</h1>
 <p><strong>&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="lang-python">w.get_login_state()
+<pre><code class="lang-python">result = w.wx_search(
+    keyword=<span class="hljs-string">&quot;&#x5C0F;&#x7C73;&#x6C7D;&#x8F66;&quot;</span>,
+    next_offset=<span class="hljs-keyword">None</span>
+)
+print(result)
 </code></pre>
-<p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong></p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
 <th style="text-align:center">&#x53C2;&#x6570;</th>
+<th style="text-align:center"><strong>&#x662F;&#x5426;&#x5FC5;&#x9009;</strong></th>
 <th style="text-align:center">&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">Bool&#x503C;</td>
-<td style="text-align:center">True:&#x5DF2;&#x767B;&#x5F55; False:&#x672A;&#x767B;&#x5F55;</td>
+<td style="text-align:center">keyword</td>
+<td style="text-align:center">&#x662F;</td>
+<td style="text-align:center">&#x5173;&#x952E;&#x8BCD;</td>
+</tr>
+<tr>
+<td style="text-align:center">next_offset</td>
+<td style="text-align:center">&#x5426;</td>
+<td style="text-align:center">&#x4E0B;&#x4E00;&#x9875;&#x7684;&#x504F;&#x79FB;&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x53EF;&#x5728;&#x8FD4;&#x56DE;&#x6D88;&#x606F;&#x4E2D;&#x83B7;&#x53D6;&#x3010;Offset&#x3011;</td>
+</tr>
+<tr>
+<td style="text-align:center">search_type</td>
+<td style="text-align:center">&#x5426;</td>
+<td style="text-align:center">&#x641C;&#x7D22;&#x7C7B;&#x578B;&#xFF08;&#x8BE6;&#x89C1;&#x4E0B;&#x65B9;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:center">filter_sort</td>
+<td style="text-align:center">&#x5426;</td>
+<td style="text-align:center">&#x8FC7;&#x6EE4;-&#x6392;&#x5E8F;&#xFF08;&#x8BE6;&#x89C1;&#x4E0B;&#x65B9;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:center">filter_type</td>
+<td style="text-align:center">&#x5426;</td>
+<td style="text-align:center">&#x8FC7;&#x6EE4;-&#x7C7B;&#x578B;&#xFF08;&#x8BE6;&#x89C1;&#x4E0B;&#x65B9;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:center">filter_time</td>
+<td style="text-align:center">&#x5426;</td>
+<td style="text-align:center">&#x8FC7;&#x6EE4;-&#x65F6;&#x95F4;&#xFF08;&#x8BE6;&#x89C1;&#x4E0B;&#x65B9;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:center">filter_scope</td>
+<td style="text-align:center">&#x5426;</td>
+<td style="text-align:center">&#x8FC7;&#x6EE4;-&#x8303;&#x56F4;&#xFF08;&#x8BE6;&#x89C1;&#x4E0B;&#x65B9;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
+<p><strong>&#x641C;&#x7D22;&#x7C7B;&#x578B;&#x8BF4;&#x660E;&#x3010;search_type&#x3011;</strong></p>
+<pre><code class="lang-python">search_type = {
+    <span class="hljs-number">0</span>: <span class="hljs-string">&quot;&#x5168;&#x90E8;&#x3010;&#x9ED8;&#x8BA4;&#x3011;&quot;</span>,
+    <span class="hljs-number">1</span>: <span class="hljs-string">&quot;&#x516C;&#x4F17;&#x53F7;&quot;</span>,
+    <span class="hljs-number">2</span>: <span class="hljs-string">&quot;&#x6587;&#x7AE0;&quot;</span>,
+    <span class="hljs-number">7</span>: <span class="hljs-string">&quot;&#x89C6;&#x9891;&#x53F7;&quot;</span>,
+    <span class="hljs-number">8</span>: <span class="hljs-string">&quot;&#x670B;&#x53CB;&#x5708;&quot;</span>,
+    <span class="hljs-number">9</span>: <span class="hljs-string">&quot;&#x76F4;&#x64AD;&quot;</span>,
+    <span class="hljs-number">384</span>: <span class="hljs-string">&quot;&#x8868;&#x60C5;&quot;</span>,
+    <span class="hljs-number">1024</span>: <span class="hljs-string">&quot;&#x8BFB;&#x4E66;&quot;</span>,
+    <span class="hljs-number">8192</span>: <span class="hljs-string">&quot;&#x5FAE;&#x4FE1;&#x6307;&#x6570;&quot;</span>,
+    <span class="hljs-number">16384</span>: <span class="hljs-string">&quot;&#x65B0;&#x95FB;&quot;</span>,
+    <span class="hljs-number">16777728</span>: <span class="hljs-string">&quot;&#x767E;&#x79D1;&quot;</span>,
+}
+</code></pre>
+<p><strong>&#x8FC7;&#x6EE4;&#x8BF4;&#x660E;&#x3010;filter_*&#x3011;</strong></p>
+<pre><code class="lang-python">filter_sort = {
+    <span class="hljs-number">0</span>: <span class="hljs-string">&quot;&#x7EFC;&#x5408;&#x3010;&#x9ED8;&#x8BA4;&#x3011;&quot;</span>,
+    <span class="hljs-number">1</span>: <span class="hljs-string">&quot;&#x6700;&#x65B0;&quot;</span>,
+    <span class="hljs-number">2</span>: <span class="hljs-string">&quot;&#x6700;&#x70ED;&quot;</span>,
+}
+filter_type = {
+    <span class="hljs-number">0</span>: <span class="hljs-string">&quot;&#x4E0D;&#x9650;&#x3010;&#x9ED8;&#x8BA4;&#x3011;&quot;</span>,
+    <span class="hljs-number">1</span>: <span class="hljs-string">&quot;&#x6587;&#x7AE0;&quot;</span>,
+    <span class="hljs-number">2</span>: <span class="hljs-string">&quot;&#x89C6;&#x9891;&quot;</span>,
+}
+filter_time = {
+    <span class="hljs-number">0</span>: <span class="hljs-string">&quot;&#x4E0D;&#x9650;&#x3010;&#x9ED8;&#x8BA4;&#x3011;&quot;</span>,
+    <span class="hljs-number">1</span>: <span class="hljs-string">&quot;&#x6700;&#x8FD1;&#x4E00;&#x5929;&quot;</span>,
+    <span class="hljs-number">2</span>: <span class="hljs-string">&quot;&#x6700;&#x8FD1;&#x4E03;&#x5929;&quot;</span>,
+    <span class="hljs-number">3</span>: <span class="hljs-string">&quot;&#x6700;&#x8FD1;&#x534A;&#x5E74;&quot;</span>,
+}
+filter_scope = {
+    <span class="hljs-number">0</span>: <span class="hljs-string">&quot;&#x4E0D;&#x9650;&#x3010;&#x9ED8;&#x8BA4;&#x3011;&quot;</span>,
+    <span class="hljs-number">1</span>: <span class="hljs-string">&quot;&#x5DF2;&#x5173;&#x6CE8;&quot;</span>,
+    <span class="hljs-number">2</span>: <span class="hljs-string">&quot;&#x6700;&#x8FD1;&#x770B;&#x8FC7;&quot;</span>,
+    <span class="hljs-number">3</span>: <span class="hljs-string">&quot;&#x670B;&#x53CB;&#x8D5E;&#x8FC7;&quot;</span>,
+}
+</code></pre>
 
                                 
                                 </section>
@@ -1400,14 +1471,6 @@
 
             
                 
-                <a href="003-获取个人信息.html" class="navigation navigation-prev " aria-label="Previous page: 3、获取个人信息">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="005-退出登录.html" class="navigation navigation-next " aria-label="Next page: 5、退出登录">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1416,7 +1479,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4、获取微信登录状态","level":"1.3.4","depth":2,"next":{"title":"5、退出登录","level":"1.3.5","depth":2,"path":"教程/005-退出登录.md","ref":"教程/005-退出登录.md","articles":[]},"previous":{"title":"3、获取个人信息","level":"1.3.3","depth":2,"path":"教程/003-获取个人信息.md","ref":"教程/003-获取个人信息.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/004-获取微信登录状态.md","mtime":"2023-06-24T02:40:27.964Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-05T08:55:21.219Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1、搜一搜","level":"1.13.1","depth":2,"next":{"title":"12、其他","level":"1.14","depth":1,"ref":"","articles":[{"title":"1、收款","level":"1.14.1","depth":2,"path":"教程/044-收款.md","ref":"教程/044-收款.md","articles":[]},{"title":"2、退款","level":"1.14.2","depth":2,"path":"教程/045-退款.md","ref":"教程/045-退款.md","articles":[]},{"title":"3、保存图片","level":"1.14.3","depth":2,"path":"教程/046-保存图片.md","ref":"教程/046-保存图片.md","articles":[]},{"title":"4、开启/关闭保存语音","level":"1.14.4","depth":2,"path":"教程/047-开启关闭保存语音.md","ref":"教程/047-开启关闭保存语音.md","articles":[]},{"title":"5、OCR文字识别","level":"1.14.5","depth":2,"path":"教程/051-OCR文字识别.md","ref":"教程/051-OCR文字识别.md","articles":[]},{"title":"6、获取当前微信进程的PID","level":"1.14.6","depth":2,"path":"教程/053-获取当前微信进程的PID.md","ref":"教程/053-获取当前微信进程的PID.md","articles":[]},{"title":"7、自动下载图片/视频/文件","level":"1.14.7","depth":2,"path":"教程/054-自动下载图片视频文件.md","ref":"教程/054-自动下载图片视频文件.md","articles":[]},{"title":"8、获取当前聊天窗口信息","level":"1.14.8","depth":2,"path":"教程/055-获取当前聊天窗口信息.md","ref":"教程/055-获取当前聊天窗口信息.md","articles":[]},{"title":"9、显示微信窗口","level":"1.14.9","depth":2,"path":"教程/061-显示微信窗口.md","ref":"教程/061-显示微信窗口.md","articles":[]},{"title":"10、隐藏微信窗口","level":"1.14.10","depth":2,"path":"教程/062-隐藏微信窗口.md","ref":"教程/062-隐藏微信窗口.md","articles":[]},{"title":"11、禁止微信自动更新","level":"1.14.11","depth":2,"path":"教程/071-禁止微信自动更新.md","ref":"教程/071-禁止微信自动更新.md","articles":[]}]},"previous":{"title":"11、搜一搜","level":"1.13","depth":1,"ref":"","articles":[{"title":"1、搜一搜","level":"1.13.1","depth":2,"path":"教程/072-搜一搜.md","ref":"教程/072-搜一搜.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/072-搜一搜.md","mtime":"2024-07-05T08:52:10.266Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-05T08:55:21.219Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
