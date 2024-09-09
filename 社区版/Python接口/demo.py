@@ -64,7 +64,7 @@ def main():
     # 群列表：pull_type = 2
     # 公众号列表：pull_type = 3
     # 其他：pull_type = 4
-    lists = w.pull_list(pull_type=1)
+    lists = w.pull_list(pull_type=3)
     print(lists)
 
     # 获取群成员列表

@@ -116,6 +116,29 @@ class WeChatPYApi(builtins.object)
  |      :param wx_id_list: 群成员的微信ID列表
  |      :return: List数据
  |  
+ |  cdn_download_file(self, file_size, file_id, aes_key, save_path)
+ |      CDN下载文件
+ |      :param file_size: 文件大小【消息回调中获取】
+ |      :param file_id: 文件ID【消息回调中获取】
+ |      :param aes_key: aes_key【消息回调中获取】
+ |      :param save_path: 保存路径
+ |      :return: 无
+ |  
+ |  cdn_download_img(self, img_type, file_id, aes_key, save_path)
+ |      CDN下载图片
+ |      :param img_type: 图片类型【1=缩略图 2=高清图 3=原图】
+ |      :param file_id: 文件ID【消息回调中获取】
+ |      :param aes_key: aes_key【消息回调中获取】
+ |      :param save_path: 保存路径
+ |      :return: 无
+ |  
+ |  cdn_download_video(self, file_id, aes_key, save_path)
+ |      CDN下载视频
+ |      :param file_id: 文件ID【消息回调中获取】
+ |      :param aes_key: aes_key【消息回调中获取】
+ |      :param save_path: 保存路径
+ |      :return: 无
+ |  
  |  collection(self, msg_data)
  |      收款
  |      :param msg_data: 消息数据
