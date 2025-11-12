@@ -17,7 +17,7 @@
   - 功能更加强大、稳定！
   - 支持长时间运行
   - 持续更新迭代
-  - 微信版本：3.9.10.19
+  - 微信版本：4.1.2.16
 
 > <span style="color: red">功能区别请打开《接口使用文档》进行查看</span>
 
@@ -58,6 +58,8 @@ https://github.com/mrsanshui/WeChatApi.git
 
 ```python
 class WeChatPYApi(builtins.object)
+ |  WeChatPYApi(msg_callback, **kwargs)
+ |  
  |  基于PC微信的Python-API
  |  
  |  Methods defined here:
@@ -69,11 +71,18 @@ class WeChatPYApi(builtins.object)
  |      :param logger: 日志器句柄
  |      :param kwargs: 略
  |  
- |  add_friend(self, wx_id_or_v3, msg, method=30)
- |      添加好友
- |      :param wx_id_or_v3: 要添加的微信ID或者v3数据
+ |  add_friend_by_chat_room(self, chat_room_id, wx_id, msg)
+ |      添加好友【群成员】
+ |      :param chat_room_id: 群ID
+ |      :param wx_id: 微信ID
  |      :param msg: 添加时的打招呼消息
- |      :param method: 添加方式【默认30】
+ |      :return: 无
+ |  
+ |  add_friend_by_net(self, v3, v4, msg)
+ |      添加好友【网络查询】
+ |      :param v3: v3数据（消息推送中获取）
+ |      :param v4: v4数据（消息推送中获取）
+ |      :param msg: 添加时的打招呼消息
  |      :return: 无
  |  
  |  agree_friend(self, msg_data)
@@ -116,9 +125,8 @@ class WeChatPYApi(builtins.object)
  |      :param wx_id_list: 群成员的微信ID列表
  |      :return: List数据
  |  
- |  cdn_download_file(self, file_size, file_id, aes_key, save_path)
+ |  cdn_download_file(self, file_id, aes_key, save_path)
  |      CDN下载文件
- |      :param file_size: 文件大小【消息回调中获取】
  |      :param file_id: 文件ID【消息回调中获取】
  |      :param aes_key: aes_key【消息回调中获取】
  |      :param save_path: 保存路径
@@ -182,12 +190,6 @@ class WeChatPYApi(builtins.object)
  |      :param mp_id: 公众号ID
  |      :return: 无
  |  
- |  forward_msg(self, to_wx, msg_id)
- |      转发任意消息
- |      :param to_wx: 接收者的微信ID/群ID
- |      :param msg_id: 消息ID
- |      :return: 无
- |  
  |  get_access_url(self, url)
  |      获取外部浏览器可访问的URL
  |      :param url: 只能在微信中打开的URL（如公众号链接）
@@ -206,10 +208,6 @@ class WeChatPYApi(builtins.object)
  |      获取当前微信进程的PID
  |      :return: 进程PID
  |  
- |  get_db_name_list(self)
- |      获取所有数据库名称
- |      :return: List数据
- |  
  |  get_login_state(self)
  |      获取微信登录状态
  |      :return: True:已登录 False:未登录
@@ -224,12 +222,6 @@ class WeChatPYApi(builtins.object)
  |      :param wx_id: 好友的微信ID
  |      :param last_id: 最后一条朋友圈的ID【翻页必传】
  |      :return: List数据
- |  
- |  get_mp_doc(self, gh_id, next_offset=None)
- |      获取公众号文章
- |      :param gh_id: 公众号ID
- |      :param next_offset: 下一页的偏移【翻页必传】
- |      :return: Dict数据
  |  
  |  get_self_info(self)
  |      获取个人信息
@@ -271,16 +263,6 @@ class WeChatPYApi(builtins.object)
  |      :param path: 图片的绝对路径
  |      :return: Dict数据
  |  
- |  ocr_recognition(self, path, is_split=False)
- |      OCR文字识别
- |      :param path: 图片的绝对路径
- |      :param is_split: 是否分段返回
- |      :return: 识别结果（分段模式返回list）
- |  
- |  pull_label_list(self)
- |      拉取标签列表
- |      :return: list数据
- |  
  |  pull_list(self, pull_type)
  |      拉取列表（好友/群/公众号/其他）
  |      :param pull_type: 好友:1 群:2 公众号:3 其他:4
@@ -311,12 +293,6 @@ class WeChatPYApi(builtins.object)
  |      :param msg_data: 消息数据
  |      :return: 无
  |  
- |  save_img(self, save_path, msg_data)
- |      保存图片
- |      :param save_path: 保存图片的绝对路径
- |      :param msg_data: 消息数据
- |      :return: 无
- |  
  |  save_to_addr_book(self, to_chat_room, switch)
  |      群聊保存/取消保存到通讯录
  |      :param to_chat_room: 群ID
@@ -328,12 +304,6 @@ class WeChatPYApi(builtins.object)
  |      :param save_dir_path: 保存语音的绝对路径【目录路径】
  |      :param switch: True:开启 False:关闭
  |      :return: 无
- |  
- |  select_db(self, db_name, sql_text)
- |      查询数据库，注意，返字段取决于你的查询语句，查询结果较多可能会导致崩溃，建议运用好sql语句中的limit
- |      :param db_name: 数据库名称
- |      :param sql_text: sql语句
- |      :return: 查询结果【List数据】
  |  
  |  send_card_link(self, to_wx, title, desc, target_url, img_url)
  |      发送卡片链接
@@ -426,12 +396,11 @@ class WeChatPYApi(builtins.object)
  |      :param msg: 文本消息
  |      :return: 无
  |  
- |  send_text_and_at_member(self, to_chat_room, to_wx_list, msg, is_custom=False)
+ |  send_text_and_at_member(self, to_chat_room, to_wx_list, msg)
  |      群聊发送文本信息并且@指定群成员
  |      :param to_chat_room: 群ID
  |      :param to_wx_list: @人的微信ID列表
- |      :param msg: 文本消息
- |      :param is_custom: False:默认@位置 True:自行指定@位置【默认为False】
+ |      :param msg: 文本消息，需自行指定【@昵称】的位置且【@昵称】的数量要跟to_wx_list中的微信ID数量相等，否则@将失效
  |      :return: 无
  |  
  |  send_voice(self, to_wx, path, voice_time)
@@ -451,26 +420,8 @@ class WeChatPYApi(builtins.object)
  |      显示微信窗口
  |      :return: 无
  |  
- |  sns_download_img(self, url, md5, key, enc_idx, token, save_path)
- |      下载朋友圈图片
- |      :param url: 图片地址
- |      :param key: key
- |      :param md5: md5
- |      :param enc_idx: enc_idx
- |      :param token: token
- |      :param save_path: 保存路径
- |      :return: True:成功 False:失败
- |  
- |  sns_download_video(self, url, md5, key, save_path)
- |      下载朋友圈视频
- |      :param url: 视频地址
- |      :param key: key
- |      :param md5: md5
- |      :param save_path: 保存路径
- |      :return: True:成功 False:失败
- |  
  |  start_wx(self, path=None)
- |      启动微信，目前支持微信版本：V-3.9.10.19
+ |      启动微信，目前支持微信版本：V-4.1.2.16
  |      :param path: 保存登录二维码的绝对路径
  |      :return: (errno:状态码，errmsg:说明)
  |  
@@ -484,17 +435,6 @@ class WeChatPYApi(builtins.object)
  |      取消关注公众号
  |      :param mp_id: 公众号ID
  |      :return: 无
- |  
- |  wx_search(self, keyword, next_offset=0, search_type=0, filter_sort=0, filter_type=0, filter_time=0, filter_scope=0)
- |      搜一搜
- |      :param keyword: 关键词
- |      :param next_offset: 下一页的偏移【翻页必传】
- |      :param search_type: 搜索类型
- |      :param filter_sort: 过滤-排序
- |      :param filter_type: 过滤-类型
- |      :param filter_time: 过滤-时间
- |      :param filter_scope: 过滤-范围
- |      :return: Dict数据
  |  
  |  ----------------------------------------------------------------------
 ```
