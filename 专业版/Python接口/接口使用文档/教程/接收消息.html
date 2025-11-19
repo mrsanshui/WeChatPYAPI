@@ -1270,6 +1270,42 @@
 }
 </code></pre>
 <ul>
+<li><h4 id="&#x7FA4;&#x6210;&#x5458;&#x8FDB;&#x7FA4;&#x901A;&#x77E5;&#x3010;type333&#x3011;">&#x7FA4;&#x6210;&#x5458;&#x8FDB;&#x7FA4;&#x901A;&#x77E5;&#x3010;type=333&#x3011;</h4>
+</li>
+</ul>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-number">333</span>, <span class="hljs-comment">// &#x63A8;&#x9001;&#x7C7B;&#x578B;&#xFF0C;&#x56FA;&#x5B9A;&#x4E3A;333</span>
+    <span class="hljs-string">&quot;chat_room_id&quot;</span>: <span class="hljs-string">&quot;xxx@chatroom&quot;</span>, <span class="hljs-comment">// &#x7FA4;ID</span>
+    <span class="hljs-comment">/* &#x8FDB;&#x7FA4;&#x8005;&#x7684;&#x4FE1;&#x606F;&#x5217;&#x8868; */</span>
+    <span class="hljs-string">&quot;member_list&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;room_name&quot;</span>:<span class="hljs-string">&quot;&quot;</span>, <span class="hljs-comment">// &#x7FA4;&#x6635;&#x79F0;</span>
+            <span class="hljs-string">&quot;wx_id&quot;</span>:<span class="hljs-string">&quot;wxid_xxx&quot;</span> <span class="hljs-comment">// &#x5FAE;&#x4FE1;ID</span>
+        }
+    ],
+    <span class="hljs-string">&quot;msg&quot;</span>: <span class="hljs-string">&quot;&#x8FDB;&#x7FA4;&#x4E8B;&#x4EF6;&quot;</span>, <span class="hljs-comment">// &#x63D0;&#x793A;&#x5185;&#x5BB9;</span>
+    <span class="hljs-string">&quot;self_wx_id&quot;</span>: <span class="hljs-string">&quot;wxid_xxxx&quot;</span>, <span class="hljs-comment">// &#x81EA;&#x5DF1;&#x7684;&#x5FAE;&#x4FE1;ID</span>
+}
+</code></pre>
+<ul>
+<li><h4 id="&#x7FA4;&#x6210;&#x5458;&#x9000;&#x7FA4;&#x901A;&#x77E5;&#x3010;type444&#x3011;">&#x7FA4;&#x6210;&#x5458;&#x9000;&#x7FA4;&#x901A;&#x77E5;&#x3010;type=444&#x3011;</h4>
+</li>
+</ul>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-number">444</span>, <span class="hljs-comment">// &#x63A8;&#x9001;&#x7C7B;&#x578B;&#xFF0C;&#x56FA;&#x5B9A;&#x4E3A;444</span>
+    <span class="hljs-string">&quot;chat_room_id&quot;</span>: <span class="hljs-string">&quot;xxx@chatroom&quot;</span>, <span class="hljs-comment">// &#x7FA4;ID</span>
+    <span class="hljs-comment">/* &#x9000;&#x7FA4;&#x8005;&#x7684;&#x4FE1;&#x606F;&#x5217;&#x8868; */</span>
+    <span class="hljs-string">&quot;member_list&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;room_name&quot;</span>:<span class="hljs-string">&quot;&quot;</span>, <span class="hljs-comment">// &#x7FA4;&#x6635;&#x79F0;</span>
+            <span class="hljs-string">&quot;wx_id&quot;</span>:<span class="hljs-string">&quot;wxid_xxx&quot;</span> <span class="hljs-comment">// &#x5FAE;&#x4FE1;ID</span>
+        }
+    ],
+    <span class="hljs-string">&quot;msg&quot;</span>: <span class="hljs-string">&quot;&#x9000;&#x7FA4;&#x4E8B;&#x4EF6;&quot;</span>, <span class="hljs-comment">// &#x63D0;&#x793A;&#x5185;&#x5BB9;</span>
+    <span class="hljs-string">&quot;self_wx_id&quot;</span>: <span class="hljs-string">&quot;wxid_xxxx&quot;</span>, <span class="hljs-comment">// &#x81EA;&#x5DF1;&#x7684;&#x5FAE;&#x4FE1;ID</span>
+}
+</code></pre>
+<ul>
 <li><h4 id="&#x804A;&#x5929;&#x64A4;&#x56DE;&#x6D88;&#x606F;&#x7684;&#x7C7B;&#x578B;&#x8BF4;&#x660E;&#x3010;msgtype&#x3011;&#xFF1A;">&#x804A;&#x5929;/&#x64A4;&#x56DE;&#x6D88;&#x606F;&#x7684;&#x7C7B;&#x578B;&#x8BF4;&#x660E;&#x3010;msg_type&#x3011;&#xFF1A;</h4>
 </li>
 </ul>
@@ -1337,6 +1373,14 @@
 <td style="text-align:center">494</td>
 <td style="text-align:center">&#x5C0F;&#x7A0B;&#x5E8F;</td>
 </tr>
+<tr>
+<td style="text-align:center">10000</td>
+<td style="text-align:center">&#x7CFB;&#x7EDF;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td style="text-align:center">10002</td>
+<td style="text-align:center">&#x7CFB;&#x7EDF;&#x6D88;&#x606F;</td>
+</tr>
 </tbody>
 </table>
 
@@ -1382,7 +1426,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"接收消息","level":"1.14","depth":1,"next":{"title":"常见问题及解决方案","level":"1.15","depth":1,"path":"常见问题及解决方案.md","ref":"常见问题及解决方案.md","articles":[]},"previous":{"title":"8、禁止微信自动更新","level":"1.13.8","depth":2,"path":"教程/071-禁止微信自动更新.md","ref":"教程/071-禁止微信自动更新.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/接收消息.md","mtime":"2025-11-11T16:29:10.563Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-11-19T13:30:56.480Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"接收消息","level":"1.14","depth":1,"next":{"title":"常见问题及解决方案","level":"1.15","depth":1,"path":"常见问题及解决方案.md","ref":"常见问题及解决方案.md","articles":[]},"previous":{"title":"8、禁止微信自动更新","level":"1.13.8","depth":2,"path":"教程/071-禁止微信自动更新.md","ref":"教程/071-禁止微信自动更新.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"教程/接收消息.md","mtime":"2025-11-19T17:52:02.155Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-11-19T18:05:17.502Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
