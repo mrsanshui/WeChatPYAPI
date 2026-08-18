@@ -17,7 +17,7 @@
   - 功能更加强大、稳定！
   - 支持长时间运行
   - 持续更新迭代
-  - 微信版本：4.1.2.16
+  - 微信版本：4.1.12.26
 
 > <span style="color: red">功能区别请打开《接口使用文档》进行查看</span>
 
@@ -57,8 +57,6 @@ https://github.com/mrsanshui/WeChatApi.git
 
 ```python
 class WeChatPYApi(builtins.object)
- |  WeChatPYApi(msg_callback, **kwargs)
- |  
  |  基于PC微信的Python-API
  |  
  |  Methods defined here:
@@ -420,7 +418,7 @@ class WeChatPYApi(builtins.object)
  |      :return: 无
  |  
  |  start_wx(self, path=None)
- |      启动微信，目前支持微信版本：V-4.1.2.16
+ |      启动微信，目前支持微信版本：V-4.1.12.26
  |      :param path: 保存登录二维码的绝对路径
  |      :return: (errno:状态码，errmsg:说明)
  |  
